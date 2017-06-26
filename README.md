@@ -1,6 +1,7 @@
-# ForkLift Js  
+# ForkLift Js  [![CircleCI](https://circleci.com/gh/PurplePigeons/forkliftjs/tree/master.svg?style=svg)](https://circleci.com/gh/PurplePigeons/forkliftjs/tree/master)
 
 A CMS scaffold with enterprise level scalability. Feel free to contribute and shoot PRs, this project will always remain open-source. 
+
 
 #### Dependencies
 
