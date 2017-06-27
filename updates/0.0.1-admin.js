@@ -8,5 +8,4 @@ exports = module.exports = function(done) {
     password: 'admin',
     canAccessKeystone: true
   }).save(done);
-
 };

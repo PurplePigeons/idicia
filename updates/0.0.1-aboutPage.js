@@ -6,5 +6,4 @@ exports = module.exports = function(done) {
   new AboutPage.model({
     title: 'About Page',
   }).save(done);
-
 };
