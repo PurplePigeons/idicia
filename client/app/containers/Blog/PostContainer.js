@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import classNames from 'classnames';
 
+// Components
 import BlogPost from 'components/BlogComponents/BlogPost';
 import LoadingIndicator from 'components/LoadingIndicator';
 
-import bulma from 'styles/bulma.scss';
-import styles from './styles.scss';
+// Styling
 import transitions from './transitions.scss';
 
+// Action Creators and selectors
 import * as actions from './actions';
 import {
   makeSelectFocusedPost,
