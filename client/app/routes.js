@@ -72,6 +72,7 @@ export default function createRoutes(store) {
         importModules.then(([reducer, component]) => {
           injectReducer('blog', reducer.default);
           renderRoute(component);
+          console.log('Blog reducer and component mounted');
         });
 
         importModules.catch(errorLoading);

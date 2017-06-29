@@ -31,8 +31,7 @@ export class PostListContainer extends Component {
     console.log('Mounting PostList');
 
     // Only fetch if there are no posts, or requested page not already cached
-    // Similarly, don't reload if the focusedPost is already loaded
-    if (posts === null || posts[currentPage] === undefined) {
+    if (!posts || !posts[currentPage]) {
       // On mount, fetch posts from the API to populate the redux store
       console.log(`Blog mounted, loading posts for page ${routeParams.pageId || currentPage || 1}`);
       getPageOfPosts(parseInt(routeParams.pageId, 10) || currentPage || 1);

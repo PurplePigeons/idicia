@@ -31,9 +31,11 @@ const fetchPageEpic = (action$, store) =>
         const page = parseInt(/page\/(\d+)/g.exec(action.payload.pathname)[1], 10);
         const cachedPosts = store.getState().getIn(['blog', 'posts']);
         // Change page instead of fetching posts if they're already cached
-        // Adding a null check since cachedPosts will be null if they navigated
+        // Adding a null/undef check since cachedPosts will be null if they navigated
         // to an invalid page on initial navigation and we can't access [page] of null...
-        if (cachedPosts !== null && cachedPosts[page] !== undefined) {
+        // This also occurs if the blog reducer and state haven't been mounted yet thanks to async
+        // reducer loading
+        if (cachedPosts && cachedPosts[page]) {
           return Observable.of(changeToPage(page));
         }
         // If the posts aren't already cached, fetch from back-end
