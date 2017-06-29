@@ -23,43 +23,13 @@ export default function createRoutes(store) {
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           import('containers/HomePage/reducer'),
-          import('containers/Blog/reducer'),
           import('containers/HomePage'),
         ]);
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer, blogReducer, component]) => {
+        importModules.then(([reducer, component]) => {
           injectReducer('home', reducer.default);
-          injectReducer('blog', blogReducer.default);
-          renderRoute(component);
-        });
-
-        importModules.catch(errorLoading);
-      },
-      childRoutes: [
-        {
-          path: 'page',
-          name: 'blogPagesRedirect',
-          onEnter: (nextState, replace) => replace('/page/1'),
-        },
-      ],
-    },
-    {
-      path: '/page(/:pageId)',
-      name: 'home',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/HomePage/reducer'),
-          import('containers/Blog/reducer'),
-          import('containers/HomePage'),
-        ]);
-
-        const renderRoute = loadModule(cb);
-
-        importModules.then(([reducer, blogReducer, component]) => {
-          injectReducer('home', reducer.default);
-          injectReducer('blog', blogReducer.default);
           renderRoute(component);
         });
 
@@ -86,8 +56,9 @@ export default function createRoutes(store) {
       },
     },
     {
-      path: '/blog/:postSlug',
+      path: '/blog',
       name: 'blog',
+      // onEnter: (nextState, replace) => replace('/page/1'),
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           import('containers/Blog/reducer'),
@@ -103,6 +74,26 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
+      childRoutes: [
+        {
+          path: 'page(/:pageId)',
+          name: 'blogPages',
+          getComponent(nextState, cb) {
+            import('containers/Blog/PostListContainer')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+        {
+          path: 'post(/:postSlug)',
+          name: 'blogPost',
+          getComponent(nextState, cb) {
+            import('containers/Blog/PostContainer')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+      ],
     },
     {
       path: '*',

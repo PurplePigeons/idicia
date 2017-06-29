@@ -4,7 +4,6 @@ import isFunction from 'lodash/isFunction';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import invariant from 'invariant';
-import warning from 'warning';
 
 import createReducer from '../reducers';
 

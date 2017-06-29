@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import classNames from 'classnames';
 
-import BlogPreviewList from 'components/BlogComponents/BlogPreviewList';
-import BlogPost from 'components/BlogComponents/BlogPost';
 import LoadingIndicator from 'components/LoadingIndicator';
 import Paginator from 'components/Paginator';
 
@@ -28,100 +26,46 @@ import {
   makeSelectMaxPages,
 } from './selectors';
 
-export class Blog extends Component {
-  componentDidMount() {
-    const {
+const Blog = ({
+      children,
       currentPage,
-      focusedPost,
-      onGetPost,
-      onGetPosts,
-      posts,
-      prefetchPage,
-      routeParams,
-    } = this.props;
-
-    // Only fetch if there are no posts, or requested page not already cached
-    // Similarly, don't reload if the focusedPost is already loaded
-    if ((routeParams && focusedPost && routeParams.postSlug !== focusedPost.post.slug)
-        || (routeParams && focusedPost === null)
-        || posts === null
-        || posts[currentPage] === undefined) {
-      // Load content based on if this container is being used to display
-      // all posts or a single post specified by the route pathing
-      if (routeParams) {
-        // Get and render the single post focused by the user
-        console.log(`Retrieve blog post: ${routeParams.postSlug}`);
-        onGetPost(routeParams.postSlug);
-      } else {
-        // On mount, fetch posts from the API to populate the redux store
-        // If a prefetchPage is defined, load that instead
-        // The template below will populate itself based on the store's contents
-        console.log(`Blog mounted, loading posts for page ${prefetchPage || currentPage}`);
-        onGetPosts(prefetchPage || currentPage);
-      }
-    }
-  }
-
-  render() {
-    const {
-      currentPage,
-      focusedPost,
       loading,
       loadSuccess,
       maxPages,
+      params,
       posts,
-      routeParams,
-    } = this.props;
+    }) => {
+  const errStyle = classNames(
+    bulma.content,
+    bulma['has-text-centered'],
+    styles.errMessage
+  );
 
-    const errStyle = classNames(
-      bulma.content,
-      bulma['has-text-centered'],
-      styles.errMessage
-    );
-
-    // Display a single blog post or a list of previews depending on location in the app
-    const BlogContainerContent = routeParams ?
-      focusedPost && <BlogPost key={focusedPost.fullPostUrl} postData={focusedPost} /> :
-      // Update posts={posts} -> posts{posts[currentPage]} to still send an array from the object
-      posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />;
-
-    return (
-      <section id="content" className={bulma.container}>
-        {!routeParams && loadSuccess
-          ? <Paginator
-            currPage={currentPage}
-            numPages={maxPages}
-          />
-          : null
-        }
-        <CSSTransitionGroup
-          transitionName={transitions}
-          transitionAppear
-          transitionLeave={false}
-          transitionAppearTimeout={250}
-          transitionEnterTimeout={250}
-        >
-          {loading
-            ? <LoadingIndicator key="loadingIndicator" />
-            : BlogContainerContent
-          }
-        </CSSTransitionGroup>
-        {!loading && !loadSuccess &&
-          <div className={errStyle}>
-            <h2>Invalid page requested or connection failed, <Link to={'/page/1'}>click here</Link> to start at the first page or use the navigation options below!</h2>
-          </div>
-        }
-        {!routeParams
-          ? <Paginator
-            currPage={currentPage}
-            numPages={maxPages}
-          />
-          : null
-        }
-      </section>
-    );
-  }
-}
+  return (
+    <section id="content" className={bulma.container}>
+      {!params.postSlug && loadSuccess
+        ? <Paginator
+          currPage={currentPage}
+          numPages={maxPages}
+        />
+        : null
+      }
+      {children}
+      {!loading && !loadSuccess &&
+        <div className={errStyle}>
+          <h2>Invalid page requested or connection failed, <Link to={'blog/page/1'}>click here</Link> to start at the first page or use the navigation options below!</h2>
+        </div>
+      }
+      {!params.postSlug
+        ? <Paginator
+          currPage={currentPage}
+          numPages={maxPages}
+        />
+        : null
+      }
+    </section>
+  );
+};
 
 Blog.propTypes = {
   currentPage: PropTypes.number,
@@ -132,7 +76,6 @@ Blog.propTypes = {
   onGetPost: PropTypes.func,
   onGetPosts: PropTypes.func,
   posts: PropTypes.object,
-  prefetchPage: PropTypes.number,
   routeParams: PropTypes.object,
 };
 

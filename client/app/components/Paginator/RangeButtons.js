@@ -42,7 +42,7 @@ const RangeButtons = ({ currPage, numPages }) => {
     return (
       <li key={idx}>
         {val !== '...' ?
-          <Link to={`/page/${val}`} className={buttonStyle}>{val}</Link> :
+          <Link to={`/blog/page/${val}`} className={buttonStyle}>{val}</Link> :
           <button className={buttonStyle}>{val}</button>}
       </li>
     );

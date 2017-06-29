@@ -20,7 +20,7 @@ const BlogCard = ({ post }) => {
   const date = getDate(post.publishedDate);
   return (
     <Card style={{ width: 'auto' }} className={bulma.content}>
-      <Link to={`/blog/${post.slug}`}>
+      <Link to={`/blog/post/${post.slug}`}>
         <CardTitle
           theme={theme}
           title={post.title}
@@ -33,7 +33,7 @@ const BlogCard = ({ post }) => {
         <p dangerouslySetInnerHTML={{ __html: summary }} />
       </CardText>
       <CardActions>
-        <LinkButton label="Read More..." to={`/blog/${post.slug}`} />
+        <LinkButton label="Read More..." to={`/blog/post/${post.slug}`} />
       </CardActions>
     </Card>
   );
