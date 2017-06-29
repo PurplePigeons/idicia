@@ -21,7 +21,7 @@ import {
   makeSelectLoading,
 } from './selectors';
 
-export class PostContainer extends Component {
+export class PostListContainer extends Component {
   componentDidMount() {
     const {
       currentPage,
@@ -54,7 +54,7 @@ export class PostContainer extends Component {
   }
 }
 
-PostContainer.propTypes = {
+PostListContainer.propTypes = {
   currentPage: PropTypes.number.isRequired,
   getPageOfPosts: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
@@ -70,4 +70,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // Wrap the component to inject dispatch and state
-export default connect(mapStateToProps, actions)(PostContainer);
+export default connect(mapStateToProps, actions)(PostListContainer);
