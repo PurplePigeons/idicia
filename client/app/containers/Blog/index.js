@@ -44,7 +44,7 @@ const Blog = ({
           <h2>Invalid page requested or connection failed, <Link to={'blog/page/1'}>click here</Link> to start at the first page or use the navigation options below!</h2>
         </div>
       }
-      {!params.postSlug && <Paginator currPage={currentPage} numPages={maxPages} />}
+      {(!params.postSlug || !loadSuccess) && <Paginator currPage={currentPage} numPages={maxPages} />}
     </section>
   );
 };
