@@ -49,7 +49,15 @@ export class PostListContainer extends Component {
     } = this.props;
 
     return (
-      isLoading ? <LoadingIndicator key="loadingIndicator" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />
+      <CSSTransitionGroup
+        transitionName={transitions}
+        transitionAppear
+        transitionLeave={false}
+        transitionAppearTimeout={250}
+        transitionEnterTimeout={250}
+      >
+        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />}
+      </CSSTransitionGroup>
     );
   }
 }

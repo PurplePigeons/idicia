@@ -39,7 +39,15 @@ export class PostContainer extends Component {
     } = this.props;
 
     return (
-      isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost postData={focusedPost} />
+      <CSSTransitionGroup
+        transitionName={transitions}
+        transitionAppear
+        transitionLeave={false}
+        transitionAppearTimeout={250}
+        transitionEnterTimeout={250}
+      >
+        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost key={focusedPost.post.slug} postData={focusedPost} />}
+      </CSSTransitionGroup>
     );
   }
 }
