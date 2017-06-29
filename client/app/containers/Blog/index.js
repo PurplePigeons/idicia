@@ -36,7 +36,7 @@ const Blog = ({
   );
 
   return (
-    <section id="content" className={bulma.container}>
+    <section className={bulma.container}>
       {!params.postSlug && loadSuccess && <Paginator currPage={currentPage} numPages={maxPages} />}
       {children}
       {!loading && !loadSuccess &&
