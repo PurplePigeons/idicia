@@ -37,26 +37,14 @@ const Blog = ({
 
   return (
     <section id="content" className={bulma.container}>
-      {!params.postSlug && loadSuccess
-        ? <Paginator
-          currPage={currentPage}
-          numPages={maxPages}
-        />
-        : null
-      }
+      {!params.postSlug && loadSuccess && <Paginator currPage={currentPage} numPages={maxPages} />}
       {children}
       {!loading && !loadSuccess &&
         <div className={errStyle}>
           <h2>Invalid page requested or connection failed, <Link to={'blog/page/1'}>click here</Link> to start at the first page or use the navigation options below!</h2>
         </div>
       }
-      {!params.postSlug
-        ? <Paginator
-          currPage={currentPage}
-          numPages={maxPages}
-        />
-        : null
-      }
+      {!params.postSlug && <Paginator currPage={currentPage} numPages={maxPages} />}
     </section>
   );
 };
