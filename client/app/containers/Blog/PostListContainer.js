@@ -35,7 +35,7 @@ export class PostListContainer extends Component {
     if (posts === null || posts[currentPage] === undefined) {
       // On mount, fetch posts from the API to populate the redux store
       console.log(`Blog mounted, loading posts for page ${routeParams.pageId || currentPage || 1}`);
-      getPageOfPosts(routeParams.pageId || currentPage || 1);
+      getPageOfPosts(parseInt(routeParams.pageId, 10) || currentPage || 1);
     }
   }
 
