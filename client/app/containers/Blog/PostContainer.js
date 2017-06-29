@@ -41,9 +41,7 @@ export class PostContainer extends Component {
     } = this.props;
 
     return (
-      <div>
-        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost postData={focusedPost} />}
-      </div>
+      isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost postData={focusedPost} />
     );
   }
 }

@@ -52,9 +52,7 @@ export class PostContainer extends Component {
     } = this.props;
 
     return (
-      <div>
-        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />}
-      </div>
+      isLoading ? <LoadingIndicator key="loadingIndicator" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />
     );
   }
 }
