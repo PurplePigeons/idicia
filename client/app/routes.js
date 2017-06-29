@@ -58,7 +58,9 @@ export default function createRoutes(store) {
     {
       path: '/blog',
       name: 'blog',
-      // onEnter: (nextState, replace) => replace('/page/1'),
+      indexRoute: {
+        onEnter: (nextState, replace) => replace('/blog/page/1'),
+      },
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           import('containers/Blog/reducer'),
@@ -85,7 +87,12 @@ export default function createRoutes(store) {
           },
         },
         {
-          path: 'post(/:postSlug)',
+          path: 'post',
+          name: 'BlogPostRequiresSlug',
+          onEnter: (nextState, replace) => replace('/blog/page/1'),
+        },
+        {
+          path: 'post/:postSlug',
           name: 'blogPost',
           getComponent(nextState, cb) {
             import('containers/Blog/PostContainer')
