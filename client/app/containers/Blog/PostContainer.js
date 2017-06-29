@@ -47,8 +47,8 @@ export class PostContainer extends Component {
 PostContainer.propTypes = {
   focusedPost: PropTypes.object,
   getPostBySlug: PropTypes.func.isRequired,
-  isLoading: PropTypes.bool,
-  routeParams: PropTypes.object,
+  isLoading: PropTypes.bool.isRequired,
+  routeParams: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({

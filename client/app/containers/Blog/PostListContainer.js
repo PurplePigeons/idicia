@@ -19,8 +19,6 @@ import {
   makeSelectCurrentPage,
   makeSelectPosts,
   makeSelectLoading,
-  makeSelectLoadSuccess,
-  makeSelectMaxPages,
 } from './selectors';
 
 export class PostContainer extends Component {
@@ -57,11 +55,9 @@ export class PostContainer extends Component {
 }
 
 PostContainer.propTypes = {
-  currentPage: PropTypes.number,
+  currentPage: PropTypes.number.isRequired,
   getPageOfPosts: PropTypes.func.isRequired,
-  isLoading: PropTypes.bool,
-  loadSuccess: PropTypes.bool,
-  maxPages: PropTypes.number,
+  isLoading: PropTypes.bool.isRequired,
   posts: PropTypes.object,
   routeParams: PropTypes.object,
 };
@@ -69,10 +65,8 @@ PostContainer.propTypes = {
 const mapStateToProps = createStructuredSelector({
   currentPage: makeSelectCurrentPage(),
   isLoading: makeSelectLoading(),
-  maxPages: makeSelectMaxPages(),
-  posts: makeSelectPosts(),
   loading: makeSelectLoading(),
-  loadSuccess: makeSelectLoadSuccess(),
+  posts: makeSelectPosts(),
 });
 
 // Wrap the component to inject dispatch and state
