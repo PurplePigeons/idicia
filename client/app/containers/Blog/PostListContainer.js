@@ -13,9 +13,8 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 import transitions from './transitions.scss';
 
-import {
-  getPageOfPosts,
-} from './actions';
+import * as actions from './actions';
+
 import {
   makeSelectCurrentPage,
   makeSelectPosts,
@@ -59,7 +58,7 @@ export class PostContainer extends Component {
 
 PostContainer.propTypes = {
   currentPage: PropTypes.number,
-  getPageOfPosts: PropTypes.func,
+  getPageOfPosts: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   loadSuccess: PropTypes.bool,
   maxPages: PropTypes.number,
@@ -77,4 +76,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // Wrap the component to inject dispatch and state
-export default connect(mapStateToProps, { getPageOfPosts })(PostContainer);
+export default connect(mapStateToProps, actions)(PostContainer);

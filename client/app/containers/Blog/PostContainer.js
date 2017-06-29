@@ -13,9 +13,7 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 import transitions from './transitions.scss';
 
-import {
-  getPostBySlug,
-} from './actions';
+import * as actions from './actions';
 import {
   makeSelectFocusedPost,
   makeSelectLoading,
@@ -48,6 +46,7 @@ export class PostContainer extends Component {
 
 PostContainer.propTypes = {
   focusedPost: PropTypes.object,
+  getPostBySlug: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   routeParams: PropTypes.object,
 };
@@ -58,4 +57,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // Wrap the component to inject dispatch and state
-export default connect(mapStateToProps, { getPostBySlug })(PostContainer);
+export default connect(mapStateToProps, actions)(PostContainer);
