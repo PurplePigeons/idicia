@@ -14,13 +14,8 @@ import styles from './styles.scss';
 import transitions from './transitions.scss';
 
 import {
-  getPostBySlug,
-  getPageOfPosts,
-} from './actions';
-import {
   makeSelectCurrentPage,
   makeSelectFocusedPost,
-  makeSelectPosts,
   makeSelectLoading,
   makeSelectLoadSuccess,
   makeSelectMaxPages,
@@ -33,7 +28,6 @@ const Blog = ({
       loadSuccess,
       maxPages,
       params,
-      posts,
     }) => {
   const errStyle = classNames(
     bulma.content,
@@ -68,31 +62,21 @@ const Blog = ({
 };
 
 Blog.propTypes = {
+  children: PropTypes.node,
   currentPage: PropTypes.number,
-  focusedPost: PropTypes.object,
   loading: PropTypes.bool,
   loadSuccess: PropTypes.bool,
   maxPages: PropTypes.number,
-  onGetPost: PropTypes.func,
-  onGetPosts: PropTypes.func,
-  posts: PropTypes.object,
-  routeParams: PropTypes.object,
+  params: PropTypes.object,
 };
-
-// Need to export so we can test and have full test coverage in Jest
-export const mapDispatchToProps = (dispatch) => ({
-  onGetPost: (slug) => dispatch(getPostBySlug(slug)),
-  onGetPosts: (page) => dispatch(getPageOfPosts(page)),
-});
 
 const mapStateToProps = createStructuredSelector({
   currentPage: makeSelectCurrentPage(),
   focusedPost: makeSelectFocusedPost(),
   maxPages: makeSelectMaxPages(),
-  posts: makeSelectPosts(),
   loading: makeSelectLoading(),
   loadSuccess: makeSelectLoadSuccess(),
 });
 
 // Wrap the component to inject dispatch and state
-export default connect(mapStateToProps, mapDispatchToProps)(Blog);
+export default connect(mapStateToProps)(Blog);
