@@ -20,7 +20,7 @@ const initialState = fromJS({
   focusedPost: null,
   posts: null,
   currentPage: 1,
-  maxPages: 1,
+  maxPages: 0,
   loadSuccess: true,
 });
 
