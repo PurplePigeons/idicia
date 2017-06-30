@@ -21,7 +21,7 @@ const Paginator = ({ currPage, numPages }) => {
   // Visually disable the prev/next buttons when at end ranges
   const prevStyle = classNames({
     [bulma['pagination-previous']]: true,
-    [bulma['is-disabled']]: currPage === 1,
+    [bulma['is-disabled']]: currPage <= 1,
   });
 
   const nextStyle = classNames({
