@@ -39,12 +39,17 @@ const Blog = ({
     <section className={bulma.container}>
       {!params.postSlug && loadSuccess && <Paginator currPage={currentPage} numPages={maxPages} />}
       {children}
-      {!loading && !loadSuccess &&
+      {!loading && !loadSuccess && maxPages > 0 &&
         <div className={errStyle}>
           <h2>Invalid page requested or connection failed, <Link to={'blog/page/1'}>click here</Link> to start at the first page or use the navigation options below!</h2>
         </div>
       }
-      {(!params.postSlug || !loadSuccess) && <Paginator currPage={currentPage} numPages={maxPages} />}
+      {!loading && !loadSuccess && !maxPages &&
+        <div className={errStyle}>
+          <h2>This blog is currently empty, please check again later for more updates.</h2>
+        </div>
+      }
+      {(!params.postSlug || !loadSuccess) && maxPages > 0 && <Paginator currPage={currentPage} numPages={maxPages} />}
     </section>
   );
 };

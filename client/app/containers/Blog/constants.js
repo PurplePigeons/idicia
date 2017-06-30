@@ -8,5 +8,6 @@ export const GET_PAGINATED_POSTS = 'keystone/Blog/GET_PAGINATED_POSTS';
 export const GET_POST_BY_SLUG = 'keystone/Blog/GET_POST_BY_SLUG';
 export const GET_POSTS_FAILED = 'keystone/Blog/GET_POSTS_FAILED';
 export const INVALID_PAGE_REQUEST = 'keystone/Blog/INVALID_PAGE_REQUEST';
+export const NO_POSTS = 'keystone/Blog/NO_POSTS';
 export const SET_PAGINATED_POSTS = 'keystone/Blog/SET_PAGINATED_POSTS';
 export const SET_POST = 'keystone/Blog/SET_POST';
