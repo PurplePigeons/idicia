@@ -16,7 +16,6 @@ const getPageOfPostsEpic = (action$, store, { blogApi }) =>
     .switchMap((action) =>
       blogApi.fetchPageOfPosts(action.page)
         .map(({ posts }) => { // Destructure posts from the response object
-          console.log(posts);
           if (posts.totalPages === 0) {
             return noPagesFound();
           } else if (posts.currentPage < 0 || posts.currentPage > posts.totalPages) {
