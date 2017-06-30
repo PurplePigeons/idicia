@@ -49,7 +49,7 @@ const Blog = ({
           <h2>This blog is currently empty, please check again later for more updates.</h2>
         </div>
       }
-      {(!params.postSlug || !loadSuccess) && maxPages > 0 && <Paginator currPage={currentPage} numPages={maxPages} />}
+      {(!params.postSlug || !loadSuccess) && !loading && maxPages > 0 && <Paginator currPage={currentPage} numPages={maxPages} />}
     </section>
   );
 };
