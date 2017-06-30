@@ -15,10 +15,10 @@ const getPageOfPostsEpic = (action$, store, { blogApi }) =>
   action$.ofType(GET_PAGINATED_POSTS)
     .switchMap((action) =>
       blogApi.fetchPageOfPosts(action.page)
-        .map(({ posts }) => { // Destructure posts from the response object
-          if (posts.totalPages === 0) {
+        .map(({ posts, posts: { totalPages, currentPage } }) => { // Destructure posts from the response object
+          if (totalPages === 0) {
             return noPagesFound();
-          } else if (posts.currentPage < 0 || posts.currentPage > posts.totalPages) {
+          } else if (currentPage < 0 || currentPage > totalPages) {
             return invalidPageRequest(posts);
           }
           return setPaginatedPosts(posts);
