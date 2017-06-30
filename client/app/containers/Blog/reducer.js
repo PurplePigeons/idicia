@@ -9,6 +9,7 @@ import {
   GET_POST_BY_SLUG,
   GET_POSTS_FAILED,
   INVALID_PAGE_REQUEST,
+  NO_POSTS,
   SET_PAGINATED_POSTS,
   SET_POST,
 } from './constants';
@@ -19,7 +20,7 @@ const initialState = fromJS({
   focusedPost: null,
   posts: null,
   currentPage: 1,
-  maxPages: 1,
+  maxPages: 0,
   loadSuccess: true,
 });
 
@@ -46,6 +47,7 @@ function blogReducer(state = initialState, action) {
     case GET_POSTS_FAILED:
       console.log('Failed to get posts');
       return state
+        .set('currentPage', 0)
         .set('isLoading', false)
         .set('posts', null)
         .set('loadSuccess', false);
@@ -54,9 +56,18 @@ function blogReducer(state = initialState, action) {
       // User requested an invalid page. Update flags, but also update maxPages
       // so that Paginator can still render correct number of pages
       return state
+        .set('currentPage', 0)
         .set('isLoading', false)
         .set('loadSuccess', false)
         .set('maxPages', action.failData.totalPages)
+        .set('posts', null);
+    case NO_POSTS:
+      console.log('Blog content not defined yet');
+      return state
+        .set('currentPage', 0)
+        .set('isLoading', false)
+        .set('loadSuccess', false)
+        .set('maxPages', 0)
         .set('posts', null);
     case SET_PAGINATED_POSTS:
       console.log(`Posts from page ${action.paginatedData.currentPage} retrieved successfully, adding to store`);

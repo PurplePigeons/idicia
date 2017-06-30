@@ -6,6 +6,7 @@ import {
 } from './constants';
 import {
   invalidPageRequest,
+  noPagesFound,
   setPost,
   setPaginatedPosts,
 } from './actions';
@@ -14,11 +15,13 @@ const getPageOfPostsEpic = (action$, store, { blogApi }) =>
   action$.ofType(GET_PAGINATED_POSTS)
     .switchMap((action) =>
       blogApi.fetchPageOfPosts(action.page)
-        .map((json) => {
-          if (json.posts.currentPage < 0 || json.posts.currentPage > json.posts.totalPages) {
-            return invalidPageRequest(json.posts);
+        .map(({ posts, posts: { totalPages, currentPage } }) => { // Destructure posts from the response object
+          if (totalPages === 0) {
+            return noPagesFound();
+          } else if (currentPage < 0 || currentPage > totalPages) {
+            return invalidPageRequest(posts);
           }
-          return setPaginatedPosts(json.posts);
+          return setPaginatedPosts(posts);
         })
         .catch((error) => Observable.of({
           type: GET_POSTS_FAILED,

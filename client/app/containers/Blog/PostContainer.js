@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import classNames from 'classnames';
 
+// Components
 import BlogPost from 'components/BlogComponents/BlogPost';
 import LoadingIndicator from 'components/LoadingIndicator';
 
-import bulma from 'styles/bulma.scss';
-import styles from './styles.scss';
+// Styling
 import transitions from './transitions.scss';
 
-import {
-  getPostBySlug,
-} from './actions';
+// Action Creators and selectors
+import * as actions from './actions';
 import {
   makeSelectFocusedPost,
   makeSelectLoading,
@@ -41,17 +38,24 @@ export class PostContainer extends Component {
     } = this.props;
 
     return (
-      <div>
-        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost postData={focusedPost} />}
-      </div>
+      <CSSTransitionGroup
+        transitionName={transitions}
+        transitionAppear
+        transitionLeave={false}
+        transitionAppearTimeout={250}
+        transitionEnterTimeout={250}
+      >
+        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : focusedPost && <BlogPost key={focusedPost.post.slug} postData={focusedPost} />}
+      </CSSTransitionGroup>
     );
   }
 }
 
 PostContainer.propTypes = {
   focusedPost: PropTypes.object,
-  isLoading: PropTypes.bool,
-  routeParams: PropTypes.object,
+  getPostBySlug: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  routeParams: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -60,4 +64,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // Wrap the component to inject dispatch and state
-export default connect(mapStateToProps, { getPostBySlug })(PostContainer);
+export default connect(mapStateToProps, actions)(PostContainer);

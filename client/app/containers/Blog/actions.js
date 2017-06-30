@@ -9,6 +9,7 @@ import {
   GET_POST_BY_SLUG,
   GET_POSTS_FAILED,
   INVALID_PAGE_REQUEST,
+  NO_POSTS,
   SET_PAGINATED_POSTS,
   SET_POST,
 } from './constants';
@@ -83,6 +84,16 @@ function invalidPageRequest(failData) {
     failData,
   };
 }
+/**
+ * Fallback method for if the user hasn't defined any blog content yet
+ *
+ * @return {object}    An action object with a type of NO_POSTS
+ */
+function noPagesFound() {
+  return {
+    type: NO_POSTS,
+  };
+}
 
 /**
  * Updates the currently page of posts and updates the store with page stats
@@ -119,6 +130,7 @@ export {
   getPageOfPosts,
   getPostBySlug,
   getPostsFailed,
+  noPagesFound,
   invalidPageRequest,
   setPaginatedPosts,
   setPost,
