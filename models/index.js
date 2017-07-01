@@ -4,5 +4,6 @@ require('./enrichment.js');
 require('./posts.js');
 require('./postCategories.js')
 require('./solutions.js');
+require('./telecom.js');
 require('./users.js');
 require('./verification.js');
