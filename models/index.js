@@ -1,4 +1,5 @@
 require('./about.js');
+require('./compliance.js');
 require('./comparison.js');
 require('./enrichment.js');
 require('./healthcare.js');
