@@ -16,8 +16,8 @@ const Solutions = new keystone.List('Solutions', {
     from: 'title',
     unique: true,
   },
-  nocreate: true,
-  nodelete: true,
+  // nocreate: true,
+  // nodelete: true,
 });
 
 Solutions.add({
