@@ -26,68 +26,20 @@ Solutions.add({
     required: true,
     default: 'Solutions',
   },
-  block1: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
-  block2: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
+  block1: { type: Types.Markdown },
+  block2: { type: Types.Markdown },
   block3: {
     column1: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
+      title: { type: String },
+      content: { type: Types.Markdown },
     },
-    column2: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
+    column2: { type: Types.Markdown },
   },
   block4: {
-    title: {
-      type: String,
-    },
-    column1: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    column2: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    column3: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
+    title: { type: String },
+    column1: { type: Types.Markdown },
+    column2: { type: Types.Markdown },
+    column3: { type: Types.Markdown },
   },
 });
 
