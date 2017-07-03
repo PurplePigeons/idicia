@@ -26,48 +26,8 @@ Enrichment.add({
     required: true,
     default: 'Enrichment',
   },
-  section1: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
-  section2: {
-    element1: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element2: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element3: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element4: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-  },
+  section1: { type: Types.Markdown },
+  section2: { type: Types.Markdown },
 });
 
 Enrichment.defaultColumns = 'title';
