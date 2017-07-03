@@ -26,52 +26,14 @@ Telecom.add({
     required: true,
     default: 'Telecom',
   },
-  block1: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
+  block1: { type: Types.Markdown },
   block2: {
-    title: {
-      type: String,
-    },
-    column1: {
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    column2: {
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    content: {
-      type: Types.Markdown,
-    },
+    title: { type: String },
+    column1: { type: Types.Markdown },
+    column2: { type: Types.Markdown },
+    content: { type: Types.Markdown },
   },
-  block4: {
-    title1: {
-      type: String,
-    },
-    content1: {
-      type: Types.Markdown,
-    },
-    title2: {
-      type: String,
-    },
-    content2: {
-      type: Types.Markdown,
-    },
-    title3: {
-      type: String,
-    },
-    content3: {
-      type: Types.Markdown,
-    },
-  },
+  block4: { type: Types.Markdown },
 });
 
 Telecom.defaultColumns = 'title';
