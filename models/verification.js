@@ -26,63 +26,14 @@ Verification.add({
     required: true,
     default: 'Verification',
   },
-  section1: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
+  section1: { type: Types.Markdown },
   section2: {
-    element1: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element2: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element3: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element4: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element5: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    element6: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    }
+    element1: { type: Types.Markdown },
+    element2: { type: Types.Markdown },
+    element3: { type: Types.Markdown },
+    element4: { type: Types.Markdown },
+    element5: { type: Types.Markdown },
+    element6: { type: Types.Markdown },
   },
 });
 
