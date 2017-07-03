@@ -27,55 +27,15 @@ Compliance.add({
     default: 'Compliance',
   },
   column1: {
-    title: {
-      type: String,
-    },
-    section1: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    section2: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    section3: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
-    section4: {
-      title: {
-        type: String,
-      },
-      content: {
-        type: Types.Markdown,
-      },
-    },
+    title: { type: String },
+    section1: { type: Types.Markdown },
+    section2: { type: Types.Markdown },
+    section3: { type: Types.Markdown },
+    section4: { type: Types.Markdown },
+
   },
-  column2: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
-  section1: {
-    content: {
-      type: Types.Markdown,
-    },
-  },
+  column2: {type: Types.Markdown },
+  section1: { type: Types.Markdown },
 });
 
 Compliance.defaultColumns = 'title';
