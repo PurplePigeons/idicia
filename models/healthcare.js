@@ -26,36 +26,19 @@ Healthcare.add({
     required: true,
     default: 'Healthcare',
   },
-  section1: {
-    title: {
-      type: String,
-    },
-    content: {
-      type: Types.Markdown,
-    },
-  },
+  section1: {type: Types.Markdown },
   section2: {
-    content: {
-      type: Types.Markdown,
-    },
+    content: { type: Types.Markdown },
     image: {
       type: Types.CloudinaryImage,
       folder: 'idicia/images/pages/healthcare/',
       allowedTypes: 'image/jpeg,image/svg+xml,image/png',
       autoCleanup : true,
     },
-    stub1: {
-      type: Types.Markdown,
-    },
-    stub2: {
-      type: Types.Markdown,
-    },
-    stub3: {
-      type: Types.Markdown,
-    },
-    example: {
-      type: Types.Markdown,
-    },
+    stub1: { type: Types.Markdown },
+    stub2: { type: Types.Markdown },
+    stub3: { type: Types.Markdown },
+    example: { type: Types.Markdown },
   },
 });
 
