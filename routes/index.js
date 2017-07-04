@@ -60,9 +60,9 @@ exports = module.exports = function(app) {
   // Generalized endpoint for site pages like /solutions, /verification, etc which are simply the
   // name of the schema containing the page data
   app.get(
-    '/api/sitePages/:page',
+    '/api/staticPages/:page',
     keystone.middleware.api,
-    routes.api.sitePages.sitePagesHandler
+    routes.api.staticPages.handler
   );
 
   // Serve the front-end SPA for non-API requests
