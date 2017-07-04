@@ -57,6 +57,12 @@ exports = module.exports = function(app) {
     routes.api.posts.getSlug
   );
 
+  app.get(
+    '/api/sitePages/solutions',
+    keystone.middleware.api,
+    routes.api.sitePages.solutions
+  );
+
   // Serve the front-end SPA for non-API requests
   app.get('*', routes.views.index);
 }
