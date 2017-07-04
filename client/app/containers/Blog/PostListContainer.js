@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 
 // Components
 import BlogPreviewList from 'components/BlogComponents/BlogPreviewList';
-import LoadingIndicator from 'components/LoadingIndicator';
+import Spinner from 'components/Spinner';
 
 // Styling
 import transitions from './transitions.scss';
@@ -53,7 +53,7 @@ export class PostListContainer extends Component {
         transitionAppearTimeout={250}
         transitionEnterTimeout={250}
       >
-        {isLoading ? <LoadingIndicator key="loadingIndicator" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />}
+        {isLoading ? <Spinner key="spinner" /> : posts && <BlogPreviewList key={currentPage} posts={posts[currentPage]} />}
       </CSSTransitionGroup>
     );
   }
