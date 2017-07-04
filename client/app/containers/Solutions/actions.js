@@ -40,10 +40,11 @@ function getPageFailed() {
  *
  * @return {object}    An action object with a type of SET_STATIC_PAGE_DATA and a payload of the page data
  */
-function setStaticPage(page) {
+function setStaticPage(pageName, data) {
   return {
     type: SET_STATIC_PAGE_DATA,
-    page,
+    pageName,
+    data,
   };
 }
 
