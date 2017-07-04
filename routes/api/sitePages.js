@@ -1,14 +1,14 @@
 const async = require('async');
 const keystone = require('keystone');
 
-const Solutions = keystone.list('Solutions');
-
 /**
- * Return data for the Solutions Page
+ * Dynamically return data for the given page. ie. /api/sitePages/Solutions will return the data in
+ * the Solutions schema
  */
-exports.solutions = (req, res) => {
-  Solutions.model
+exports.sitePagesHandler = (req, res) => {
+  const schema = keystone.list(req.params.page);
+  schema.model
     .find()
-    .then(solutions => res.json({ solutions: solutions[0] }))
+    .then(data => res.json({ page: data[0] }))
     .catch(err => res.apiError('database error', err));
 }
