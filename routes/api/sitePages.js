@@ -1,4 +1,3 @@
-const async = require('async');
 const keystone = require('keystone');
 
 /**
