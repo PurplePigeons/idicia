@@ -37,25 +37,6 @@ export default function createRoutes(store) {
       },
     },
     {
-      path: '/about',
-      name: 'about',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/AboutPage/reducer'),
-          import('containers/AboutPage'),
-        ]);
-
-        const renderRoute = loadModule(cb);
-
-        importModules.then(([reducer, component]) => {
-          injectReducer('aboutPage', reducer.default);
-          renderRoute(component);
-        });
-
-        importModules.catch(errorLoading);
-      },
-    },
-    {
       path: '/blog',
       name: 'blog',
       indexRoute: {
