@@ -10,6 +10,7 @@ import * as actions from './actions';
 import {
   makeSelectLoading,
   makeSelectSolutions,
+  makeSelectSuccess,
 } from './selectors';
 
 class Solutions extends Component {
@@ -22,12 +23,14 @@ class Solutions extends Component {
   render() {
     const {
       loading,
+      loadSuccess,
       solutions,
     } = this.props;
 
     return (
       <section>
-        {loading ? <Spinner /> : solutions.title}
+        {loading ? <Spinner /> : solutions && solutions.title}
+        {!loading && !loadSuccess && <strong>Something went wrong. Please refresh or try again later</strong>}
       </section>
     );
   }
@@ -36,11 +39,13 @@ class Solutions extends Component {
 Solutions.propTypes = {
   getStaticPage: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
+  loadSuccess: PropTypes.bool.isRequired,
   solutions: PropTypes.object,
 };
 
 const mapStateToProps = createStructuredSelector({
   loading: makeSelectLoading(),
+  loadSuccess: makeSelectSuccess(),
   solutions: makeSelectSolutions(),
 });
 

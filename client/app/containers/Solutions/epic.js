@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { ajax } from 'rxjs/observable/dom/ajax';
 import { GET_STATIC_PAGE } from './constants';
 import {
@@ -10,7 +11,8 @@ const solutionsPagesEpic = (action$) =>
     .switchMap((action) =>
       ajax.getJSON(`/api/staticPages/${action.page}`)
         .map(({ page }) => setStaticPage(page.title.toLowerCase(), page))
-        .catch(() => getPageFailed())
+        // An observable is expected, so we need to wrap the returned function (can also return in an array)
+        .catch(() => Observable.of(getPageFailed()))
     );
 
 export {
