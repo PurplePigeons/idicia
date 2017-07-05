@@ -22,6 +22,11 @@ class Solutions extends Component {
   }
 }
 
+Solutions.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  solutions: PropTypes.object,
+};
+
 const mapStateToProps = createStructuredSelector({
   loading: makeSelectLoading(),
   solutions: makeSelectSolutions(),
