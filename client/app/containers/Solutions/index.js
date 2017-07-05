@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Spinner from 'components/Spinner';
+import SolutionsTemplate from 'components/SolutionsTemplate';
 
 import * as actions from './actions';
 import {
@@ -28,10 +29,10 @@ class Solutions extends Component {
     } = this.props;
 
     return (
-      <section>
-        {loading ? <Spinner /> : solutions && solutions.title}
+      <div>
         {!loading && !loadSuccess && <strong>Something went wrong. Please refresh or try again later</strong>}
-      </section>
+        {loading ? <Spinner /> : solutions && <SolutionsTemplate data={solutions} />}
+      </div>
     );
   }
 }
