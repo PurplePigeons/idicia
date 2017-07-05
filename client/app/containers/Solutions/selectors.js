@@ -6,7 +6,7 @@ import { createSelector } from 'reselect';
 
 const selectSolutions = (state) => state.get('solutions');
 
-const makeSelectLoadings = () => createSelector(
+const makeSelectLoading = () => createSelector(
   selectSolutions,
   (solutionsState) => solutionsState.get('isLoading')
 );
@@ -53,7 +53,7 @@ const makeSelectCompliance = () => createSelector(
 
 export {
   selectSolutions,
-  makeSelectLoadings,
+  makeSelectLoading,
   makeSelectSuccess,
   makeSelectSolutions,
   makeSelectVerification,

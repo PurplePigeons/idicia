@@ -4,6 +4,11 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import {
+  makeSelectLoading,
+  makeSelectSolutions,
+} from './selectors';
+
 class Solutions extends Component {
   componentWillMount() {
     // Action dispatch to fetch Solutions page data
@@ -18,8 +23,8 @@ class Solutions extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  loading: ,
-  solutions: ,
+  loading: makeSelectLoading(),
+  solutions: makeSelectSolutions(),
 });
 
 export default connect(mapStateToProps)(Solutions);
