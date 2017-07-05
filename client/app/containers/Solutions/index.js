@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import Spinner from 'components/Spinner';
+
 import * as actions from './actions';
 import {
   makeSelectLoading,
@@ -25,6 +27,7 @@ class Solutions extends Component {
 
     return (
       <section>
+        {loading ? <Spinner /> : solutions.title}
       </section>
     );
   }

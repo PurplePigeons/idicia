@@ -9,6 +9,7 @@ import styles from './styles.scss';
 const NavBar = () => (
   <nav className={styles.bar}>
     <LinkButton label="Home" to="/" />
+    <LinkButton label="Solutions" to="/solutions" />
     <LinkButton label="Blog" to="/blog/page/1" />
   </nav>
 );

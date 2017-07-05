@@ -11,7 +11,7 @@ import {
 
 // The initial state of the App
 const initialState = fromJS({
-  isLoading: false,
+  isLoading: true,
   loadSuccess: false,
   solutions: null,
   verification: null,
