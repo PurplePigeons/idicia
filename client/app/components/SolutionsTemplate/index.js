@@ -1,15 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
+import Parser from 'html-react-parser';
+import domToReact from 'html-react-parser/lib/dom-to-react';
 
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
+
+// Alternative to using dangerouslySetInnerHTML that also parses <a> tags into React-Router
+// <Link to={...}/> components
+const renderHtmlWithRouterLinks = (HTMLstring) =>
+  Parser(HTMLstring, {
+    replace: (node) => { // eslint-disable-line consistent-return
+      if (node.name === 'a') {
+        return <Link to={node.attribs.href}>{domToReact(node.children)}</Link>;
+      }
+    },
+  });
 
 const SolutionsTemplate = ({ data }) => {
   // Generate the divs for the 6 distinct solutions
   const solutionExamples = data.block3.column1 && Object.keys(data.block3.column1)
     .filter((key) => key !== 'title')
     .sort() // Since the keys come out in an indeterminate order... #object-things
-    .map((content) => <div key={content} dangerouslySetInnerHTML={{ __html: data.block3.column1[content].html }} />);
+    .map((content) => (
+      <div key={content}>
+        {renderHtmlWithRouterLinks(data.block3.column1[content].html)}
+      </div>
+    ));
 
   const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
   const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
@@ -54,7 +72,9 @@ const SolutionsTemplate = ({ data }) => {
                 </div>
               </div>
               <div className={`${bulma.column} ${bulma['is-one-third']}`}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block3.column2.html }} />
+                <div className={mediumCustomContent}>
+                  {renderHtmlWithRouterLinks(data.block3.column2.html)}
+                </div>
               </div>
             </div>
           </div>
