@@ -15,9 +15,13 @@ import {
 
 class Solutions extends Component {
   componentWillMount() {
-    const { getStaticPage } = this.props;
-    // Action dispatch to fetch Solutions page data
-    getStaticPage('Solutions');
+    const {
+      getStaticPage,
+      solutions,
+    } = this.props;
+
+    // Only fetch page data if not already loaded
+    if (!solutions) getStaticPage('Solutions');
   }
 
   render() {

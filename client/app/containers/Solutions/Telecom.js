@@ -15,9 +15,13 @@ import {
 
 class Telecom extends Component {
   componentWillMount() {
-    const { getStaticPage } = this.props;
-    // Action dispatch to fetch Telecom page data
-    getStaticPage('Telecom');
+    const {
+      getStaticPage,
+      telecom,
+    } = this.props;
+
+    // Only fetch page data if not already loaded
+    if (!telecom) getStaticPage('Telecom');
   }
 
   render() {
