@@ -1,22 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import Parser from 'html-react-parser';
-import domToReact from 'html-react-parser/lib/dom-to-react';
+import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
-
-// Alternative to using dangerouslySetInnerHTML that also parses <a> tags into React-Router
-// <Link to={...}/> components
-const renderHtmlWithRouterLinks = (HTMLstring) =>
-  Parser(HTMLstring, {
-    replace: (node) => { // eslint-disable-line consistent-return
-      if (node.name === 'a') {
-        return <Link to={node.attribs.href}>{domToReact(node.children)}</Link>;
-      }
-    },
-  });
 
 const SolutionsTemplate = ({ data }) => {
   // Generate the divs for the 6 distinct solutions
