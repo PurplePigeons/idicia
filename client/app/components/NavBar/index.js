@@ -10,6 +10,7 @@ const NavBar = () => (
   <nav className={styles.bar}>
     <LinkButton label="Home" to="/" />
     <LinkButton label="Solutions" to="/solutions" />
+    <LinkButton label="Enrichment" to="/enrichment" />
     <LinkButton label="Telecom" to="/telecom" />
     <LinkButton label="Blog" to="/blog/page/1" />
   </nav>
