@@ -12,6 +12,7 @@ const NavBar = () => (
     <LinkButton label="Solutions" to="/solutions" />
     <LinkButton label="Verification" to="/verification" />
     <LinkButton label="Enrichment" to="/enrichment" />
+    <LinkButton label="Comparison" to="/comparison" />
     <LinkButton label="Telecom" to="/telecom" />
     <LinkButton label="Blog" to="/blog/page/1" />
   </nav>

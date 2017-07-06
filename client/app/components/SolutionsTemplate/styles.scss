@@ -6,16 +6,32 @@
 
   > h1 {
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   > p > a {
-    color: #000066 !important;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    color: #3f3f3f;
+    border: 2px solid transparent;
+    border: 2px solid #3f3f3f;
+    padding: 14px 31px;
+    font-size: 13px;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    &:hover {
+      background-color: #3f3f3f;
+      color: #ffffff;
+      border: 2px solid #3f3f3f;
+    }
   }
 }
 
 .mainTitle {
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 // Custom styling so that the six elements will render into two columns on larger screens only

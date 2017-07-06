@@ -142,6 +142,25 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/comparison',
+      name: 'comparison',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Comparison'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '/telecom',
       name: 'telecom',
       getComponent(nextState, cb) {
