@@ -14,7 +14,7 @@ import domToReact from 'html-react-parser/lib/dom-to-react';
 const renderHtmlWithRouterLinks = (HTMLstring) =>
   Parser(HTMLstring, {
     replace: (node) => { // eslint-disable-line consistent-return
-      if (node.name === 'a') {
+      if (node.name === 'a' && node.attribs.href && node.children) {
         return <Link to={node.attribs.href}>{domToReact(node.children)}</Link>;
       }
     },
