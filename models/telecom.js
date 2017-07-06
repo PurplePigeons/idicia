@@ -33,7 +33,7 @@ Telecom.add({
     column2: { type: Types.Markdown },
     content: { type: Types.Markdown },
   },
-  block4: { type: Types.Markdown },
+  block3: { type: Types.Markdown },
 });
 
 Telecom.defaultColumns = 'title';
