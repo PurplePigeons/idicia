@@ -104,12 +104,12 @@ export default function createRoutes(store) {
       },
     },
     {
-      path: '/telecom',
-      name: 'telecom',
+      path: '/verification',
+      name: 'verification',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           import('containers/Solutions/reducer'),
-          import('containers/Solutions/Telecom'),
+          import('containers/Solutions/Verification'),
         ]);
 
         const renderRoute = loadModule(cb);
@@ -129,6 +129,25 @@ export default function createRoutes(store) {
         const importModules = Promise.all([
           import('containers/Solutions/reducer'),
           import('containers/Solutions/Enrichment'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/telecom',
+      name: 'telecom',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Telecom'),
         ]);
 
         const renderRoute = loadModule(cb);

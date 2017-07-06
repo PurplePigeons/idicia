@@ -5,7 +5,16 @@ import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
-const TelecomTemplate = ({ data }) => {
+const VerificationTemplate = ({ data }) => {
+  // Generate the divs for the 4 different Enrichment examples
+  const enrichmentExamples = data.section2 && Object.keys(data.section2)
+    .sort() // Since the keys come out in an indeterminate order... #object-things
+    .map((content) =>
+      <div key={content}>
+        {renderHtmlWithRouterLinks(data.section2[content].html)}
+      </div>
+    );
+
   const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
   const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
   const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
@@ -27,30 +36,16 @@ const TelecomTemplate = ({ data }) => {
       <section className={lightHero}>
         <div className={bulma['hero-body']}>
           <div className={bulma.container}>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
+            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />
           </div>
         </div>
       </section>
       <section className={infoHero}>
         <div className={bulma['hero-body']}>
           <div className={bulma.container}>
-            <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
-            <div className={bulma.columns}>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
-              </div>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
-              </div>
+            <div className={`${bulma.content} ${bulma['is-medium']} ${styles.content} ${styles.columnCluster}`}>
+              {enrichmentExamples}
             </div>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.content.html }}></div>
-          </div>
-        </div>
-      </section>
-      <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />
           </div>
         </div>
       </section>
@@ -58,8 +53,8 @@ const TelecomTemplate = ({ data }) => {
   );
 };
 
-TelecomTemplate.propTypes = {
+VerificationTemplate.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default TelecomTemplate;
+export default VerificationTemplate;
