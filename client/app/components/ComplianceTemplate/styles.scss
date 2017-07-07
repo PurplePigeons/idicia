@@ -1,0 +1,47 @@
+// Custom transforms for content blocks such as centered text and uppercased main headers
+.content {
+  > h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
+
+  > h1, h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  > p > a {
+    color: #000066 !important;
+  }
+}
+
+.mainTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Display a properly centered, scaled, image
+.flexImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin: 25px 0;
+
+  img {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 5px;
+    border-radius: 12px;
+  }
+}
+
+.centeredList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ul {
+    margin: auto;
+  }
+}

@@ -199,6 +199,25 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/compliance',
+      name: 'compliance',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Compliance'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
