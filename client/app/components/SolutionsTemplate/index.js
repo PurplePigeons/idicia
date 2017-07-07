@@ -59,7 +59,7 @@ const SolutionsTemplate = ({ data }) => {
                 </div>
               </div>
               <div className={`${bulma.column} ${bulma['is-one-third']}`}>
-                <div className={mediumCustomContent}>
+                <div className={`${mediumCustomContent} ${styles.verticalCenter}`}>
                   {renderHtmlWithRouterLinks(data.block3.column2.html)}
                 </div>
               </div>
