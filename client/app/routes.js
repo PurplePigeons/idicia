@@ -180,6 +180,25 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/healthcare',
+      name: 'healthcare',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Healthcare'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

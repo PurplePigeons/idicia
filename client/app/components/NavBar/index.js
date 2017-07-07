@@ -14,6 +14,7 @@ const NavBar = () => (
     <LinkButton label="Enrichment" to="/enrichment" />
     <LinkButton label="Comparison" to="/comparison" />
     <LinkButton label="Telecom" to="/telecom" />
+    <LinkButton label="Healthcare" to="/healthcare" />
     <LinkButton label="Blog" to="/blog/page/1" />
   </nav>
 );
