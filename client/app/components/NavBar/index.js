@@ -1,22 +1,21 @@
 import React from 'react';
-
-// Components
-import LinkButton from '../LinkedComponents/LinkButton';
+import { Link } from 'react-router';
 
 // Styles
+import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const NavBar = () => (
-  <nav className={styles.bar}>
-    <LinkButton label="Home" to="/" />
-    <LinkButton label="Solutions" to="/solutions" />
-    <LinkButton label="Verification" to="/verification" />
-    <LinkButton label="Enrichment" to="/enrichment" />
-    <LinkButton label="Comparison" to="/comparison" />
-    <LinkButton label="Telecom" to="/telecom" />
-    <LinkButton label="Healthcare" to="/healthcare" />
-    <LinkButton label="Compliance" to="/compliance" />
-    <LinkButton label="Blog" to="/blog/page/1" />
+  <nav>
+    <Link label="Home" to="/">Home</Link>
+    <Link label="Solutions" to="/solutions">Solutions</Link>
+    <Link label="Verification" to="/verification">Verification</Link>
+    <Link label="Enrichment" to="/enrichment">Enrichment</Link>
+    <Link label="Comparison" to="/comparison">Comparison</Link>
+    <Link label="Telecom" to="/telecom">Telecom</Link>
+    <Link label="Healthcare" to="/healthcare">Healthcare</Link>
+    <Link label="Compliance" to="/compliance">Compliance</Link>
+    <Link label="Blog" to="/blog/page/1">Blog</Link>
   </nav>
 );
 

@@ -12,12 +12,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Helmet from 'react-helmet';
-import {
-  Layout,
-  NavDrawer,
-  Panel,
-  AppBar,
-} from 'react-toolbox';
 
 // Components
 import Footer from 'components/Footer';
@@ -30,13 +24,11 @@ import { toggleDrawer } from './actions';
 import { makeSelectDrawerActive } from './selectors';
 
 // Styling
-import styles from './styles.scss';
-import theme from './themes.scss';
 
 export const App = ({ children, drawerActive, onToggleDrawer }) => (
   // Need to use a nested Layout structure to keep fixed AppBar from going
   // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
-  <div className={styles.appWrapper}>
+  <div>
     <Helmet
       titleTemplate="%s - KeystoneJS + React-Redux!"
       defaultTitle="KeystoneJS + React-Redux!"
@@ -47,26 +39,9 @@ export const App = ({ children, drawerActive, onToggleDrawer }) => (
         },
       ]}
     />
-    <Layout>
-      <Panel>
-        <div className={styles.contentArea}>
-          <AppBar theme={theme} fixed leftIcon="menu" onLeftIconClick={onToggleDrawer} />
-          <Layout>
-            <NavDrawer active={drawerActive} onOverlayClick={onToggleDrawer}>
-              <NavBar />
-            </NavDrawer>
-            <Panel className={styles.contentPanel}>
-              <div className={styles.contentArea}>
-                <div className={styles.contentWrapper}>
-                  {React.Children.toArray(children)}
-                </div>
-                <Footer />
-              </div>
-            </Panel>
-          </Layout>
-        </div>
-      </Panel>
-    </Layout>
+    <NavBar />
+    {React.Children.toArray(children)}
+    <Footer />
   </div>
 );
 
