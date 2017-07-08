@@ -85,6 +85,139 @@ export default function createRoutes(store) {
       ],
     },
     {
+      path: '/solutions',
+      name: 'solutions',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/verification',
+      name: 'verification',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Verification'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/enrichment',
+      name: 'enrichment',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Enrichment'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/comparison',
+      name: 'comparison',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Comparison'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/telecom',
+      name: 'telecom',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Telecom'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/healthcare',
+      name: 'healthcare',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Healthcare'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/compliance',
+      name: 'compliance',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Solutions/reducer'),
+          import('containers/Solutions/Compliance'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('solutions', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

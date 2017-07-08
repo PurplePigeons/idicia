@@ -3505,6 +3505,13 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
+html-dom-parser@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-0.1.1.tgz#4f149f16ce6cc35458fe2f7a9e8187db2c8c1f76"
+  dependencies:
+    domhandler "^2.3.0"
+    htmlparser2 "^3.9.1"
+
 html-encoding-sniffer@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-1.0.1.tgz#79bf7a785ea495fe66165e734153f363ff5437da"
@@ -3537,6 +3544,12 @@ html-minifier@^3.0.1, html-minifier@^3.1.0:
     param-case "2.1.x"
     relateurl "0.2.x"
     uglify-js "2.7.x"
+
+html-react-parser@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-0.3.5.tgz#befe046d75b97f51fbd1be43c12ae6c5563e5e13"
+  dependencies:
+    html-dom-parser "0.1.1"
 
 html-webpack-plugin@2.24.1:
   version "2.24.1"
@@ -6577,10 +6590,6 @@ redux-logger@^2.8.1:
 redux-observable@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.14.0.tgz#f8d70b5a0d0b6883acfaa392894b4f4c51785206"
-
-redux-saga@0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.14.0.tgz#7792bcc9dc57e9ed2484daa95794b154ee472b24"
 
 redux@3.6.0:
   version "3.6.0"

@@ -31,7 +31,12 @@ Solutions.add({
   block3: {
     column1: {
       title: { type: String },
-      content: { type: Types.Markdown },
+      content1: { type: Types.Markdown },
+      content2: { type: Types.Markdown },
+      content3: { type: Types.Markdown },
+      content4: { type: Types.Markdown },
+      content5: { type: Types.Markdown },
+      content6: { type: Types.Markdown },
     },
     column2: { type: Types.Markdown },
   },

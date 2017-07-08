@@ -27,7 +27,12 @@ Enrichment.add({
     default: 'Enrichment',
   },
   section1: { type: Types.Markdown },
-  section2: { type: Types.Markdown },
+  section2: {
+    content1: { type: Types.Markdown },
+    content2: { type: Types.Markdown },
+    content3: { type: Types.Markdown },
+    content4: { type: Types.Markdown },
+  },
 });
 
 Enrichment.defaultColumns = 'title';

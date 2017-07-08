@@ -9,23 +9,21 @@ injectGlobal`
     overflow-y: hidden !important; // Bulma is interfering here and adding an extra scrollbar...
   }
 
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
   #app {
-    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
   }
 
   p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+  label,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li {
+    font-family: Raleway;
     line-height: 1.5em;
   }
 `;
