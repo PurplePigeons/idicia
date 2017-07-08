@@ -15,29 +15,27 @@ const Paginator = ({ currPage, numPages }) => {
     bulma.pagination,
     styles.paginator,
     bulma['is-right'],
-    bulma['is-large']
+    bulma['is-small']
   );
 
   // Visually disable the prev/next buttons when at end ranges
-  const prevStyle = classNames({
-    [bulma['pagination-previous']]: true,
-    [bulma['is-disabled']]: currPage <= 1,
-  });
+  const prevStyle = classNames(
+    bulma['pagination-previous']
+  );
 
-  const nextStyle = classNames({
-    [bulma['pagination-next']]: true,
-    [bulma['is-disabled']]: currPage === numPages,
-  });
+  const nextStyle = classNames(
+    bulma['pagination-next']
+  );
 
   return (
     <nav className={paginatorStyle}>
       {currPage > 1
         ? <Link to={`/blog/page/${currPage - 1}`} className={prevStyle}>Previous</Link>
-        : <Link to={`/blog/page/${currPage}`} className={prevStyle} onClick={(e) => e.preventDefault()}>Previous</Link>
+        : <Link to={`/blog/page/${currPage}`} className={prevStyle} disabled onClick={(e) => e.preventDefault()}>Previous</Link>
       }
       {currPage < numPages
         ? <Link to={`/blog/page/${currPage + 1}`} className={nextStyle}>Next</Link>
-        : <Link to={`/blog/page/${currPage}`} className={nextStyle} onClick={(e) => e.preventDefault()}>Next</Link>
+        : <Link to={`/blog/page/${currPage}`} className={nextStyle} disabled onClick={(e) => e.preventDefault()}>Next</Link>
       }
       <RangeButtons currPage={currPage} numPages={numPages} />
     </nav>
