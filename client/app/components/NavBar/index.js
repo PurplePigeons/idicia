@@ -28,11 +28,11 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           <img src={logo} alt="Idicia" width="112" height="28" />
         </Link>
 
-        <div className={navHamburger} onClick={toggleMobileNav}>
+        <button className={navHamburger} onClick={toggleMobileNav}>
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
 
       <div className={navMenu}>
