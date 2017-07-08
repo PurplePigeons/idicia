@@ -6,9 +6,9 @@ import { createSelector } from 'reselect';
 
 const selectGlobal = (state) => state.get('global');
 
-const makeSelectDrawerActive = () => createSelector(
+const makeSelectMobileNavActive = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.get('drawerActive')
+  (globalState) => globalState.get('mobileNavActive')
 );
 
 const makeSelectLocationState = () => {
@@ -29,6 +29,6 @@ const makeSelectLocationState = () => {
 
 export {
   selectGlobal,
-  makeSelectDrawerActive,
+  makeSelectMobileNavActive,
   makeSelectLocationState,
 };

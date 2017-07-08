@@ -5,23 +5,23 @@
 import { fromJS } from 'immutable';
 
 import {
-  CLOSE_DRAWER,
-  TOGGLE_DRAWER,
+  CLOSE_MOBILE_NAV,
+  TOGGLE_MOBILE_NAV,
 } from './constants';
 
 // The initial state of the App
 const initialState = fromJS({
-  drawerActive: false,
+  mobileNavActive: false,
 });
 
 function appReducer(state = initialState, action) {
   switch (action.type) {
-    case CLOSE_DRAWER:
+    case CLOSE_MOBILE_NAV:
       return state
-        .set('drawerActive', false);
-    case TOGGLE_DRAWER:
+        .set('mobileNavActive', false);
+    case TOGGLE_MOBILE_NAV:
       return state
-        .set('drawerActive', !state.get('drawerActive'));
+        .set('mobileNavActive', !state.get('mobileNavActive'));
     default:
       return state;
   }

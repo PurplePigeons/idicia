@@ -20,12 +20,12 @@ import NavBar from 'components/NavBar';
 // Sadly Scrollbars seems to be breaking useScroll middleware...
 // import { Scrollbars } from 'react-custom-scrollbars';
 
-import { toggleDrawer } from './actions';
-import { makeSelectDrawerActive } from './selectors';
+import * as actions from './actions';
+import { makeSelectMobileNavActive } from './selectors';
 
 // Styling
 
-export const App = ({ children, drawerActive, onToggleDrawer }) => (
+export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
   // Need to use a nested Layout structure to keep fixed AppBar from going
   // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
   <div>
@@ -39,7 +39,7 @@ export const App = ({ children, drawerActive, onToggleDrawer }) => (
         },
       ]}
     />
-    <NavBar />
+    <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
     {React.Children.toArray(children)}
     <Footer />
   </div>
@@ -47,16 +47,12 @@ export const App = ({ children, drawerActive, onToggleDrawer }) => (
 
 App.propTypes = {
   children: PropTypes.node,
-  drawerActive: PropTypes.bool,
-  onToggleDrawer: PropTypes.func,
+  mobileNavActive: PropTypes.bool.isRequired,
+  toggleMobileNav: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  onToggleDrawer: () => dispatch(toggleDrawer()),
-});
-
 const mapStateToProps = createStructuredSelector({
-  drawerActive: makeSelectDrawerActive(),
+  mobileNavActive: makeSelectMobileNavActive(),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withProgressBar(App));
+export default connect(mapStateToProps, actions)(withProgressBar(App));

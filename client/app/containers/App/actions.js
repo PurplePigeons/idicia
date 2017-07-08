@@ -16,28 +16,28 @@
  */
 
 import {
-  CLOSE_DRAWER,
-  TOGGLE_DRAWER,
+  CLOSE_MOBILE_NAV,
+  TOGGLE_MOBILE_NAV,
 } from './constants';
 
 /**
  * Toggle state of the navigation drawer
  *
- * @return {object} An action object with a type of TOGGLE_DRAWER
+ * @return {object} An action object with a type of TOGGLE_MOBILE_NAV
  */
-export function toggleDrawer() {
+export function toggleMobileNav() {
   return {
-    type: TOGGLE_DRAWER,
+    type: TOGGLE_MOBILE_NAV,
   };
 }
 
 /**
  * Directly close the navigation drawer
  *
- * @return {object} An action object with a type of CLOSE_DRAWER
+ * @return {object} An action object with a type of CLOSE_MOBILE_NAV
  */
-export function closeDrawer() {
+export function closeMobileNav() {
   return {
-    type: CLOSE_DRAWER,
+    type: CLOSE_MOBILE_NAV,
   };
 }

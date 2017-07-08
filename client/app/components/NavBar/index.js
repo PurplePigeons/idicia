@@ -1,13 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router';
+import classNames from 'classnames';
 
 // Styles
 import bulma from 'styles/bulma.scss';
 import logo from './full_logo.png';
 
-const NavBar = () => {
+const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
   const hoverableDropdownItem = `${bulma['navbar-item']} ${bulma['has-dropdown']} ${bulma['is-hoverable']}`;
   const dropdownPrimaryLink = `${bulma['navbar-link']} ${bulma['is-active']}`;
+
+  const navMenu = classNames({
+    [bulma['navbar-menu']]: true,
+    [bulma['is-active']]: mobileNavActive,
+  });
+
+  const navHamburger = classNames({
+    [bulma['navbar-burger']]: true,
+    [bulma.burger]: true,
+    [bulma['is-active']]: mobileNavActive,
+  });
 
   return (
     <nav className={bulma.navbar}>
@@ -16,14 +28,14 @@ const NavBar = () => {
           <img src={logo} alt="Idicia" width="112" height="28" />
         </Link>
 
-        <div className={`${bulma['navbar-burger']} ${bulma.burger}`}>
+        <div className={navHamburger} onClick={toggleMobileNav}>
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
 
-      <div className={bulma['navbar-menu']}>
+      <div className={navMenu}>
         <div className={bulma['navbar-start']}>
           <Link to={'/'} className={bulma['navbar-item']}>Home</Link>
 
@@ -38,7 +50,7 @@ const NavBar = () => {
               <Link to={'/compliance'} className={bulma['navbar-item']}>Compliance</Link>
             </div>
           </div>
-          
+
           <div className={hoverableDropdownItem}>
             <Link to={'/resources'} className={dropdownPrimaryLink}>Resources</Link>
             <div className={bulma['navbar-dropdown']}>
