@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 
@@ -66,6 +67,11 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
       </div>
     </nav>
   );
+};
+
+NavBar.propTypes = {
+  mobileNavActive: PropTypes.bool.isRequired,
+  toggleMobileNav: PropTypes.func.isRequired,
 };
 
 export default NavBar;
