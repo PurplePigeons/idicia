@@ -8,6 +8,16 @@ import bulma from 'styles/bulma.scss';
 import logo from './full_logo.png';
 
 const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
+  // Pattern for refs in functional components...
+  let navButton;
+
+  // In addition to toggling the nav menu, we also want the button to lose focus after being used
+  // since the outline is an eyesore, and simply hiding the focus outline with css is bad for usability
+  const handleClick = () => {
+    toggleMobileNav();
+    navButton.blur();
+  };
+
   const hoverableDropdownItem = `${bulma['navbar-item']} ${bulma['has-dropdown']} ${bulma['is-hoverable']}`;
   const dropdownPrimaryLink = `${bulma['navbar-link']} ${bulma['is-active']}`;
 
@@ -29,7 +39,11 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           <img src={logo} alt="Idicia" width="112" height="28" />
         </Link>
 
-        <button className={navHamburger} onClick={toggleMobileNav}>
+        <button
+          className={navHamburger}
+          onClick={handleClick}
+          ref={(button) => { navButton = button; }}
+        >
           <span></span>
           <span></span>
           <span></span>
