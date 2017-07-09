@@ -12,12 +12,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Helmet from 'react-helmet';
-import {
-  Layout,
-  NavDrawer,
-  Panel,
-  AppBar,
-} from 'react-toolbox';
 
 // Components
 import Footer from 'components/Footer';
@@ -26,17 +20,15 @@ import NavBar from 'components/NavBar';
 // Sadly Scrollbars seems to be breaking useScroll middleware...
 // import { Scrollbars } from 'react-custom-scrollbars';
 
-import { toggleDrawer } from './actions';
-import { makeSelectDrawerActive } from './selectors';
+import * as actions from './actions';
+import { makeSelectMobileNavActive } from './selectors';
 
 // Styling
-import styles from './styles.scss';
-import theme from './themes.scss';
 
-export const App = ({ children, drawerActive, onToggleDrawer }) => (
+export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
   // Need to use a nested Layout structure to keep fixed AppBar from going
   // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
-  <div className={styles.appWrapper}>
+  <div>
     <Helmet
       titleTemplate="%s - KeystoneJS + React-Redux!"
       defaultTitle="KeystoneJS + React-Redux!"
@@ -47,41 +39,20 @@ export const App = ({ children, drawerActive, onToggleDrawer }) => (
         },
       ]}
     />
-    <Layout>
-      <Panel>
-        <div className={styles.contentArea}>
-          <AppBar theme={theme} fixed leftIcon="menu" onLeftIconClick={onToggleDrawer} />
-          <Layout>
-            <NavDrawer active={drawerActive} onOverlayClick={onToggleDrawer}>
-              <NavBar />
-            </NavDrawer>
-            <Panel className={styles.contentPanel}>
-              <div className={styles.contentArea}>
-                <div className={styles.contentWrapper}>
-                  {React.Children.toArray(children)}
-                </div>
-                <Footer />
-              </div>
-            </Panel>
-          </Layout>
-        </div>
-      </Panel>
-    </Layout>
+    <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
+    {React.Children.toArray(children)}
+    <Footer />
   </div>
 );
 
 App.propTypes = {
   children: PropTypes.node,
-  drawerActive: PropTypes.bool,
-  onToggleDrawer: PropTypes.func,
+  mobileNavActive: PropTypes.bool.isRequired,
+  toggleMobileNav: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  onToggleDrawer: () => dispatch(toggleDrawer()),
-});
-
 const mapStateToProps = createStructuredSelector({
-  drawerActive: makeSelectDrawerActive(),
+  mobileNavActive: makeSelectMobileNavActive(),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withProgressBar(App));
+export default connect(mapStateToProps, actions)(withProgressBar(App));

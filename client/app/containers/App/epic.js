@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import {
-  closeDrawer,
+  closeMobileNav,
 } from './actions';
 import {
   changeToPage,
@@ -12,9 +12,9 @@ import {
 const closeNavEpic = (action$, store) =>
   action$.ofType(LOCATION_CHANGE)
     .switchMap(() => {
-      const drawerActive = store.getState().getIn(['global', 'drawerActive']);
-      if (drawerActive) {
-        return Observable.of(closeDrawer());
+      const mobileNavActive = store.getState().getIn(['global', 'mobileNavActive']);
+      if (mobileNavActive) {
+        return Observable.of(closeMobileNav());
       }
       return Observable.of();
     });
