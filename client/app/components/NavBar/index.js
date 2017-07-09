@@ -73,6 +73,7 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
             </div>
           </div>
 
+          <Link to={'/blog'} className={bulma['navbar-item']}>Blog</Link>
           <Link to={'/contactus'} className={bulma['navbar-item']}>Contact Us</Link>
         </div>
 
