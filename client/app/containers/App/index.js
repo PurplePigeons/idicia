@@ -25,7 +25,7 @@ import { makeSelectMobileNavActive } from './selectors';
 
 // Styling
 
-export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
+export const App = ({ children, mobileNavActive, router: { location: { pathname } }, toggleMobileNav }) => (
   // Need to use a nested Layout structure to keep fixed AppBar from going
   // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
   <div>
@@ -39,7 +39,7 @@ export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
         },
       ]}
     />
-    <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
+    <NavBar mobileNavActive={mobileNavActive} pathname={pathname} toggleMobileNav={toggleMobileNav} />
     {React.Children.toArray(children)}
     <Footer />
   </div>
@@ -48,6 +48,7 @@ export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
 App.propTypes = {
   children: PropTypes.node,
   mobileNavActive: PropTypes.bool.isRequired,
+  router: PropTypes.object.isRequired,
   toggleMobileNav: PropTypes.func.isRequired,
 };
 

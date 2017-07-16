@@ -16,7 +16,6 @@ const VerificationTemplate = ({ data }) => {
     );
 
   const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
   const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
   const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
 
@@ -24,15 +23,6 @@ const VerificationTemplate = ({ data }) => {
 
   return (
     <div>
-      <section className={mainHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <h1 className={`${bulma.title} ${styles.mainTitle}`}>
-              {data.title}
-            </h1>
-          </div>
-        </div>
-      </section>
       <section className={lightHero}>
         <div className={bulma['hero-body']}>
           <div className={bulma.container}>

@@ -1,0 +1,17 @@
+.enter {
+  opacity: 0.01;
+  transition: all 250ms ease-in-out;
+
+  &.enterActive {
+    opacity: 1;
+  }
+}
+
+.appear {
+  opacity: 0.01;
+  transition: all 250ms ease-in-out;
+
+  &.appearActive {
+    opacity: 1;
+  }
+}
