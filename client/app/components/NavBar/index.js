@@ -67,14 +67,27 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           </div>
 
           <div className={hoverableDropdownItem}>
-            <Link to={'/resources'} className={dropdownPrimaryLink}>Resources</Link>
+            <Link to={'/services'} className={dropdownPrimaryLink}>Services</Link>
             <div className={bulma['navbar-dropdown']}>
-              <Link to={'/learningcenter'} className={bulma['navbar-item']}>Learning Center</Link>
+              <Link to={'/telefied'} className={bulma['navbar-item']}>Telefied</Link>
+              <Link to={'/contact-data-enrichment'} className={bulma['navbar-item']}>Contact Data Enrichment</Link>
+              <Link to={'/wireless-flagging'} className={bulma['navbar-item']}>Wireless Flagging</Link>
+              <Link to={'/caller-id'} className={bulma['navbar-item']}>Caller ID</Link>
+              <Link to={'/telecom-hosting'} className={bulma['navbar-item']}>Telecom Hosting</Link>
             </div>
           </div>
 
-          <Link to={'/blog'} className={bulma['navbar-item']}>Blog</Link>
-          <Link to={'/contactus'} className={bulma['navbar-item']}>Contact Us</Link>
+          <div className={hoverableDropdownItem}>
+            <Link to={'/resources'} className={dropdownPrimaryLink}>Resources</Link>
+            <div className={bulma['navbar-dropdown']}>
+              <Link to={'/developer'} className={bulma['navbar-item']}>Developer</Link>
+              <Link to={'/blog'} className={bulma['navbar-item']}>Blog</Link>
+              <Link to={'/contact-us'} className={bulma['navbar-item']}>Contact Us</Link>
+              <Link to={'/learning-center'} className={bulma['navbar-item']}>Learning Center</Link>
+            </div>
+          </div>
+
+          <Link to={'/about-us'} className={bulma['navbar-item']}>About Us</Link>
         </div>
 
         <div className={bulma['navbar-end']}>
