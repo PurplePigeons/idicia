@@ -1,5 +1,28 @@
+// @import 'node_modules/bulma/sass/utilities/_all';
+
+$navbar-background: transparent;
+// $navbar-item: white;
+
 $link: #000066;
 $primary: #3D3D8A;
 $info: #FFD21E;
+
+.navbar {
+  &.is-transparent {
+    background-color: transparent;
+    // .navbar-dropdown {
+    //   background-color: transparent;
+    //   box-shadow: none;
+    //   a.navbar-item {
+    //     &:hover {
+    //       background-color: transparent;
+    //     }
+    //     &.is-active {
+    //       background-color: transparent;
+    //     }
+    //   }
+    // }
+  }
+}
 
 @import "node_modules/bulma/bulma";

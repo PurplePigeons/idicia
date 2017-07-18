@@ -56,7 +56,7 @@ const NavBar = ({ mobileNavActive, pathname, toggleMobileNav }) => {
   return (
     <section className={dynamicHero}>
       <div className={bulma['hero-head']}>
-        <nav className={bulma.navbar}>
+        <nav className={`${bulma.navbar} ${bulma['is-transparent']}`}>
           <div className={bulma['navbar-brand']}>
             <Link to={'/'} className={bulma['navbar-item']}>
               <img src={logo} alt="Idicia" width="112" height="28" />
