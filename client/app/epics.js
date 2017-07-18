@@ -7,7 +7,7 @@ import {
   getBlogPostBySlugEpic,
   getPageOfPostsEpic,
 } from 'containers/Blog/epic';
-import { solutionsPagesEpic } from 'containers/Solutions/epic';
+import { staticPagesEpic } from 'containers/StaticPages/epic';
 import * as blogApi from 'utils/blogApi';
 
 const rootEpic = (...args) => combineEpics(
@@ -15,7 +15,7 @@ const rootEpic = (...args) => combineEpics(
   fetchPageEpic,
   getBlogPostBySlugEpic,
   getPageOfPostsEpic,
-  solutionsPagesEpic,
+  staticPagesEpic,
 )(...args, { blogApi });
 
 export default rootEpic;

@@ -24,7 +24,7 @@ HomePage.add({
   title: {
     type: String,
     required: true,
-    default: 'Home Page',
+    default: 'Home',
   },
   welcome: { type: Types.Markdown },
   quickFacts: {

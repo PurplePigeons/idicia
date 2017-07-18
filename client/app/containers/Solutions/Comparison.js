@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import ComparisonTemplate from 'components/ComparisonTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectComparison,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Comparison extends Component {
   componentWillMount() {

@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import TelecomTemplate from 'components/TelecomTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectTelecom,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Telecom extends Component {
   componentWillMount() {

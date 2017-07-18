@@ -6,7 +6,7 @@ import {
   setStaticPage,
 } from './actions';
 
-const solutionsPagesEpic = (action$) =>
+const staticPagesEpic = (action$) =>
   action$.ofType(GET_STATIC_PAGE)
     .switchMap((action) =>
       ajax.getJSON(`/api/staticPages/${action.page}`)
@@ -16,5 +16,5 @@ const solutionsPagesEpic = (action$) =>
     );
 
 export {
-  solutionsPagesEpic,
+  staticPagesEpic,
 };

@@ -9,10 +9,11 @@ import {
   SET_STATIC_PAGE_DATA,
 } from './constants';
 
-// The initial state of the App
+// The initial state of our static pages
 const initialState = fromJS({
   isLoading: true,
   loadSuccess: false,
+  home: null,
   solutions: null,
   verification: null,
   enrichment: null,
@@ -22,7 +23,7 @@ const initialState = fromJS({
   compliance: null,
 });
 
-function solutionsReducer(state = initialState, action) {
+function staticPageReducer(state = initialState, action) {
   switch (action.type) {
     case GET_STATIC_PAGE:
       console.log(`Fetching page ${action.page}`);
@@ -45,4 +46,4 @@ function solutionsReducer(state = initialState, action) {
   }
 }
 
-export default solutionsReducer;
+export default staticPageReducer;

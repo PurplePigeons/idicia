@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import HealthcareTemplate from 'components/HealthcareTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectHealthcare,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Healthcare extends Component {
   componentWillMount() {
