@@ -18,8 +18,11 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
     navButton.blur();
   };
 
-  const hoverableDropdownItem = `${bulma['navbar-item']} ${bulma['has-dropdown']} ${bulma['is-hoverable']}`;
-  const dropdownPrimaryLink = `${bulma['navbar-link']} ${bulma['is-active']}`;
+  const hoverableDropdownItem = classNames(
+    bulma['navbar-item'],
+    bulma['has-dropdown'],
+    bulma['is-hoverable'],
+  );
 
   const navMenu = classNames({
     [bulma['navbar-menu']]: true,
@@ -55,7 +58,7 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           <Link to={'/'} className={bulma['navbar-item']}>Home</Link>
 
           <div className={hoverableDropdownItem}>
-            <Link to={'/solutions'} className={dropdownPrimaryLink}>Solutions</Link>
+            <Link to={'/solutions'} className={bulma['navbar-link']}>Solutions</Link>
             <div className={bulma['navbar-dropdown']}>
               <Link to={'/verification'} className={bulma['navbar-item']}>Verification</Link>
               <Link to={'/enrichment'} className={bulma['navbar-item']}>Enrichment</Link>
@@ -67,14 +70,27 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           </div>
 
           <div className={hoverableDropdownItem}>
-            <Link to={'/resources'} className={dropdownPrimaryLink}>Resources</Link>
+            <Link to={'/services'} className={bulma['navbar-link']}>Services</Link>
             <div className={bulma['navbar-dropdown']}>
-              <Link to={'/learningcenter'} className={bulma['navbar-item']}>Learning Center</Link>
+              <Link to={'/telefied'} className={bulma['navbar-item']}>Telefied</Link>
+              <Link to={'/contact-data-enrichment'} className={bulma['navbar-item']}>Contact Data Enrichment</Link>
+              <Link to={'/wireless-flagging'} className={bulma['navbar-item']}>Wireless Flagging</Link>
+              <Link to={'/caller-id'} className={bulma['navbar-item']}>Caller ID</Link>
+              <Link to={'/telecom-hosting'} className={bulma['navbar-item']}>Telecom Hosting</Link>
             </div>
           </div>
 
-          <Link to={'/blog'} className={bulma['navbar-item']}>Blog</Link>
-          <Link to={'/contactus'} className={bulma['navbar-item']}>Contact Us</Link>
+          <div className={hoverableDropdownItem}>
+            <Link to={'/resources'} className={bulma['navbar-link']}>Resources</Link>
+            <div className={bulma['navbar-dropdown']}>
+              <Link to={'/developer'} className={bulma['navbar-item']}>Developer</Link>
+              <Link to={'/blog'} className={bulma['navbar-item']}>Blog</Link>
+              <Link to={'/contact-us'} className={bulma['navbar-item']}>Contact Us</Link>
+              <Link to={'/learning-center'} className={bulma['navbar-item']}>Learning Center</Link>
+            </div>
+          </div>
+
+          <Link to={'/about-us'} className={bulma['navbar-item']}>About Us</Link>
         </div>
 
         <div className={bulma['navbar-end']}>
