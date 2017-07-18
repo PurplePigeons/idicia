@@ -5,6 +5,7 @@ injectGlobal`
   html,
   body {
     background-color: whitesmoke;
+    overflow-y: hidden;
   }
 
   #app {
