@@ -9,22 +9,18 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 // Components
-import LandingHeader from 'components/LandingHeader';
-import Blog from 'containers/Blog';
 
-const HomePage = ({ routeParams }) => (
+const HomePage = () => (
   <article>
     <Helmet
-      title="Home Page"
+      title="Home"
       meta={[
         {
           name: 'description',
-          content: 'A React-Redux and RxJS-powered platform built on top of KeystoneJS CMS and NodeJS',
+          content: 'IDICIA: Real-Time Identity Verification & Fraud Prevention',
         },
       ]}
     />
-    <LandingHeader compact={false} />
-    {/* <Blog prefetchPage={parseInt(routeParams.pageId, 10)} /> */}
   </article>
 );
 

@@ -2,6 +2,7 @@ require('./compliance.js');
 require('./comparison.js');
 require('./enrichment.js');
 require('./healthcare.js');
+require('./homePage.js');
 require('./posts.js');
 require('./postCategories.js')
 require('./solutions.js');

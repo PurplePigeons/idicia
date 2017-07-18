@@ -10,6 +10,7 @@ exports.handler = (req, res) => {
 
   // Prevent unwanted access to non-static-page schemas, such as User
   const allowedStaticPages = [
+    'HomePage',
     'Solutions',
     'Verification',
     'Enrichment',

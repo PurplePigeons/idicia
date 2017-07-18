@@ -26,16 +26,14 @@ import { makeSelectMobileNavActive } from './selectors';
 // Styling
 
 export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
-  // Need to use a nested Layout structure to keep fixed AppBar from going
-  // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
   <div>
     <Helmet
-      titleTemplate="%s - KeystoneJS + React-Redux!"
-      defaultTitle="KeystoneJS + React-Redux!"
+      titleTemplate="%s - IDICIA: Real-Time Identity Verification & Fraud Prevention"
+      defaultTitle="IDICIA: Real-Time Identity Verification & Fraud Prevention"
       meta={[
         {
           name: 'description',
-          content: 'A meshing of KeystoneJS CMS and MXSTBR\'s React.js Boilerplate',
+          content: 'IDICIA: Real-Time Identity Verification & Fraud Prevention',
         },
       ]}
     />
