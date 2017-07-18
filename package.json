@@ -13,9 +13,11 @@
   },
   "scripts": {
     "start": "node server.js",
+    "start:dev": "nodemon server.js",
     "start:prod": "cross-env NODE_ENV=production node server.js"
   },
   "devDependencies": {
-    "cross-env": "^3.2.3"
+    "cross-env": "^3.2.3",
+    "nodemon": "^1.11.0"
   }
 }
