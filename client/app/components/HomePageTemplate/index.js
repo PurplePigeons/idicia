@@ -13,8 +13,23 @@ const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
 const mainHero = `${boldHero} ${bulma['is-fullheight']} ${bulma['is-primary']}`;
 const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
 const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
+const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
 
-const HomePageTemplate = () => (
+const quickFacts = (data) => data && Object.keys(data)
+    .filter((key) => key !== 'title')
+    .reverse() // Since the keys come out reversed of the order we want...
+    .map((key) => (
+      <div className={bulma.columns} key={key}>
+        <div className={`${bulma.column} ${bulma['is-one-third-tablet']} ${bulma['has-text-left']}`} >
+          {renderHtmlWithRouterLinks(data[key].title.html)}
+        </div>
+        <div className={`${bulma.column} ${bulma['has-text-left']}`} >
+          {renderHtmlWithRouterLinks(data[key].text.html)}
+        </div>
+      </div>
+    ));
+
+const HomePageTemplate = ({ data }) => (
   <section>
     <Helmet
       title="Home"
@@ -31,6 +46,23 @@ const HomePageTemplate = () => (
           <h1 className={`${bulma.title} ${styles.mainTitle}`}>
             Welcome to Idicia
           </h1>
+        </div>
+      </div>
+    </section>
+    <section className={lightHero}>
+      <div className={bulma['hero-body']}>
+        <div className={bulma.container}>
+          <div className={bulma.columns}>
+            <div className={bulma.column}>
+              <div className={`${mediumCustomContent} ${bulma['has-text-right']}`} dangerouslySetInnerHTML={{ __html: data.welcome.html }} />
+            </div>
+            <div className={`${bulma.column} ${styles.leftBorder}`}>
+              <div className={mediumCustomContent}><h2>{data.quickFacts.title}</h2></div>
+              <div className={`${mediumCustomContent} ${styles.verticalCenter}`}>
+                {quickFacts(data.quickFacts)}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

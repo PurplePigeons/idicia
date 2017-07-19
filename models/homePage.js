@@ -30,30 +30,34 @@ HomePage.add({
   quickFacts: {
     title: { type: String },
     idicia: { 
-      title: { type: String },
+      title: { type: Types.Markdown },
       text: { type: Types.Markdown },
     },
     telified: { 
-      title: { type: String },
+      title: { type: Types.Markdown },
       text: { type: Types.Markdown },
     },
     digDeeper: { 
-      title: { type: String },
+      title: { type: Types.Markdown },
       text: { type: Types.Markdown },
     },
     customers: { 
-      title: { type: String },
+      title: { type: Types.Markdown },
       text: { type: Types.Markdown },
     },
     info: { 
-      title: { type: String },
+      title: { type: Types.Markdown },
       text: { type: Types.Markdown },
     },
   },
-  whatWeDo: { type: Types.Markdown },
+  whatWeDo: { 
+    text: { type: Types.Markdown },
+    verification: { type: Types.Markdown },
+    enrichment: { type: Types.Markdown },
+    comparison: { type: Types.Markdown },
+  },
   columns: {
-    verification: {
-      title: { type: String },
+    contact: {
       icon: {
         type: Types.CloudinaryImage,
         folder: 'idicia/images/pages/homePage/',
@@ -62,8 +66,7 @@ HomePage.add({
       },
       text: { type: Types.Markdown },
     },
-    enrichment: {
-      title: { type: String },
+    solutions: {
       icon: {
         type: Types.CloudinaryImage,
         folder: 'idicia/images/pages/homePage/',
@@ -72,8 +75,7 @@ HomePage.add({
       },
       text: { type: Types.Markdown },
     },
-    comparison: {
-      title: { type: String },
+    resources: {
       icon: {
         type: Types.CloudinaryImage,
         folder: 'idicia/images/pages/homePage/',

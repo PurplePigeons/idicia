@@ -1,12 +1,9 @@
 // Custom transforms for content blocks such as centered text and uppercased main headers
 .content {
-  > h1, h2, p {
-    text-align: center;
-  }
-
-  > h1 {
+  > h1, h2 {
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
   }
 
   > p > a {
@@ -58,4 +55,11 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+.leftBorder {
+  @media (min-width: 769px) {
+	  border-left: 3px solid rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+  }
 }
