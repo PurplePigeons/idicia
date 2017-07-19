@@ -42,7 +42,11 @@ const iconColumns = (data) => data && Object.keys(data)
     .reverse()
     .map((key) => (
       <div className={`${bulma.column} ${bulma['has-text-centered']} ${styles.buttonLink}`} key={key}>
-        <img className={`${bulma.image} ${bulma['is-96x96']} ${styles.centeredImage}`} src={data[key].icon.secure_url} />
+        <div className={styles.flexCenter}>
+          <figure className={`${bulma.image} ${bulma['is-96x96']}`}>
+            <img src={data[key].icon.secure_url} alt={`${key}-icon`} />
+          </figure>
+        </div>
         {renderHtmlWithRouterLinks(data[key].text.html)}
       </div>
     ));

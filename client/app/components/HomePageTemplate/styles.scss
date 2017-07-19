@@ -83,8 +83,9 @@
   > p {
     margin-top: 35px;
   }
-} 
+}
 
-.centeredImage {
-  margin: auto;
+.flexCenter {
+  display: flex;
+  justify-content: center;
 }
