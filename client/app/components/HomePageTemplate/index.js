@@ -20,7 +20,7 @@ const quickFacts = (data) => data && Object.keys(data)
     .reverse() // Since the keys come out reversed of the order we want...
     .map((key) => (
       <div className={bulma.columns} key={key}>
-        <div className={`${bulma.column} ${bulma['is-one-third-tablet']} ${bulma['has-text-left']}`} >
+        <div className={`${bulma.column} ${bulma['is-one-third-tablet']} ${bulma['has-text-left']} ${styles.factLink}`} >
           {renderHtmlWithRouterLinks(data[key].title.html)}
         </div>
         <div className={`${bulma.column} ${bulma['has-text-left']}`} >

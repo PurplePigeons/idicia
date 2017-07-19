@@ -6,21 +6,16 @@
     text-align: center;
   }
 
+  .factLink > p > a,
   > p > a {
     transition: all .3s ease-in-out;
-    background-color: transparent;
-    color: #3f3f3f;
-    border: 2px solid transparent;
-    border: 2px solid #3f3f3f;
-    padding: 14px 31px;
-    font-size: 13px;
+    color: #000066 !important;
     font-weight: bold;
-    word-wrap: break-word;
+    text-transform: uppercase;
+    word-wrap: normal;
 
     &:hover {
-      background-color: #3f3f3f;
-      color: #ffffff;
-      border: 2px solid #3f3f3f;
+      color: #FFD21E !important;
     }
   }
 }
