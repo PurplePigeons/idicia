@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Slider from 'react-slick';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
@@ -51,6 +52,37 @@ const iconColumns = (data) => data && Object.keys(data)
       </div>
     ));
 
+const LeftNav = (props) =>
+  <button className={styles.leftNav} onClick={props.onClick}>
+    <span className={bulma.icon} aria-hidden="true">
+      <i className="fa fa-arrow-left fa-4x"></i>
+    </span>
+  </button>;
+
+const RightNav = (props) =>
+  <button className={styles.rightNav} onClick={props.onClick}>
+    <span className={bulma.icon} aria-hidden="true">
+      <i className="fa fa-arrow-right fa-4x"></i>
+    </span>
+  </button>;
+
+const sliderSettings = {
+  prevArrow: <LeftNav />,
+  nextArrow: <RightNav />,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  fade: true,
+  pauseOnHover: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  draggable: false,
+  className: 'center',
+  centerMode: true,
+  infinite: true,
+  centerPadding: '100px',
+};
+
 const HomePageTemplate = ({ data }) => (
   <section>
     <Helmet
@@ -68,6 +100,42 @@ const HomePageTemplate = ({ data }) => (
           <h1 className={`${bulma.title} ${styles.mainTitle}`}>
             Welcome to Idicia
           </h1>
+        </div>
+      </div>
+    </section>
+    <section className={`${boldHero} ${bulma['is-large']} ${bulma['is-info']}`}>
+      <div className={bulma['hero-body']}>
+        <div className={bulma.container}>
+          <Slider {...sliderSettings}>
+            <div className={`${bulma.container} ${styles.sliderContainer}`}>
+              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                <h1>Real-time Encrypted Transactions for Identity Verification, Fraud Prevention, and Regulatory Compliance</h1>
+                <h3>Every month we process millions of transactions across billions of miles... Each in a fraction of a second</h3>
+                <p><a>Learn More</a></p>
+              </div>
+            </div>
+            <div className={`${bulma.container} ${styles.sliderContainer}`}>
+              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                <h1>Verify Consumer Account Applications Against Telecom Billing and Credit Bureau Files</h1>
+                <h3>Our KYC (Know Your Customer) compliant mechanisms help you verify applicants our competition can't find</h3>
+                <p><a>Learn More</a></p>
+              </div>
+            </div>
+            <div className={`${bulma.container} ${styles.sliderContainer}`}>
+              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                <h1>Drill Deeper into Consumer Provided Data and Reduce your Fraud Exposure</h1>
+                <h3>Cross-verify multiple data points to ensure your new account data is accurate</h3>
+                <p><a>Learn More</a></p>
+              </div>
+            </div>
+            <div className={`${bulma.container} ${styles.sliderContainer}`}>
+              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                <h1>Real-time, Authoritative, Direct Access to Data in the Cloud</h1>
+                <h3>Fast, easy to use API access via SOAP or REST provides you simple access to Information as a Service (IaaS)</h3>
+                <p><a>Learn More</a></p>
+              </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </section>

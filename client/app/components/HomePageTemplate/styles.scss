@@ -89,3 +89,27 @@
   display: flex;
   justify-content: center;
 }
+
+.leftNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2.5%;
+  z-index: 2;
+  color: #363636;
+  @media (max-width: 770px) {
+	  display: none;
+  }
+}
+
+.rightNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5%;
+  z-index: 2;
+  color: #363636;
+  @media (max-width: 770px) {
+	  display: none;
+  }
+}
