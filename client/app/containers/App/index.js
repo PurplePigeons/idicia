@@ -18,7 +18,7 @@ import Footer from 'components/Footer';
 import withProgressBar from 'components/ProgressBar';
 import NavBar from 'components/NavBar';
 // Sadly Scrollbars seems to be breaking useScroll middleware...
-import { Scrollbars } from 'react-custom-scrollbars';
+// import { Scrollbars } from 'react-custom-scrollbars';
 
 import * as actions from './actions';
 import { makeSelectMobileNavActive } from './selectors';
@@ -38,11 +38,11 @@ export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
       ]}
     />
 
-    <Scrollbars autoHeight autoHeightMax={'100vh'} autoHide>
+    {/* <Scrollbars autoHeight autoHeightMax={'100vh'} autoHide> */}
       <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
       {React.Children.toArray(children)}
       <Footer />
-    </Scrollbars>
+    {/* </Scrollbars> */}
   </div>
 );
 
