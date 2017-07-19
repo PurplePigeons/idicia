@@ -29,6 +29,15 @@ const quickFacts = (data) => data && Object.keys(data)
       </div>
     ));
 
+const whatWeDoLinks = (data) => data && Object.keys(data)
+    .filter((key) => key !== 'text')
+    .reverse()
+    .map((key) => (
+      <div className={`${bulma.column} ${bulma['is-one-third-tablet']} ${bulma['has-text-centered']} ${styles.buttonLink}`} key={key}>
+        {renderHtmlWithRouterLinks(data[key].html)}
+      </div>
+    ));
+
 const HomePageTemplate = ({ data }) => (
   <section>
     <Helmet
@@ -62,6 +71,16 @@ const HomePageTemplate = ({ data }) => (
                 {quickFacts(data.quickFacts)}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className={infoHero}>
+      <div className={bulma['hero-body']}>
+        <div className={bulma.container}>
+          <div className={`${mediumCustomContent} ${bulma['has-text-centered']}`} dangerouslySetInnerHTML={{ __html: data.whatWeDo.text.html }} />
+          <div className={bulma.columns}>
+            {whatWeDoLinks(data.whatWeDo)}
           </div>
         </div>
       </div>

@@ -58,3 +58,27 @@
     padding-left: 20px;
   }
 }
+
+.buttonLink {
+  margin-top: 100px;
+
+  > p > a {
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    color: #3f3f3f !important;
+    border: 2px solid transparent;
+    border: 2px solid #3f3f3f;
+    padding: 14px 31px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    &:hover {
+      background-color: #3f3f3f;
+      color: #ffffff !important;
+      border: 2px solid #3f3f3f;
+    }
+  }
+} 
