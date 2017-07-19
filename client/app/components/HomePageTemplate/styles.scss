@@ -60,8 +60,6 @@
 }
 
 .buttonLink {
-  margin-top: 100px;
-
   > p > a {
     transition: all .3s ease-in-out;
     background-color: transparent;
@@ -81,4 +79,12 @@
       border: 2px solid #3f3f3f;
     }
   }
+
+  > p {
+    margin-top: 35px;
+  }
 } 
+
+.centeredImage {
+  margin: auto;
+}

@@ -38,6 +38,15 @@ const whatWeDoLinks = (data) => data && Object.keys(data)
       </div>
     ));
 
+const iconColumns = (data) => data && Object.keys(data)
+    .reverse()
+    .map((key) => (
+      <div className={`${bulma.column} ${bulma['has-text-centered']} ${styles.buttonLink}`} key={key}>
+        <img className={`${bulma.image} ${bulma['is-96x96']} ${styles.centeredImage}`} src={data[key].icon.secure_url} />
+        {renderHtmlWithRouterLinks(data[key].text.html)}
+      </div>
+    ));
+
 const HomePageTemplate = ({ data }) => (
   <section>
     <Helmet
@@ -81,6 +90,15 @@ const HomePageTemplate = ({ data }) => (
           <div className={`${mediumCustomContent} ${bulma['has-text-centered']}`} dangerouslySetInnerHTML={{ __html: data.whatWeDo.text.html }} />
           <div className={bulma.columns}>
             {whatWeDoLinks(data.whatWeDo)}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className={lightHero}>
+      <div className={bulma['hero-body']}>
+        <div className={bulma.container}>
+          <div className={bulma.columns}>
+            {iconColumns(data.columns)}
           </div>
         </div>
       </div>
