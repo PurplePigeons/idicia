@@ -19,7 +19,10 @@ import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
+
+// Relative CSS imports
 import 'sanitize.css/sanitize.css';
+import 'animate.css/animate.css';
 
 // Import root app
 import App from 'containers/App';

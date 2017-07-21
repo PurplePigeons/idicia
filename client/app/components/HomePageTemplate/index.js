@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Slider from 'react-slick';
 import Reveal from 'react-reveal';
-import 'animate.css/animate.css';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
