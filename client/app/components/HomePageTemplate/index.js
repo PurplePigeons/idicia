@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Slider from 'react-slick';
+import Reveal from 'react-reveal';
+import 'animate.css/animate.css';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
@@ -97,7 +99,7 @@ const HomePageTemplate = ({ data }) => (
     <section className={mainHero}>
       <div className={bulma['hero-body']}>
         <div className={bulma.container}>
-          <h1 className={`${bulma.title} ${styles.mainTitle}`}>
+          <h1 className={`${bulma.title} ${styles.mainTitle} animated fadeInUp`} ref={(title) => { this.titleText = title; }}>
             Welcome to Idicia
           </h1>
         </div>
@@ -106,36 +108,38 @@ const HomePageTemplate = ({ data }) => (
     <section className={`${boldHero} ${bulma['is-large']} ${bulma['is-info']}`}>
       <div className={bulma['hero-body']}>
         <div className={bulma.container}>
-          <Slider {...sliderSettings}>
-            <div className={`${bulma.container} ${styles.sliderContainer}`}>
-              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                <h1>Real-time Encrypted Transactions for Identity Verification, Fraud Prevention, and Regulatory Compliance</h1>
-                <h3>Every month we process millions of transactions across billions of miles... Each in a fraction of a second</h3>
-                <p><a>Learn More</a></p>
+          <Reveal effect="animated fadeIn">
+            <Slider {...sliderSettings}>
+              <div className={`${bulma.container} ${styles.sliderContainer}`}>
+                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                  <h1>Real-time Encrypted Transactions for Identity Verification, Fraud Prevention, and Regulatory Compliance</h1>
+                  <h3>Every month we process millions of transactions across billions of miles... Each in a fraction of a second</h3>
+                  <p><a>Learn More</a></p>
+                </div>
               </div>
-            </div>
-            <div className={`${bulma.container} ${styles.sliderContainer}`}>
-              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                <h1>Verify Consumer Account Applications Against Telecom Billing and Credit Bureau Files</h1>
-                <h3>Our KYC (Know Your Customer) compliant mechanisms help you verify applicants our competition can't find</h3>
-                <p><a>Learn More</a></p>
+              <div className={`${bulma.container} ${styles.sliderContainer}`}>
+                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                  <h1>Verify Consumer Account Applications Against Telecom Billing and Credit Bureau Files</h1>
+                  <h3>Our KYC (Know Your Customer) compliant mechanisms help you verify applicants our competition can't find</h3>
+                  <p><a>Learn More</a></p>
+                </div>
               </div>
-            </div>
-            <div className={`${bulma.container} ${styles.sliderContainer}`}>
-              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                <h1>Drill Deeper into Consumer Provided Data and Reduce your Fraud Exposure</h1>
-                <h3>Cross-verify multiple data points to ensure your new account data is accurate</h3>
-                <p><a>Learn More</a></p>
+              <div className={`${bulma.container} ${styles.sliderContainer}`}>
+                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                  <h1>Drill Deeper into Consumer Provided Data and Reduce your Fraud Exposure</h1>
+                  <h3>Cross-verify multiple data points to ensure your new account data is accurate</h3>
+                  <p><a>Learn More</a></p>
+                </div>
               </div>
-            </div>
-            <div className={`${bulma.container} ${styles.sliderContainer}`}>
-              <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                <h1>Real-time, Authoritative, Direct Access to Data in the Cloud</h1>
-                <h3>Fast, easy to use API access via SOAP or REST provides you simple access to Information as a Service (IaaS)</h3>
-                <p><a>Learn More</a></p>
+              <div className={`${bulma.container} ${styles.sliderContainer}`}>
+                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+                  <h1>Real-time, Authoritative, Direct Access to Data in the Cloud</h1>
+                  <h3>Fast, easy to use API access via SOAP or REST provides you simple access to Information as a Service (IaaS)</h3>
+                  <p><a>Learn More</a></p>
+                </div>
               </div>
-            </div>
-          </Slider>
+            </Slider>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -143,36 +147,40 @@ const HomePageTemplate = ({ data }) => (
       <div className={bulma['hero-body']}>
         <div className={bulma.container}>
           <div className={bulma.columns}>
-            <div className={bulma.column}>
+            <Reveal effect="animated fadeIn" className={bulma.column}>
               <div className={`${mediumCustomContent} ${bulma['has-text-right']}`} dangerouslySetInnerHTML={{ __html: data.welcome.html }} />
-            </div>
-            <div className={`${bulma.column} ${styles.leftBorder}`}>
+            </Reveal>
+            <Reveal effect="animated fadeIn" className={`${bulma.column} ${styles.leftBorder}`}>
               <div className={mediumCustomContent}><h2>{data.quickFacts.title}</h2></div>
               <div className={`${mediumCustomContent} ${styles.verticalCenter}`}>
                 {quickFacts(data.quickFacts)}
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
     </section>
     <section className={infoHero}>
       <div className={bulma['hero-body']}>
-        <div className={bulma.container}>
-          <div className={`${mediumCustomContent} ${bulma['has-text-centered']}`} dangerouslySetInnerHTML={{ __html: data.whatWeDo.text.html }} />
-          <div className={bulma.columns}>
-            {whatWeDoLinks(data.whatWeDo)}
+        <Reveal effect="animated fadeInLeft">
+          <div className={bulma.container}>
+            <div className={`${mediumCustomContent} ${bulma['has-text-centered']}`} dangerouslySetInnerHTML={{ __html: data.whatWeDo.text.html }} />
+            <div className={bulma.columns}>
+              {whatWeDoLinks(data.whatWeDo)}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
     <section className={lightHero}>
       <div className={bulma['hero-body']}>
-        <div className={bulma.container}>
-          <div className={bulma.columns}>
-            {iconColumns(data.columns)}
+        <Reveal effect="animated fadeInRight">
+          <div className={bulma.container}>
+            <div className={bulma.columns}>
+              {iconColumns(data.columns)}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   </section>
