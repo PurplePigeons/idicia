@@ -113,3 +113,9 @@
 	  display: none;
   }
 }
+
+// Transparent gradient overlay of image :D
+.landingHero {
+  background-image: -webkit-linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
+  background-image: linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
+}

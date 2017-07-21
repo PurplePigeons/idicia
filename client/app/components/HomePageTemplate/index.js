@@ -12,7 +12,7 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-const mainHero = `${boldHero} ${bulma['is-fullheight']} ${bulma['is-primary']}`;
+const mainHero = `${bulma.hero} ${bulma['is-fullheight']} ${bulma['is-primary']} ${styles.landingHero}`;
 const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
 const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
 const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
