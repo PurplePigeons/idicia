@@ -65,6 +65,12 @@ exports = module.exports = function(app) {
     routes.api.staticPages.handler
   );
 
+  app.get(
+    '/api/sliders',
+    keystone.middleware.api,
+    routes.api.sliders.allSliders
+  );
+
   // Serve the front-end SPA for non-API requests
   app.get('*', routes.views.index);
 }

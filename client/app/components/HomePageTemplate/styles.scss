@@ -1,0 +1,121 @@
+// Custom transforms for content blocks such as centered text and uppercased main headers
+.content {
+  > h1, h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .factLink > p > a,
+  > p > a {
+    transition: all .3s ease-in-out;
+    color: #000066 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    word-wrap: normal;
+
+    &:hover {
+      color: #FFD21E !important;
+    }
+  }
+}
+
+.mainTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Custom styling so that the six elements will render into two columns on larger screens only
+.columnCluster {
+  display: flex;
+  flex-flow: row wrap;
+
+  div {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 10px;
+    @media (min-width: 769px) {
+	    width: 50%;
+	  }
+
+    > h2 > a {
+      color: #000066 !important;
+    }
+  }
+}
+
+.verticalCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.leftBorder {
+  @media (min-width: 769px) {
+	  border-left: 3px solid rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+  }
+}
+
+.buttonLink {
+  > p > a {
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    color: #3f3f3f !important;
+    border: 2px solid transparent;
+    border: 2px solid #3f3f3f;
+    padding: 14px 31px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    &:hover {
+      background-color: #3f3f3f;
+      color: #ffffff !important;
+      border: 2px solid #3f3f3f;
+    }
+  }
+
+  > p {
+    margin-top: 35px;
+  }
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.leftNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2.5%;
+  z-index: 2;
+  color: #363636;
+  @media (max-width: 770px) {
+	  display: none;
+  }
+}
+
+.rightNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5%;
+  z-index: 2;
+  color: #363636;
+  @media (max-width: 770px) {
+	  display: none;
+  }
+}
+
+// Transparent gradient overlay of image :D
+.landingHero {
+  background-image: -webkit-linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
+  background-image: linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
+}

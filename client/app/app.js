@@ -7,7 +7,7 @@
 
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
-import 'rxjs';
+// import 'rxjs';
 // Needed polyfill for smoothscrolling (only supported by Firefox for now)
 import { polyfill as smoothScrollPolyfill } from 'smoothscroll-polyfill';
 
@@ -19,7 +19,10 @@ import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
+
+// Relative CSS imports
 import 'sanitize.css/sanitize.css';
+import 'animate.css/animate.css';
 
 // Import root app
 import App from 'containers/App';

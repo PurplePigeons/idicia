@@ -22,14 +22,14 @@ export default function createRoutes(store) {
       name: 'home',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/HomePage/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/HomePage'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('home', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -89,14 +89,14 @@ export default function createRoutes(store) {
       name: 'solutions',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -108,14 +108,14 @@ export default function createRoutes(store) {
       name: 'verification',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Verification'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -127,14 +127,14 @@ export default function createRoutes(store) {
       name: 'enrichment',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Enrichment'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -146,14 +146,14 @@ export default function createRoutes(store) {
       name: 'comparison',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Comparison'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -165,14 +165,14 @@ export default function createRoutes(store) {
       name: 'telecom',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Telecom'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -184,14 +184,14 @@ export default function createRoutes(store) {
       name: 'healthcare',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Healthcare'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 
@@ -203,14 +203,14 @@ export default function createRoutes(store) {
       name: 'compliance',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Solutions/reducer'),
+          import('containers/StaticPages/reducer'),
           import('containers/Solutions/Compliance'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, component]) => {
-          injectReducer('solutions', reducer.default);
+          injectReducer('staticPages', reducer.default);
           renderRoute(component);
         });
 

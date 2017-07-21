@@ -2,8 +2,10 @@ require('./compliance.js');
 require('./comparison.js');
 require('./enrichment.js');
 require('./healthcare.js');
+require('./homePage.js');
 require('./posts.js');
 require('./postCategories.js')
+require('./slider.js');
 require('./solutions.js');
 require('./telecom.js');
 require('./users.js');

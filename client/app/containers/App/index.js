@@ -17,8 +17,6 @@ import Helmet from 'react-helmet';
 import Footer from 'components/Footer';
 import withProgressBar from 'components/ProgressBar';
 import NavBar from 'components/NavBar';
-// Sadly Scrollbars seems to be breaking useScroll middleware...
-import { Scrollbars } from 'react-custom-scrollbars';
 
 import * as actions from './actions';
 import { makeSelectMobileNavActive } from './selectors';
@@ -26,25 +24,21 @@ import { makeSelectMobileNavActive } from './selectors';
 // Styling
 
 export const App = ({ children, mobileNavActive, toggleMobileNav }) => (
-  // Need to use a nested Layout structure to keep fixed AppBar from going
-  // over the NavDrawer, at least until 2.x beta of react-toolbox is in production
   <div>
     <Helmet
-      titleTemplate="%s - KeystoneJS + React-Redux!"
-      defaultTitle="KeystoneJS + React-Redux!"
+      titleTemplate="%s - IDICIA: Real-Time Identity Verification & Fraud Prevention"
+      defaultTitle="IDICIA: Real-Time Identity Verification & Fraud Prevention"
       meta={[
         {
           name: 'description',
-          content: 'A meshing of KeystoneJS CMS and MXSTBR\'s React.js Boilerplate',
+          content: 'IDICIA: Real-Time Identity Verification & Fraud Prevention',
         },
       ]}
     />
 
-    <Scrollbars autoHeight autoHeightMax={'100vh'} autoHide>
-      <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
-      {React.Children.toArray(children)}
-      <Footer />
-    </Scrollbars>
+    <NavBar mobileNavActive={mobileNavActive} toggleMobileNav={toggleMobileNav} />
+    {React.Children.toArray(children)}
+    <Footer />
   </div>
 );
 

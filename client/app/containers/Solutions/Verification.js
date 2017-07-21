@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import VerificationTemplate from 'components/VerificationTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectVerification,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Verification extends Component {
   componentWillMount() {

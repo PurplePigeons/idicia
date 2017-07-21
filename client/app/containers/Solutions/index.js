@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import SolutionsTemplate from 'components/SolutionsTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectSolutions,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Solutions extends Component {
   componentWillMount() {

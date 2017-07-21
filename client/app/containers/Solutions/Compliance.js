@@ -6,12 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import Spinner from 'components/Spinner';
 import ComplianceTemplate from 'components/ComplianceTemplate';
 
-import * as actions from './actions';
+import * as actions from '../StaticPages/actions';
 import {
   makeSelectLoading,
   makeSelectCompliance,
   makeSelectSuccess,
-} from './selectors';
+} from '../StaticPages/selectors';
 
 class Compliance extends Component {
   componentWillMount() {
