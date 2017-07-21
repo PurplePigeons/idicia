@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 import Slider from 'react-slick';
 import Reveal from 'react-reveal';
@@ -52,6 +53,16 @@ const iconColumns = (data) => data && Object.keys(data)
         {renderHtmlWithRouterLinks(data[key].text.html)}
       </div>
     ));
+
+const sliders = (data) => data.map((slider, idx) => (
+  <div className={`${bulma.container} ${styles.sliderContainer}`} key={idx}>
+    <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+      <h1>{slider.headline}</h1>
+      <h3>{slider.secondaryText}</h3>
+      <Link to={slider.link.route}>{slider.link.text}</Link>
+    </div>
+  </div>
+));
 
 const LeftNav = (props) =>
   <button className={styles.leftNav} onClick={props.onClick}>
@@ -109,34 +120,7 @@ const HomePageTemplate = ({ data }) => (
         <div className={bulma.container}>
           <Reveal effect="animated fadeIn">
             <Slider {...sliderSettings}>
-              <div className={`${bulma.container} ${styles.sliderContainer}`}>
-                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                  <h1>Real-time Encrypted Transactions for Identity Verification, Fraud Prevention, and Regulatory Compliance</h1>
-                  <h3>Every month we process millions of transactions across billions of miles... Each in a fraction of a second</h3>
-                  <p><a>Learn More</a></p>
-                </div>
-              </div>
-              <div className={`${bulma.container} ${styles.sliderContainer}`}>
-                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                  <h1>Verify Consumer Account Applications Against Telecom Billing and Credit Bureau Files</h1>
-                  <h3>Our KYC (Know Your Customer) compliant mechanisms help you verify applicants our competition can't find</h3>
-                  <p><a>Learn More</a></p>
-                </div>
-              </div>
-              <div className={`${bulma.container} ${styles.sliderContainer}`}>
-                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                  <h1>Drill Deeper into Consumer Provided Data and Reduce your Fraud Exposure</h1>
-                  <h3>Cross-verify multiple data points to ensure your new account data is accurate</h3>
-                  <p><a>Learn More</a></p>
-                </div>
-              </div>
-              <div className={`${bulma.container} ${styles.sliderContainer}`}>
-                <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
-                  <h1>Real-time, Authoritative, Direct Access to Data in the Cloud</h1>
-                  <h3>Fast, easy to use API access via SOAP or REST provides you simple access to Information as a Service (IaaS)</h3>
-                  <p><a>Learn More</a></p>
-                </div>
-              </div>
+              {sliders(data.sliders)}
             </Slider>
           </Reveal>
         </div>

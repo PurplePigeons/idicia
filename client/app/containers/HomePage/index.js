@@ -22,12 +22,12 @@ import {
 class HomePage extends Component {
   componentWillMount() {
     const {
-      getStaticPage,
+      getHomePage,
       homePage,
     } = this.props;
 
     // Only fetch page data if not already loaded
-    if (!homePage) getStaticPage('homePage');
+    if (!homePage) getHomePage();
   }
 
   render() {
@@ -47,7 +47,7 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-  getStaticPage: PropTypes.func.isRequired,
+  getHomePage: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loadSuccess: PropTypes.bool.isRequired,
   homePage: PropTypes.object,

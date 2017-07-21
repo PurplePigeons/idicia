@@ -6,6 +6,7 @@ import { fromJS } from 'immutable';
 import {
   GET_STATIC_PAGE,
   GET_PAGE_FAILED,
+  SET_HOME_PAGE,
   SET_STATIC_PAGE_DATA,
 } from './constants';
 
@@ -35,6 +36,12 @@ function staticPageReducer(state = initialState, action) {
       return state
         .set('isLoading', false)
         .set('loadSuccess', false);
+    case SET_HOME_PAGE:
+      console.log('Updating home page data (page + sliders)');
+      return state
+        .set('home', action.data)
+        .set('isLoading', false)
+        .set('loadSuccess', true);
     case SET_STATIC_PAGE_DATA:
       console.log(`Updating data for page: ${action.pageName}`);
       return state
