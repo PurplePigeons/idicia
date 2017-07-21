@@ -115,17 +115,20 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    <section className={`${boldHero} ${bulma['is-large']} ${bulma['is-info']}`}>
-      <div className={bulma['hero-body']}>
-        <div className={bulma.container}>
-          <Reveal effect="animated fadeIn">
-            <Slider {...sliderSettings}>
-              {sliders(data.sliders)}
-            </Slider>
-          </Reveal>
+    {
+      data.sliders &&
+      <section className={`${boldHero} ${bulma['is-large']} ${bulma['is-info']}`}>
+        <div className={bulma['hero-body']}>
+          <div className={bulma.container}>
+            <Reveal effect="animated fadeIn">
+              <Slider {...sliderSettings}>
+                {sliders(data.sliders)}
+              </Slider>
+            </Reveal>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    }
     <section className={lightHero}>
       <div className={bulma['hero-body']}>
         <div className={bulma.container}>
