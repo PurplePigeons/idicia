@@ -3,7 +3,6 @@
  */
 
 import {
-  GET_HOME_PAGE,
   GET_PAGE_FAILED,
   SET_HOME_PAGE,
   GET_STATIC_PAGE,
@@ -21,17 +20,6 @@ function getStaticPage(page) {
   return {
     type: GET_STATIC_PAGE,
     page,
-  };
-}
-
-/**
- * Fetch data for the home page
- *
- * @return {object}    An action object with a type of GET_HOME_PAGE
- */
-function getHomePage() {
-  return {
-    type: GET_HOME_PAGE,
   };
 }
 
@@ -76,7 +64,6 @@ function setStaticPage(pageName, data) {
 }
 
 export {
-  getHomePage,
   getStaticPage,
   getPageFailed,
   setHomePage,

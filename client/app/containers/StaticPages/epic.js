@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { ajax } from 'rxjs/observable/dom/ajax';
-import { GET_STATIC_PAGE, GET_HOME_PAGE } from './constants';
+import { GET_STATIC_PAGE } from './constants';
 import {
   getPageFailed,
   setHomePage,
@@ -9,6 +9,7 @@ import {
 
 const staticPagesEpic = (action$) =>
   action$.ofType(GET_STATIC_PAGE)
+    .filter((action) => action.page !== 'homePage')
     .switchMap((action) =>
       ajax.getJSON(`/api/staticPages/${action.page}`)
         .map(({ page }) => setStaticPage(page.title.toLowerCase(), page))
@@ -17,7 +18,8 @@ const staticPagesEpic = (action$) =>
     );
 
 const homePageEpic = (action$) =>
-  action$.ofType(GET_HOME_PAGE)
+  action$.ofType(GET_STATIC_PAGE)
+    .filter((action) => action.page === 'homePage')
     .switchMap(() =>
       Observable.forkJoin(
         ajax.getJSON('/api/staticPages/homePage'),
