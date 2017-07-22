@@ -7,6 +7,8 @@ import styles from './styles.scss';
 
 import LargeLogo from './white.png';
 
+const year = new Date().getFullYear();
+
 const Footer = () => (
   <footer className={`${bulma.hero} ${bulma['is-dark']} ${bulma['is-medium']}`}>
     <div className={bulma['hero-body']}>
@@ -52,6 +54,18 @@ const Footer = () => (
                   <Link to={'/Contact Us'} className={styles.capsLink}>Contact Us</Link>
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className={`${bulma.container} ${styles.creditFooter}`}>
+          <div className={`${bulma.content} ${styles.darkTextFix}`}>
+            <div className={styles.footerEnd}>
+              <p>
+                {`©${year} IDICIA, the Real-time Division of PacificEast. All Rights Reserved.`}
+              </p>
+              <p>
+                <Link to={'/privacy-policy'}>Privacy Policy</Link>
+              </p>
             </div>
           </div>
         </div>
