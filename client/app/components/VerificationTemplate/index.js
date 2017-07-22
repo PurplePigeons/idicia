@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
+// Components
+import ContactUsCTA from '../ContactUsCTA';
+
+// Styles
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
@@ -49,6 +53,7 @@ const VerificationTemplate = ({ data }) => {
           </div>
         </div>
       </section>
+      <ContactUsCTA />
     </div>
   );
 };

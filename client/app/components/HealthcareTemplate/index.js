@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import ContactUsCTA from '../ContactUsCTA';
+
+// Styles
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
@@ -52,6 +56,7 @@ const HealthcareTemplate = ({ data }) => {
           </div>
         </div>
       </section>
+      <ContactUsCTA />
     </div>
   );
 };
