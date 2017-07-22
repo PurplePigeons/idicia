@@ -1,0 +1,58 @@
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footerColumn1 {
+  composes: footerColumn;
+  justify-content: flex-start;
+}
+
+.footerColumn2 {
+  composes: footerColumn;
+}
+
+.footerColumn3 {
+  composes: footerColumn;
+  height: 80%;
+}
+
+.hr {
+  width: 5rem;
+  margin: 1.5rem auto;
+}
+
+.darkTextFix {
+  color: white !important;
+  h3 {
+    color: #FFD21E;
+  }
+  a {
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    &:hover {
+      color: #FFD21E !important;
+    }
+  }
+}
+
+.info {
+  color: #FFD21E;
+}
+
+.footerLogo {
+  margin: 0 auto 3rem auto;
+}
+
+.creditFooter {
+  padding-top: 3rem;
+}
+
+.footerEnd {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  flex: 1;
+}
