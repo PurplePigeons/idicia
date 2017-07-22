@@ -80,7 +80,9 @@ const HomePageTemplate = ({ data }) => (
         </Reveal>
       </div>
     </section>
-    <ContactUsCTA />
+    <Reveal effect="animated fadeIn">
+      <ContactUsCTA />
+    </Reveal>
   </section>
 );
 
