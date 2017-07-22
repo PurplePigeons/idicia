@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
 
 // Components
+import ContactUsCTA from '../ContactUsCTA';
 import Carousel from './Carousel';
 import QuickFacts from './QuickFacts';
 import ServiceIcons from './ServiceIcons';
@@ -79,6 +80,7 @@ const HomePageTemplate = ({ data }) => (
         </Reveal>
       </div>
     </section>
+    <ContactUsCTA />
   </section>
 );
 
