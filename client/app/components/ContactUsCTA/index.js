@@ -29,7 +29,7 @@ const ContactUsCTA = () => {
       <div className={bulma['hero-body']}>
         <div className={bulma.container}>
           <h2 className={`${bulma.title} ${styles.contactUsTitle}`}>{titleOptions[titleSelector]}</h2>
-          <h3>{taglineOptions[taglineSelector]}</h3>
+          <h3 className={styles.contactUsText}>{taglineOptions[taglineSelector]}</h3>
           <Link to={`/${contactUsRoute}`} className={styles.contactUsButton}>{buttonText}</Link>
         </div>
       </div>
