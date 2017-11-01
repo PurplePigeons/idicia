@@ -142,7 +142,28 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           </Link>
         </div>
 
-        <div className={bulma["navbar-end"]} />
+        <div className={bulma["navbar-end"]}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ flex: 1, padding: "10px" }}>
+              <a>
+                <i
+                  className="fa fa-facebook-official fa-2x"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+            <div style={{ flex: 1, padding: "10px" }}>
+              <a>
+                <i className="fa fa-twitter-square fa-2x" aria-hidden="true" />
+              </a>
+            </div>
+            <div style={{ flex: 1, padding: "10px" }}>
+              <a>
+                <i className="fa fa-linkedin-square fa-2x" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
