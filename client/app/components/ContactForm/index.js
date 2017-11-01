@@ -16,7 +16,11 @@ const ContactForm = () => {
           "is-offset-one-quarter"
         ]}`}
       >
-        <div className={bulma["card-content"]} style={{ padding: "0 2.5rem" }}>
+        <div
+          className={bulma["card-content"]}
+          style={{ padding: "0 2.5rem", textAlign: "center" }}
+        >
+          <h1 className={bulma.title}>Contact Us</h1>
           <div className={bulma.content}>
             <form
               onSubmit={e => {
