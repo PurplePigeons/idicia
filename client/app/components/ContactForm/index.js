@@ -71,7 +71,7 @@ const ContactForm = () => {
                 <div style={{ flex: 1, textAlign: "center" }}>
                   <button
                     style={{
-                      border: "1px solid #ddd",
+                      // border: "1px solid #ddd",
                       backgroundColor: "#3d3d8a",
                       color: "#fff",
                       borderRadius: "6px",
@@ -79,10 +79,11 @@ const ContactForm = () => {
                       height: "40px",
                       marginTop: "35px",
                       marginBottom: "10px",
-                      cursor: "pointer"
+                      cursor: "pointer",
+                      boxShadow: "1px 1px 4px rgba(0, 0, 0, 0.6)"
                     }}
                   >
-                    Contact Us
+                    Submit
                   </button>
                 </div>
               </div>
