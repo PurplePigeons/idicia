@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import Reveal from "react-reveal";
+
 // Styles
 import bulma from "styles/bulma.scss";
+import styles from "./threeblock.scss";
 
 // components
 import H2 from "../../H2";
@@ -48,7 +51,7 @@ export default class ThreeBlock extends Component {
             </div>
           </div>
         ) : (
-          <div>{this.props.children}</div>
+          <div className={styles.content}>{this.props.children}</div>
         )}
       </div>
     );
