@@ -54,7 +54,7 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
       </div>
 
       <div className={navMenu}>
-        <div className={bulma['navbar-start']}>
+        <div className={`${bulma.columns} ${bulma['navbar-start']} ${bulma['is-multiline']} ${bulma['is-centered']}`}>
           <Link to={'/'} className={bulma['navbar-item']}>Home</Link>
 
           <div className={hoverableDropdownItem}>

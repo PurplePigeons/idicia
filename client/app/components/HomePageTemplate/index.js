@@ -84,7 +84,6 @@ const HomePageTemplate = ({ data }) => (
         and hoping to hear back, we understand that just isn’t
         good enough sometimes. We’re here to help on an actual
         phone and email(if you prefer).
-
         </div>
         <div className={`${bulma.column} ${bulma['is-3']}`}>
         Easy Implementation: <br />
@@ -99,7 +98,6 @@ const HomePageTemplate = ({ data }) => (
         With the ability to access telecom data literally seconds after
         it is updated, we ensure highly accurate data.
         </div>
-        
       </div>
     </section>
     <section>
@@ -126,46 +124,6 @@ const HomePageTemplate = ({ data }) => (
           internal crock-pot like data files. This helps you get answers
           that others can’t provide, giving you a competitive edge.
         </div>
-      </div>
-    </section>
-    {
-      data.sliders &&
-      <section className={`${boldHero} ${bulma['is-large']} ${bulma['is-info']}`}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <Reveal effect="animated fadeIn">
-              <Carousel slides={data.sliders} />
-            </Reveal>
-          </div>
-        </div>
-      </section>
-    }
-    <section className={lightHero}>
-      <div className={bulma['hero-body']}>
-        <div className={bulma.container}>
-          <div className={bulma.columns}>
-            <Reveal effect="animated fadeIn" className={bulma.column}>
-              <div className={`${mediumCustomContent} ${bulma['has-text-right']}`} dangerouslySetInnerHTML={{ __html: data.welcome.html }} />
-            </Reveal>
-            <Reveal effect="animated fadeIn" className={`${bulma.column} ${styles.leftBorder}`}>
-              <QuickFacts {...data.quickFacts} contentStyle={mediumCustomContent} />
-            </Reveal>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className={infoHero}>
-      <div className={bulma['hero-body']}>
-        <Reveal effect="animated fadeInLeft">
-          <WhatWeDo {...data.whatWeDo} contentStyle={mediumCustomContent} />
-        </Reveal>
-      </div>
-    </section>
-    <section className={lightHero}>
-      <div className={bulma['hero-body']}>
-        <Reveal effect="animated fadeInRight">
-          <ServiceIcons {...data.columns} />
-        </Reveal>
       </div>
     </section>
     <Reveal effect="animated fadeIn">
