@@ -15,6 +15,7 @@ import H2 from "../H2";
 import H3 from "../H3";
 import ThreeBlock from "./components/ThreeBlock";
 import TimeCounter from "./components/TimeCounter";
+import GettingStarted from "./components/GettingStarted";
 
 // Styles
 import bulma from "styles/bulma.scss"; // eslint-disable-line import/first
@@ -204,8 +205,13 @@ const HomePageTemplate = ({ data }) => (
         </ThreeBlock>
       </div>
     </section>
-    <section>What do you need to get started?</section>
-    <section className={styles.textCenter}>
+    <section className={`${bulma.container}`}>
+      <div className={styles.textCenter}>
+        <h1 className={bulma.title}>What do you need to get started?</h1>
+      </div>
+      <GettingStarted />
+    </section>
+    <section className={`${bulma.container} ${styles.textCenter}`}>
       <h1
         className={bulma.title}
         style={{ color: "#FFCC00", fontWeight: "bolder" }}
