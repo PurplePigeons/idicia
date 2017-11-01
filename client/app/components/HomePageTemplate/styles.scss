@@ -1,28 +1,29 @@
 // Custom transforms for content blocks such as centered text and uppercased main headers
 .content {
-  > h1, h2 {
+  > h1,
+  h2 {
     text-transform: uppercase;
     font-weight: bold;
   }
 
   .factLink > p > a,
   > p > a {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: #000066 !important;
     font-weight: bold;
     text-transform: uppercase;
     word-wrap: normal;
 
     &:hover {
-      color: #FFD21E !important;
+      color: #ffd21e !important;
     }
   }
 }
 
 .titleContent {
   text-align: center;
-  align: center;
-  color: #fff838;
+  background-color: rgba(61, 61, 138, 0.8);
+  border-radius: 5px;
 }
 
 .textCenter {
@@ -33,13 +34,14 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  color: #fff838;
 }
 
 .subTitle {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff838;  
+  color: #fff838;
 }
 
 // Custom styling so that the six elements will render into two columns on larger screens only
@@ -52,8 +54,8 @@
     width: 100%;
     padding: 25px 10px;
     @media (min-width: 769px) {
-	    width: 50%;
-	  }
+      width: 50%;
+    }
 
     > h2 > a {
       color: #000066 !important;
@@ -70,14 +72,14 @@
 
 .leftBorder {
   @media (min-width: 769px) {
-	  border-left: 3px solid rgba(0, 0, 0, 0.2);
+    border-left: 3px solid rgba(0, 0, 0, 0.2);
     padding-left: 20px;
   }
 }
 
 .buttonLink {
   > p > a {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: transparent;
     color: #3f3f3f !important;
     border: 2px solid transparent;
@@ -114,7 +116,7 @@
   z-index: 2;
   color: #363636;
   @media (max-width: 770px) {
-	  display: none;
+    display: none;
   }
 }
 
@@ -126,16 +128,15 @@
   z-index: 2;
   color: #363636;
   @media (max-width: 770px) {
-	  display: none;
+    display: none;
   }
 }
 
 // Transparent gradient overlay of image :D
 .landingHero {
-  background-image: url('./idiciaLandingImage.jpeg');
-  background-image: url('./idiciaLandingImage.jpeg');
-  background-size: contain;
-  background-size: 100%;
+  background-image: url("./idiciaLandingImage.jpeg");
+  background-image: url("./idiciaLandingImage.jpeg");
+  background-size: cover;
 }
 
 //ScrollTOButton
@@ -144,23 +145,27 @@
 
   display: block;
   margin: 30px auto;
-  padding: 0;
+  width: 30%;
+  min-width: 300px;
+  height: 40px;
 
   overflow: hidden;
 
   border-width: 0;
   outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  
-  background-color: #2ecc71;
-  color: #ecf0f1;
-  
-  transition: background-color .3s;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+  background-color: #3d3d8a;
+  color: #fff838;
+
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-.btn:hover, .btn:focus {
-  background-color: Blue;
+.btn:hover,
+.btn:focus {
+  background-color: #3939b9;
 }
 
 .btn > * {
@@ -174,19 +179,19 @@
 
 .btn:before {
   content: "";
-  
+
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   display: block;
   width: 0;
   padding-top: 0;
-    
+
   border-radius: 100%;
-  
-  background-color: rgba(236, 240, 241, .3);
-  
+
+  background-color: rgba(236, 240, 241, 0.3);
+
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -197,7 +202,6 @@
 .btn:active:before {
   width: 120%;
   padding-top: 120%;
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
-}
 
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
