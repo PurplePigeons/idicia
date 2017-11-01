@@ -11,6 +11,9 @@ import QuickFacts from "./QuickFacts";
 import ServiceIcons from "./ServiceIcons";
 import WhatWeDo from "./WhatWeDo";
 import H1 from "../H1";
+import H2 from "../H2";
+import H3 from "../H3";
+import ThreeBlock from "./components/ThreeBlock";
 
 // Styles
 import bulma from "styles/bulma.scss"; // eslint-disable-line import/first
@@ -104,32 +107,45 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    <section>
-      <div> What We Do </div>
+    <section className={styles.textCenter}>
+      <H1> What We Do </H1>
       <div
         className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
           "is-centered"
         ]} ${styles.textCenter}`}
       >
-        <div className={`${bulma.column} ${bulma["is-3"]} `}>
-          Awesome support: <br />
+        <ThreeBlock
+          backgroundImage={require("./Support-20%.png")}
+          icon="fa-phone"
+          title="Awesome support"
+        >
           While the support standard in our industry is an email and hoping to
           hear back, we understand that just isn’t good enough sometimes. We’re
-          here to help on an actual phone and email(if you prefer).
-        </div>
-        <div className={`${bulma.column} ${bulma["is-3"]}`}>
-          Easy Implementation: <br />
+          here to help on an actual phone and email(if you prefer).<br />
+          <a>Learn more</a>
+        </ThreeBlock>
+
+        <ThreeBlock
+          backgroundImage={require("./Implementation-20%.png")}
+          icon="fa-code"
+          title="Easy Implementation"
+        >
           Using the RESTful standard for our API and extensive documentation
           will help you get up and running with our data enrichment services
-          fast and with less hassle.
-        </div>
-        <div className={`${bulma.column} ${bulma["is-3"]}`}>
-          Database LookupsFast & Accurate Data: <br />
+          fast and with less hassle.<br />
+          <a>Learn more</a>
+        </ThreeBlock>
+        <ThreeBlock
+          backgroundImage={require("./dataBackground-20%.png")}
+          icon="fa-database"
+          title="Fast & Accurate Data"
+        >
           With data centers strategically positioned across the country we
           ensure fast response times on our data services. With the ability to
           access telecom data literally seconds after it is updated, we ensure
-          highly accurate data.
-        </div>
+          highly accurate data.<br />
+          <a>Learn more</a>
+        </ThreeBlock>
       </div>
     </section>
     <section>What do you need to get started?</section>
