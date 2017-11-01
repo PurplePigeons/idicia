@@ -122,7 +122,7 @@ const HomePageTemplate = ({ data }) => (
           While the support standard in our industry is an email and hoping to
           hear back, we understand that just isn’t good enough sometimes. We’re
           here to help on an actual phone and email(if you prefer).<br />
-          <a>Learn more</a>
+          <a style={{ textDecoration: "underline" }}>Learn more</a>
         </ThreeBlock>
 
         <ThreeBlock
@@ -133,7 +133,7 @@ const HomePageTemplate = ({ data }) => (
           Using the RESTful standard for our API and extensive documentation
           will help you get up and running with our data enrichment services
           fast and with less hassle.<br />
-          <a>Learn more</a>
+          <a style={{ textDecoration: "underline" }}>Learn more</a>
         </ThreeBlock>
         <ThreeBlock
           backgroundImage={require("./dataBackground-20%.png")}
@@ -144,7 +144,7 @@ const HomePageTemplate = ({ data }) => (
           ensure fast response times on our data services. With the ability to
           access telecom data literally seconds after it is updated, we ensure
           highly accurate data.<br />
-          <a>Learn more</a>
+          <a style={{ textDecoration: "underline" }}>Learn more</a>
         </ThreeBlock>
       </div>
     </section>
