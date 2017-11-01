@@ -211,7 +211,10 @@ const HomePageTemplate = ({ data }) => (
       </div>
       <GettingStarted />
     </section>
-    <section className={`${bulma.container} ${styles.textCenter}`}>
+    <section
+      className={`${bulma.container} ${styles.textCenter}`}
+      style={{ marginTop: "40px" }}
+    >
       <h1
         className={bulma.title}
         style={{ color: "#FFCC00", fontWeight: "bolder" }}
