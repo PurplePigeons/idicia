@@ -3,7 +3,6 @@
   > h1, h2 {
     text-transform: uppercase;
     font-weight: bold;
-    text-align: center;
   }
 
   .factLink > p > a,
@@ -20,10 +19,27 @@
   }
 }
 
+.titleContent {
+  text-align: center;
+  align: center;
+  color: #fff838;
+}
+
+.textCenter {
+  text-align: center;
+}
+
 .mainTitle {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.subTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff838;  
 }
 
 // Custom styling so that the six elements will render into two columns on larger screens only
@@ -116,6 +132,72 @@
 
 // Transparent gradient overlay of image :D
 .landingHero {
-  background-image: -webkit-linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
-  background-image: linear-gradient(141deg, rgba(38, 50, 110, 0.6) 0%, rgba(61, 61, 138, 0.6) 71%, rgba(80, 63, 161, 0.6) 100%),linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./idiciaLandingImage.jpg');
+  background-image: url('./idiciaLandingImage.jpeg');
+  background-image: url('./idiciaLandingImage.jpeg');
+  background-size: contain;
+  background-size: 100%;
 }
+
+//ScrollTOButton
+.btn {
+  position: relative;
+
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: Blue;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+

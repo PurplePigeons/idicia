@@ -26,7 +26,9 @@ HomePage.add({
     required: true,
     default: 'Home',
   },
-  welcome: { type: Types.Markdown },
+  welcome: { 
+    title : {type: Types.Markdown },
+    text: { type: Types.Markdown },
   quickFacts: {
     title: { type: String },
     idicia: { 

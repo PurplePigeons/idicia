@@ -1,0 +1,12 @@
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.icon {
+	padding-top: 3px
+}
+.input {
+	padding: 0px, 12px, 4px, 0; 
+}

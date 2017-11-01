@@ -224,7 +224,7 @@
     "lodash": "4.17.2",
     "minimist": "1.2.0",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
+    "react": "15.5.4",
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "15.4.1",
     "react-helmet": "3.2.2",
