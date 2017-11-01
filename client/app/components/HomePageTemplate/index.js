@@ -14,6 +14,7 @@ import H1 from "../H1";
 import H2 from "../H2";
 import H3 from "../H3";
 import ThreeBlock from "./components/ThreeBlock";
+import TimeCounter from "./components/TimeCounter";
 
 // Styles
 import bulma from "styles/bulma.scss"; // eslint-disable-line import/first
@@ -83,32 +84,87 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    <section>
-      <div
-        className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
-          "is-centered"
-        ]} ${styles.textCenter}`}
-      >
-        <div className={`${bulma.column} ${bulma["is-2"]} `}>
-          120938 <br />
-          Happy Customers
-        </div>
-        <div className={`${bulma.column} ${bulma["is-2"]}`}>
-          1209381239000000 <br />
-          Records Processed
-        </div>
-        <div className={`${bulma.column} ${bulma["is-2"]}`}>
-          12093812390 <br />
-          Database Lookups
-        </div>
-        <div className={`${bulma.column} ${bulma["is-2"]} `}>
-          83874982374 <br />
-          Data Points
+    <section
+      className={bulma.section}
+      style={{ padding: "0", backgroundColor: "whitesmoke" }}
+    >
+      <div className={bulma.container}>
+        <div
+          className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
+            "is-centered"
+          ]} ${styles.textCenter}`}
+        >
+          <div
+            className={`${bulma.column} ${bulma["is-2"]} `}
+            style={{
+              border: "2px solid #ddd",
+              fontSize: "1.2rem",
+              backgroundColor: "#eee"
+            }}
+          >
+            <TimeCounter initialValue={120938} interval={1000} increment={1} />
+            <br />
+            Happy Customers
+          </div>
+          <div
+            className={`${bulma.column} ${bulma["is-2"]}`}
+            style={{
+              borderTop: "2px solid #ddd",
+              borderBottom: "2px solid #ddd",
+              borderRight: "2px solid #ddd",
+              fontSize: "1.2rem",
+              backgroundColor: "#eee"
+            }}
+          >
+            <TimeCounter
+              initialValue={1209381239000000}
+              interval={300}
+              increment={1}
+            />
+            <br />
+            Records Processed
+          </div>
+          <div
+            className={`${bulma.column} ${bulma["is-2"]}`}
+            style={{
+              borderTop: "2px solid #ddd",
+              borderBottom: "2px solid #ddd",
+              fontSize: "1.2rem",
+              backgroundColor: "#eee"
+            }}
+          >
+            <TimeCounter
+              initialValue={12093812390}
+              interval={150}
+              increment={5}
+            />
+            <br />
+            Database Lookups
+          </div>
+          <div
+            className={`${bulma.column} ${bulma["is-2"]} `}
+            style={{
+              border: "2px solid #ddd",
+              fontSize: "1.2rem",
+              backgroundColor: "#eee"
+            }}
+          >
+            <TimeCounter
+              initialValue={83874982374}
+              interval={100}
+              increment={111}
+            />
+            <br />
+            Data Points
+          </div>
         </div>
       </div>
     </section>
-    <section className={styles.textCenter}>
-      <H1> What We Do </H1>
+    <section
+      className={`${bulma.section} ${styles.textCenter}`}
+      style={{ background: "none" }}
+    >
+      <h1 className={bulma.title}> What We Do </h1>
       <div
         className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
           "is-centered"
@@ -150,9 +206,12 @@ const HomePageTemplate = ({ data }) => (
     </section>
     <section>What do you need to get started?</section>
     <section className={styles.textCenter}>
-      <H1 style={{ color: "#FFCC00", fontWeight: "bolder" }}>
+      <h1
+        className={bulma.title}
+        style={{ color: "#FFCC00", fontWeight: "bolder" }}
+      >
         THE IDICIA DIFFERENCE
-      </H1>
+      </h1>
       <div className={`${bulma.columns} ${bulma["is-centered"]}`}>
         <div className={`${bulma.column} ${bulma["is-half"]}`}>
           <p>
