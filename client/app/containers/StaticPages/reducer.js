@@ -25,6 +25,7 @@ const initialState = fromJS({
 });
 
 function staticPageReducer(state = initialState, action) {
+  console.log('starting reducer ');
   switch (action.type) {
     case GET_STATIC_PAGE:
       console.log(`Fetching page ${action.page}`);
