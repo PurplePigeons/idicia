@@ -14,6 +14,10 @@
   composes: footerColumn;
 }
 
+.heroBody {
+  padding-top: 20px;
+}
+
 .footerColumn3 {
   composes: footerColumn;
   height: 80%;
