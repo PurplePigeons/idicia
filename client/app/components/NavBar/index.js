@@ -96,8 +96,8 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
               Services
             </Link>
             <div className={bulma["navbar-dropdown"]}>
-              <Link to={"/telefied"} className={bulma["navbar-item"]}>
-                Telefied
+              <Link to={"/telified"} className={bulma["navbar-item"]}>
+                Telified
               </Link>
               <Link
                 to={"/contact-data-enrichment"}

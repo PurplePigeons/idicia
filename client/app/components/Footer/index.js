@@ -11,7 +11,7 @@ const year = new Date().getFullYear();
 
 const Footer = () => (
   <footer className={`${bulma.hero} ${bulma['is-dark']} ${bulma['is-medium']}`}>
-    <div className={bulma['hero-body']}>
+    <div className={`${styles.heroBody}`} >
       <Reveal effect="animated fadeIn">
         <div className={bulma.container}>
           <div className={bulma.columns}>
@@ -21,16 +21,16 @@ const Footer = () => (
                 <p>Integrated Verification, Enrichment and Comparison Solutions for Identity Verification, Fraud Prevention and Compliance.</p>
               </div>
             </div>
-            <div className={`${bulma.column} ${bulma.content} ${bulma['has-text-centered']} ${styles.darkTextFix}`}>
+            <div className={`${bulma.column} ${bulma.content} ${bulma['has-text-centered']} ${bulma['is-3']} ${bulma['is-offset-1']} ${styles.darkTextFix}`}>
               <div className={styles.footerColumn2}>
                 <h3>Contact Info</h3>
-                <p>IDICIA (US)</p>
-                <p>4900 SW Griffith Dr, Ste 251</p>
-                <p>Beaverton, OR 97005</p>
+                IDICIA (US)
+                4900 SW Griffith Dr, Ste 251
+                Beaverton, OR 97005
                 <hr className={styles.hr} />
-                <p>IDICIA (Canada)</p>
-                <p>101A 30701 Simpson Road</p>
-                <p>Abbotsford, BC V2T 6C7</p>
+                IDICIA (Canada)
+                101A 30701 Simpson Road
+                Abbotsford, BC V2T 6C7
                 <hr className={styles.hr} />
                 <p className={styles.info}>
                   <a href="mailto:info@idicia.com">info@idicia.com</a>
@@ -53,6 +53,26 @@ const Footer = () => (
                 <p>
                   <Link to={'/Contact Us'} className={styles.capsLink}>Contact Us</Link>
                 </p>
+              </div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{ flex: 1, padding: "10px" }}>
+                <a>
+                  <i
+                    className="fa fa-facebook-official fa-2x"
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+              <div style={{ flex: 1, padding: "10px" }}>
+                <a>
+                  <i className="fa fa-twitter-square fa-2x" aria-hidden="true" />
+                </a>
+              </div>
+              <div style={{ flex: 1, padding: "10px" }}>
+                <a>
+                  <i className="fa fa-linkedin-square fa-2x" aria-hidden="true" />
+                </a>
               </div>
             </div>
           </div>

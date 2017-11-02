@@ -218,6 +218,24 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/telified',
+      name: 'telified',
+      getComponent(nextState, cb) {
+        import('components/TelifiedTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: 'about-us',
+      name: 'about us',
+      getComponent(nextState, cb) {
+        import('components/AboutUsTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
