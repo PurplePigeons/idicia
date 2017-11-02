@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
@@ -64,7 +65,9 @@ const AboutUsTemplate = () => (
         <iframe src="https://www.youtube.com/embed/iiyQhxFFJtg" frameBorder="0" allowFullScreen />
       </div>
     </div>
-    <ContactForm />
+    <Reveal effect="animated fadeIn">
+      <ContactForm />
+    </Reveal>
   </section>
 );
 

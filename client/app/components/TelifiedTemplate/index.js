@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
@@ -71,7 +72,9 @@ const TelifiedTemplate = () => (
       <hr />
       <h2 className={`${bulma.title} ${bulma['is-2']}`}>Want to learn more about Telified and our broad coverage option?</h2>
     </div>
-    <ContactForm />
+    <Reveal effect="animated fadeIn">
+      <ContactForm />
+    </Reveal>
   </section>
 );
 
