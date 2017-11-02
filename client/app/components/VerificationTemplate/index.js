@@ -39,15 +39,15 @@ const VerificationTemplate = ({ data }) => {
       </section>
       <section className={lightHero}>
         <div className={bulma['hero-body']}>
-          <div className={`${bulma.container} ${bulma.columns} ${bulma['is-centered']}`}>
-            <div className={`${mediumCustomContent} ${bulma.column}  ${bulma['is-half']}`} dangerouslySetInnerHTML={{ __html: data.section1.html }} />
+          <div className={bulma.container}>
+            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />
           </div>
         </div>
       </section>
       <section className={infoHero}>
         <div className={bulma['hero-body']}>
-          <div className={`${bulma.container} ${bulma.columns} ${bulma['is-centered']}`}>
-            <div className={`${bulma.column} ${bulma['is-4']} ${styles.content} ${styles.columnCluster}`}>
+          <div className={bulma.container}>
+            <div className={`${bulma.content} ${bulma['is-medium']} ${styles.content} ${styles.columnCluster}`}>
               {enrichmentExamples}
             </div>
           </div>
