@@ -11,19 +11,21 @@ import styles from './styles.scss';
 
 const TelifiedTemplate = () => (
   <section>
-    <section className={`${bulma.hero} ${bulma['is-medium']} ${bulma['is-primary']} ${styles.telifiedHero}`}>
-      <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.telefiedContentStrip}`}>
-        <h1 className={`${bulma.title} ${bulma['is-1']}`}>
-          Telephone Verified
-        </h1>
-        <p>
-          Our service verifies consumer identity by providing direct access to the ultimate source of accurate contact data: the phone company billing database. Telified confirms the name, address and phone number supplied is indeed valid.
-        </p>
-        <h1 className={`${bulma.title} ${bulma['is-1']} ${styles.header2}`}>
-          What Telified Can Do For You
-        </h1>
-        <p>
-          <ul>
+    <section className={`${bulma.hero} ${bulma['is-fullheight']} ${bulma['is-primary']} ${styles.telifiedHero}`}>
+      <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.telifiedContentStrip}`}>
+        <div>
+          <h1 className={`${bulma.title} ${bulma['is-1']} animated fadeInUp`}>
+            Telephone Verified
+          </h1>
+          <p className="animated fadeInUp">
+            Our service verifies consumer identity by providing direct access to the ultimate source of accurate contact data: the phone company billing database. Telified confirms the name, address and phone number supplied is indeed valid.
+          </p>
+        </div>
+        <div>
+          <h1 className={`${bulma.title} ${bulma['is-1']} ${styles.header2} animated fadeInUp`}>
+            What Telified Can Do For You
+          </h1>
+          <ul className="animated fadeInUp">
             <li>Verify the name, address and phone number supplied in on-line orders is truly valid.</li>
             <li>Verify a telephone number is truly active or has been disconnected.</li>
             <li>Verify that consumer identity is valid and associated to the provided phone number.</li>
@@ -33,7 +35,7 @@ const TelifiedTemplate = () => (
             <li>Detect if cell phone numbers have been reassigned.</li>
             <li>Help you stay in compliance with TCPA regulations.</li>
           </ul>
-        </p>
+        </div>
       </div>
     </section>
     <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.section2}`}>
