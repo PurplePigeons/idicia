@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const EnrichmentTemplate = ({ data }) => {
@@ -10,35 +9,35 @@ const EnrichmentTemplate = ({ data }) => {
     .sort() // Since the keys come out in an indeterminate order... #object-things
     .map((content) => <div key={content} dangerouslySetInnerHTML={{ __html: data.section2[content].html }} />);
 
-  const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
-  const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
-  const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
+  const boldHero = 'hero is-bold';
+  const mainHero = `${boldHero} is-small is-primary`;
+  const infoHero = `${boldHero} is-medium is-info`;
+  const lightHero = `${boldHero} is-medium is-light`;
 
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
+  const mediumCustomContent = `content is-medium ${styles.content}`;
 
   return (
     <div>
       <section className={mainHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <h1 className={`${bulma.title} ${styles.mainTitle}`}>
+        <div className="hero-body">
+          <div className="container">
+            <h1 className={`title ${styles.mainTitle}`}>
               {data.title}
             </h1>
           </div>
         </div>
       </section>
       <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
+        <div className="hero-body">
+          <div className="container">
             <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />
           </div>
         </div>
       </section>
       <section className={infoHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={`${bulma.content} ${bulma['is-medium']} ${styles.content} ${styles.columnCluster}`}>
+        <div className="hero-body">
+          <div className="container">
+            <div className={`content is-medium ${styles.content} ${styles.columnCluster}`}>
               {enrichmentExamples}
             </div>
           </div>

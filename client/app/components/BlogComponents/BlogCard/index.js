@@ -7,7 +7,6 @@ import {
   htmlToString,
   truncate,
 } from 'utils/blogUtils';
-import bulma from 'styles/bulma.scss';
 
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import LinkButton from 'components/LinkedComponents/LinkButton';
@@ -19,7 +18,7 @@ const BlogCard = ({ post }) => {
   const summary = truncate(htmlToString(post.content.extended.html || post.content.markdown.html), 250);
   const date = getDate(post.publishedDate);
   return (
-    <Card style={{ width: 'auto' }} className={bulma.content}>
+    <Card style={{ width: 'auto' }} className="content">
       <Link to={`/blog/post/${post.slug}`}>
         <CardTitle
           theme={theme}
@@ -29,7 +28,7 @@ const BlogCard = ({ post }) => {
       </Link>
       <CardText theme={theme}>
         <hr />
-        <p className={bulma.subtitle} dangerouslySetInnerHTML={{ __html: brief }} />
+        <p className="subtitle" dangerouslySetInnerHTML={{ __html: brief }} />
         <p dangerouslySetInnerHTML={{ __html: summary }} />
       </CardText>
       <CardActions>

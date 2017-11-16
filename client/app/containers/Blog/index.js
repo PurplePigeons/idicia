@@ -9,7 +9,6 @@ import classNames from 'classnames';
 import Paginator from 'components/Paginator';
 
 // Styling
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 // Action Creators and selectors
@@ -30,13 +29,13 @@ const Blog = ({
       params,
     }) => {
   const errStyle = classNames(
-    bulma.content,
-    bulma['has-text-centered'],
+    'content',
+    'has-text-centered',
     styles.errMessage
   );
 
   return (
-    <section className={bulma.container}>
+    <section className="container">
       {!params.postSlug && loadSuccess && <Paginator currPage={currentPage} numPages={maxPages} />}
       {children}
       {!loading && !loadSuccess && maxPages > 0 &&

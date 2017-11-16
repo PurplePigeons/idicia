@@ -25,15 +25,16 @@ module.exports = (options) => ({
       // Since we require these CSS files in our JS or CSS files,
       // they will be a part of our compilation either way.
       // So, no need for ExtractTextPlugin here.
-      test: /\.css$/,
-      include: /node_modules/,
-      exclude: [
-        /(node_modules)\/bulma/,
-        /(node_modules)\/react-toolbox/,
+      test: /\.s?css$/,
+      include: [
+        /app\/styles/,
+        /node_modules/,
       ],
+      exclude: /node_modules\/react-toolbox/,
       loaders: [
         'style-loader',
         'css-loader',
+        'sass-loader',
       ],
     },
     {
@@ -42,8 +43,8 @@ module.exports = (options) => ({
       include: [
         /app/,
         /node_modules\/react-toolbox/,
-        /node_modules\/bulma/,
       ],
+      exclude: /app\/styles/,
       loaders: [
         'style-loader?fixUrls',
         'css-loader?modules&sourceMap&localIdentName=[local]___[hash:base64:5]',
