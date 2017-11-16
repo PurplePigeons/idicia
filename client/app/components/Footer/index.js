@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import Reveal from 'react-reveal';
 
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 import LargeLogo from './white.png';
@@ -10,18 +9,18 @@ import LargeLogo from './white.png';
 const year = new Date().getFullYear();
 
 const Footer = () => (
-  <footer className={`${bulma.hero} ${bulma['is-dark']} ${bulma['is-medium']}`}>
-    <div className={`${styles.heroBody}`} >
+  <footer className="hero is-dark is-medium">
+    <div className={styles.heroBody}>
       <Reveal effect="animated fadeIn">
-        <div className={bulma.container}>
-          <div className={bulma.columns}>
-            <div className={`${bulma.column} ${bulma.content} ${bulma['has-text-centered']} ${styles.darkTextFix}`}>
+        <div className="container">
+          <div className="columns">
+            <div className={`column content has-text-centered ${styles.darkTextFix}`}>
               <div className={styles.footerColumn1}>
                 <img className={styles.footerLogo} src={LargeLogo} alt="Idicia Footer Logo" />
                 <p>Integrated Verification, Enrichment and Comparison Solutions for Identity Verification, Fraud Prevention and Compliance.</p>
               </div>
             </div>
-            <div className={`${bulma.column} ${bulma.content} ${bulma['has-text-centered']} ${bulma['is-3']} ${bulma['is-offset-1']} ${styles.darkTextFix}`}>
+            <div className={`column content has-text-centered is-3 is-offset-1 ${styles.darkTextFix}`}>
               <div className={styles.footerColumn2}>
                 <h3>Contact Info</h3>
                 IDICIA (US)
@@ -38,7 +37,7 @@ const Footer = () => (
                 <p className={styles.info}>1.844.4IDICIA</p>
               </div>
             </div>
-            <div className={`${bulma.column} ${bulma.content} ${bulma['has-text-centered']} ${styles.darkTextFix}`}>
+            <div className={`column content has-text-centered ${styles.darkTextFix}`}>
               <div className={styles.footerColumn3}>
                 <h3>Quick Links</h3>
                 <p>
@@ -55,8 +54,8 @@ const Footer = () => (
                 </p>
               </div>
             </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div style={{ flex: 1, padding: "10px" }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{ flex: 1, padding: '10px' }}>
                 <a>
                   <i
                     className="fa fa-facebook-official fa-2x"
@@ -64,12 +63,12 @@ const Footer = () => (
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "10px" }}>
+              <div style={{ flex: 1, padding: '10px' }}>
                 <a>
                   <i className="fa fa-twitter-square fa-2x" aria-hidden="true" />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "10px" }}>
+              <div style={{ flex: 1, padding: '10px' }}>
                 <a>
                   <i className="fa fa-linkedin-square fa-2x" aria-hidden="true" />
                 </a>
@@ -77,8 +76,8 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className={`${bulma.container} ${styles.creditFooter}`}>
-          <div className={`${bulma.content} ${styles.darkTextFix}`}>
+        <div className={`container ${styles.creditFooter}`}>
+          <div className={`content ${styles.darkTextFix}`}>
             <div className={styles.footerEnd}>
               <p>
                 {`©${year} IDICIA, the Real-time Division of PacificEast. All Rights Reserved.`}
@@ -89,13 +88,13 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className={`${bulma.container} ${styles.creditFooter}`}>
-          <div className={`${bulma.content} ${bulma['has-text-centered']} ${styles.darkTextFix}`}>
+        <div className={`container ${styles.creditFooter}`}>
+          <div className={`content has-text-centered ${styles.darkTextFix}`}>
             <p>
               <strong>KeystoneJS + React-Redux + RxJS</strong> by <a href="https://github.com/stern-shawn">Shawn Stern</a>.
             </p>
             <p>
-              <a className={bulma.icon} href="https://github.com/PurplePigeons/idicia">
+              <a className="icon" href="https://github.com/PurplePigeons/idicia">
                 <i className="fa fa-github fa-3x"></i>
               </a>
             </p>

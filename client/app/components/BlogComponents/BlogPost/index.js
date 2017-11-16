@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { createMetaData, getDate } from 'utils/blogUtils';
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 import theme from './theme.scss';
 
@@ -25,7 +24,7 @@ const BlogPost = ({ postData }) => {
   const date = getDate(post.publishedDate);
 
   return (
-    <section className={`${styles.postArea} ${bulma.content}`}>
+    <section className={`${styles.postArea} content`}>
       <Helmet
         title={`${metaData.metaTitle} - Blog`}
         meta={metaData.metaTags}
@@ -42,9 +41,9 @@ const BlogPost = ({ postData }) => {
           title={post.title}
           subtitle={date}
         />
-        <CardText className={bulma.content} theme={theme}>
+        <CardText className="content" theme={theme}>
           <hr />
-          <p className={bulma.subtitle} dangerouslySetInnerHTML={{ __html: brief }} />
+          <p className="subtitle" dangerouslySetInnerHTML={{ __html: brief }} />
           <section dangerouslySetInnerHTML={{ __html: postBody }} />
         </CardText>
         <CardActions>

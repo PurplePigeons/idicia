@@ -1,35 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import Reveal from "react-reveal";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Reveal from 'react-reveal';
 
 // Components
-import ContactUsCTA from "../ContactUsCTA";
-import ContactForm from "../ContactForm";
-import Carousel from "./Carousel";
-import QuickFacts from "./QuickFacts";
-import ServiceIcons from "./ServiceIcons";
-import WhatWeDo from "./WhatWeDo";
-import H1 from "../H1";
-import H2 from "../H2";
-import H3 from "../H3";
-import ThreeBlock from "./components/ThreeBlock";
-import TimeCounter from "./components/TimeCounter";
-import GettingStarted from "./components/GettingStarted";
+import ContactUsCTA from '../ContactUsCTA';
+import ContactForm from '../ContactForm';
+import Carousel from './Carousel';
+import QuickFacts from './QuickFacts';
+import ServiceIcons from './ServiceIcons';
+import WhatWeDo from './WhatWeDo';
+import H1 from '../H1';
+import H2 from '../H2';
+import H3 from '../H3';
+import ThreeBlock from './components/ThreeBlock';
+import TimeCounter from './components/TimeCounter';
+import GettingStarted from './components/GettingStarted';
 
 // Styles
-import bulma from "styles/bulma.scss"; // eslint-disable-line import/first
-import styles from "./styles.scss";
+import bulma from 'styles/bulma.scss';
+import styles from './styles.scss';
 
-const boldHero = `${bulma.hero} ${bulma["is-bold"]}`;
-const mainHero = `${bulma.hero} ${bulma["is-fullheight"]} ${bulma[
-  "is-primary"
-]} ${styles.landingHero}`;
-const infoHero = `${boldHero} ${bulma["is-medium"]} ${bulma["is-info"]}`;
-const lightHero = `${boldHero} ${bulma["is-medium"]} ${bulma["is-light"]}`;
-const mediumCustomContent = `${bulma.content} ${bulma[
-  "is-medium"
-]} ${styles.content}`;
+const boldHero = 'hero is-bold';
+const mainHero = `hero is-fullheight is-primary ${styles.landingHero}`;
+const infoHero = `${boldHero} is-medium is-info`;
+const lightHero = `${boldHero} is-medium is-light`;
+
+const mediumCustomContent = `content is-medium ${styles.content}`;
 
 const HomePageTemplate = ({ data }) => (
   <section>

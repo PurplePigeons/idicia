@@ -1,38 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Components
-import ContactUsCTA from '../ContactUsCTA';
-
-// Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const ComparisonTemplate = ({ data }) => {
-  const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
-  const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
-  const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
+  const boldHero = 'hero is-bold';
+  const mainHero = `${boldHero} is-small is-primary`;
+  const infoHero = `${boldHero} is-medium is-info`;
+  const lightHero = `${boldHero} is-medium is-light`;
 
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
+  const mediumCustomContent = `content is-medium ${styles.content}`;
 
-  const centeredMobileColumns = `${bulma.columns} ${bulma['is-mobile']} ${bulma['is-centered']}`;
-  const comparisonColumn = `${bulma.column} ${bulma['is-half-mobile']} ${bulma['is-one-quarter-tablet']} ${bulma['is-one-quarter-desktop']} ${bulma['has-text-centered']} ${styles.comparisonColumn}`;
+  const centeredMobileColumns = 'columns is-mobile is-centered';
+  const comparisonColumn = `column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop has-text-centered ${styles.comparisonColumn}`;
 
   return (
     <div>
       <section className={mainHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <h1 className={`${bulma.title} ${styles.mainTitle}`}>
+        <div className="hero-body">
+          <div className="container">
+            <h1 className={`title ${styles.mainTitle}`}>
               {data.title}
             </h1>
           </div>
         </div>
       </section>
       <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
+        <div className="hero-body">
+          <div className="container">
             <div className={mediumCustomContent}>
               <h1>{data.section1.title}</h1>
             </div>
@@ -46,13 +41,12 @@ const ComparisonTemplate = ({ data }) => {
         </div>
       </section>
       <section className={infoHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
+        <div className="hero-body">
+          <div className="container">
             <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.html }} />
           </div>
         </div>
       </section>
-      <ContactUsCTA />
     </div>
   );
 };

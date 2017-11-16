@@ -8,11 +8,8 @@ export default class TimeCounter extends Component {
     interval: PropTypes.number.isRequired // in milliseconds
   };
 
-  constructor() {
-    super();
-    this.state = {
-      count: 0
-    };
+  state = {
+    count: 0,
   }
 
   componentDidMount() {
@@ -23,7 +20,7 @@ export default class TimeCounter extends Component {
     }, this.props.interval);
   }
 
-  compoenntWillUnmount() {
+  componentWillUnmount() {
     clearInterval(this.timer);
   }
 

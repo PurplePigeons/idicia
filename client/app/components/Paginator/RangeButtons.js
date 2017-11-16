@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 
-// Styles
-import bulma from 'styles/bulma.scss';
-
 // Given a range of pages, render the numeric buttons for accessing respective pages
 const RangeButtons = ({ currPage, numPages }) => {
   const midPoint = Math.floor(numPages / 2);
@@ -34,9 +31,9 @@ const RangeButtons = ({ currPage, numPages }) => {
     // Conditionally add the is-current class from bulma if the current page,
     // and apply proper styling to ellipses vs link elements
     const buttonStyle = classNames({
-      [bulma['pagination-link']]: val !== '...',
-      [bulma['pagination-ellipsis']]: val === '...',
-      [bulma['is-current']]: currPage === val,
+      'pagination-link': val !== '...',
+      'pagination-ellipsis': val === '...',
+      'is-current': currPage === val,
     });
 
     return (
@@ -49,7 +46,7 @@ const RangeButtons = ({ currPage, numPages }) => {
   });
 
   return (
-    <ul className={bulma['pagination-list']}>
+    <ul className="pagination-list">
       {buttons}
     </ul>
   );

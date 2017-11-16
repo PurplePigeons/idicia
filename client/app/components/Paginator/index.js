@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 import classNames from 'classnames';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 // Components
@@ -12,19 +11,19 @@ import RangeButtons from './RangeButtons';
 
 const Paginator = ({ currPage, numPages }) => {
   const paginatorStyle = classNames(
-    bulma.pagination,
+    'pagination',
+    'is-right',
+    'is-small',
     styles.paginator,
-    bulma['is-right'],
-    bulma['is-small']
   );
 
   // Visually disable the prev/next buttons when at end ranges
   const prevStyle = classNames(
-    bulma['pagination-previous']
+    'pagination-previous',
   );
 
   const nextStyle = classNames(
-    bulma['pagination-next']
+    'pagination-next',
   );
 
   return (
