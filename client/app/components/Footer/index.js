@@ -4,8 +4,6 @@ import Reveal from 'react-reveal';
 
 import styles from './styles.scss';
 
-import LargeLogo from './white.png';
-
 const year = new Date().getFullYear();
 
 const Footer = () => (
@@ -16,7 +14,7 @@ const Footer = () => (
           <div className="columns">
             <div className={`column content has-text-centered ${styles.darkTextFix}`}>
               <div className={styles.footerColumn1}>
-                <img className={styles.footerLogo} src={LargeLogo} alt="Idicia Footer Logo" />
+                <img className={styles.footerLogo} src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087342/idicia/white.png" alt="Idicia Footer Logo" />
                 <p>Integrated Verification, Enrichment and Comparison Solutions for Identity Verification, Fraud Prevention and Compliance.</p>
               </div>
             </div>

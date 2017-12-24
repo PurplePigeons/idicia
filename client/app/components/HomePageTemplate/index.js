@@ -169,7 +169,7 @@ const HomePageTemplate = ({ data }) => (
         ]} ${styles.textCenter}`}
       >
         <ThreeBlock
-          backgroundImage={require("./Support-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
           icon="fa-phone"
           title="Awesome support"
         >
@@ -180,7 +180,7 @@ const HomePageTemplate = ({ data }) => (
         </ThreeBlock>
 
         <ThreeBlock
-          backgroundImage={require("./Implementation-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
           icon="fa-code"
           title="Easy Implementation"
         >
@@ -190,7 +190,7 @@ const HomePageTemplate = ({ data }) => (
           <a style={{ textDecoration: "underline" }}>Learn more</a>
         </ThreeBlock>
         <ThreeBlock
-          backgroundImage={require("./dataBackground-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
           icon="fa-database"
           title="Fast & Accurate Data"
         >

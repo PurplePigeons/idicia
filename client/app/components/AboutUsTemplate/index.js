@@ -39,22 +39,22 @@ const AboutUsTemplate = () => (
       <hr />
       <div className={`${bulma.columns} ${bulma['is-multiline']}`}>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./garth-froese.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg" />
         </div>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./scott-rice.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg" />
         </div>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./tom-liebe.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg" />
         </div>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./dave-mori.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg" />
         </div>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./ken-dick.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg" />
         </div>
         <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
-          <img role="presentation" src={require('./stacey-halligan.jpg')} />
+          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg" />
         </div>
       </div>
       <hr />
