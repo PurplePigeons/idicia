@@ -4,21 +4,20 @@ import { Link } from 'react-router';
 import Slider from 'react-slick';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 // React-slick accepts components for prev/next arrows, and passes them the
 // onClick handler for moving the carousel. Capture it from props
 const LeftNav = ({ onClick }) =>
   <button className={styles.leftNav} onClick={onClick}>
-    <span className={bulma.icon} aria-hidden="true">
+    <span className="icon" aria-hidden="true">
       <i className="fa fa-arrow-left fa-4x"></i>
     </span>
   </button>;
 
 const RightNav = ({ onClick }) =>
   <button className={styles.rightNav} onClick={onClick}>
-    <span className={bulma.icon} aria-hidden="true">
+    <span className="icon" aria-hidden="true">
       <i className="fa fa-arrow-right fa-4x"></i>
     </span>
   </button>;
@@ -44,8 +43,8 @@ const sliderSettings = {
 
 // Procedurally create slides based on the given array
 const generateSlides = (slideStack) => slideStack.map((slide, idx) => (
-  <div className={`${bulma.container} ${styles.sliderContainer}`} key={idx}>
-    <div className={`${bulma.content} ${bulma['has-text-centered']}`}>
+  <div className={`container ${styles.sliderContainer}`} key={idx}>
+    <div className="content has-text-centered">
       <h1>{slide.headline}</h1>
       <h3>{slide.secondaryText}</h3>
       <Link to={slide.link.route}>{slide.link.text}</Link>
