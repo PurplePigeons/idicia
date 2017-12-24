@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class TimeCounter extends Component {
   static propTypes = {
     initialValue: PropTypes.number.isRequired,
     increment: PropTypes.number.isRequired,
-    interval: PropTypes.number.isRequired // in milliseconds
+    interval: PropTypes.number.isRequired, // in milliseconds
   };
 
   state = {
@@ -15,7 +15,7 @@ export default class TimeCounter extends Component {
   componentDidMount() {
     this.timer = setInterval(() => {
       this.setState(({ count }) => ({
-        count: count + this.props.increment
+        count: count + this.props.increment,
       }));
     }, this.props.interval);
   }
