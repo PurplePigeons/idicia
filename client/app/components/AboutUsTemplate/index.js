@@ -7,15 +7,14 @@ import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 import ContactForm from '../ContactForm';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const AboutUsTemplate = () => (
   <section>
-    <section className={`${bulma.hero} ${bulma['is-fullheight']} ${bulma['is-primary']} ${styles.aboutHero}`}>
-      <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.aboutContentStrip}`}>
+    <section className={`hero is-fullheight is-primary ${styles.aboutHero}`}>
+      <div className={`container has-text-centered ${styles.aboutContentStrip}`}>
         <div>
-          <h1 className={`${bulma.title} ${bulma['is-1']} animated fadeInUp`}>
+          <h1 className="title is-1 animated fadeInUp">
             Who We Are
           </h1>
           <p className="animated fadeInUp">
@@ -23,7 +22,7 @@ const AboutUsTemplate = () => (
           </p>
         </div>
         <div>
-          <h1 className={`${bulma.title} ${bulma['is-1']} ${styles.header2} animated fadeInUp`}>
+          <h1 className={`title is-1 ${styles.header2} animated fadeInUp`}>
             Who Our Customers Are
           </h1>
           <p className="animated fadeInUp">
@@ -32,33 +31,33 @@ const AboutUsTemplate = () => (
         </div>
       </div>
     </section>
-    <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.section2}`}>
-      <h1 className={`${bulma.title} ${bulma['is-1']}`}>
+    <div className={`container has-text-centered ${styles.section2}`}>
+      <h1 className="title is-1">
         Meet Our Team
       </h1>
       <hr />
-      <div className={`${bulma.columns} ${bulma['is-multiline']}`}>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+      <div className="columns is-multiline">
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg" />
         </div>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg" />
         </div>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg" />
         </div>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg" />
         </div>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg" />
         </div>
-        <div className={`${bulma.column} ${bulma['is-one-third']} ${styles.memberPhoto}`}>
+        <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg" />
         </div>
       </div>
       <hr />
-      <h2 className={`${bulma.title} ${bulma['is-2']}`}>
+      <h2 className="title is-2">
         IDICIA: More Than Just A Business
       </h2>
       <div className={styles.videoWrapper}>
