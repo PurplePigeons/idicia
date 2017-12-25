@@ -4,8 +4,9 @@ import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
+import ContactForm from 'components/ContactForm';
+import ProfileCard from 'components/ProfileCard';
 import ScrollToButton from 'components/ScrollToButton';
-import ContactForm from '../ContactForm';
 
 // Styles
 import styles from './styles.scss';
@@ -60,24 +61,42 @@ const AboutUsTemplate = () => (
       </h1>
       <hr />
       <div className="columns is-multiline">
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg" />
-        </div>
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg" />
-        </div>
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg" />
-        </div>
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg" />
-        </div>
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg" />
-        </div>
-        <div className={`column is-one-third ${styles.memberPhoto}`}>
-          <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg" />
-        </div>
+        <ProfileCard
+          name="Garth Froese"
+          title="CEO"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg"
+          description="Very CEO wow guy ..."
+        />
+        <ProfileCard
+          name="Scott Rice"
+          title="COO"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg"
+          description="Very COO wow guy ..."
+        />
+        <ProfileCard
+          name="Tom Liebe"
+          title="CTO"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg"
+          description="Very CTO wow guy ..."
+        />
+        <ProfileCard
+          name="Dave Mori"
+          title="CEO"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg"
+          description="Very CEO wow guy ..."
+        />
+        <ProfileCard
+          name="Ken Dick"
+          title="CFO"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg"
+          description="Very CFO wow guy ..."
+        />
+        <ProfileCard
+          name="Stacy Halligan"
+          title="Carrier Relations"
+          imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg"
+          description="Very wow relations lady ..."
+        />
       </div>
     </div>
     <Reveal effect="animated fadeIn">
