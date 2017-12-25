@@ -4,6 +4,7 @@ import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
+import ScrollToButton from 'components/ScrollToButton';
 import ContactForm from '../ContactForm';
 
 // Styles
@@ -12,22 +13,44 @@ import styles from './styles.scss';
 const AboutUsTemplate = () => (
   <section>
     <section className={`hero is-fullheight is-primary ${styles.aboutHero}`}>
-      <div className={`container has-text-centered ${styles.aboutContentStrip}`}>
-        <div>
-          <h1 className="title is-1 animated fadeInUp">
-            Who We Are
-          </h1>
-          <p className="animated fadeInUp">
-            IDICIA gives you access to all the best information without the need to maintain it. Our specialty is combining highly accurate, authoritative and nearly ubiquitous telecom billing data with robust credit bureau data in a hybrid approach that uses the best qualities of each to give your business (or that of your customers) the confidence and assurance it needs when interacting with consumers over the internet. IDICIA services provide access to data enrichment and consumer data verification in our easy to implement API and we’re here to answer the phone when you have a question.
-          </p>
-        </div>
-        <div>
-          <h1 className={`title is-1 ${styles.header2} animated fadeInUp`}>
-            Who Our Customers Are
-          </h1>
-          <p className="animated fadeInUp">
-            Businesses and organizations that need help verifying identity information, reducing identity and other forms of fraud, or need help meeting many of the complex regulatory compliance requirements involving consumer data and privacy
-          </p>
+      <div className="hero-body">
+        <div className="container is-vcentered">
+          <div className="card animated fadeInUp">
+            <div className="columns is-vcentered">
+              <div className="column is-6">
+                <div className="is-video">
+                  <iframe src="https://www.youtube.com/embed/iiyQhxFFJtg" frameBorder="0" allowFullScreen />
+                </div>
+              </div>
+              <div className="column is-6">
+                <div className="card-content">
+                  <div className="content">
+                    <h1 className="has-text-centered">
+                      Who We Are
+                    </h1>
+                    <p>
+                      IDICIA gives you access to all the best information without the need to maintain it. Our specialty is combining highly accurate, authoritative and nearly ubiquitous telecom billing data with robust credit bureau data in a hybrid approach that uses the best qualities of each to give your business (or that of your customers) the confidence and assurance it needs when interacting with consumers over the internet. IDICIA services provide access to data enrichment and consumer data verification in our easy to implement API and we’re here to answer the phone when you have a question.
+                    </p>
+                    <hr />
+                    <ScrollToButton scrollTo="#contactForm" text="Contact Us" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
+            <div className="card-content">
+              <div className="content">
+                <h1 className="has-text-centered">
+                  Who Our Customers Are
+                </h1>
+                <hr />
+                <p>
+                  Businesses and organizations that need help verifying identity information, reducing identity and other forms of fraud, or need help meeting many of the complex regulatory compliance requirements involving consumer data and privacy
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -55,13 +78,6 @@ const AboutUsTemplate = () => (
         <div className={`column is-one-third ${styles.memberPhoto}`}>
           <img role="presentation" src="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg" />
         </div>
-      </div>
-      <hr />
-      <h2 className="title is-2">
-        IDICIA: More Than Just A Business
-      </h2>
-      <div className={styles.videoWrapper}>
-        <iframe src="https://www.youtube.com/embed/iiyQhxFFJtg" frameBorder="0" allowFullScreen />
       </div>
     </div>
     <Reveal effect="animated fadeIn">
