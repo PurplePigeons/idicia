@@ -60,7 +60,7 @@ const HomePageTemplate = ({ data }) => (
               document
                 .querySelector('#contactForm')
                 .scrollIntoView({ behavior: 'smooth' })}
-            className={styles.btn}
+            className={`${styles.btn} animated fadeInUp`}
           >
             {' '}
             Contact Us{' '}
