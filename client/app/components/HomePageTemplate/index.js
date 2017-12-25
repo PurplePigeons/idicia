@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
 
 // Components
+import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
 import ContactForm from '../ContactForm';
 import Carousel from './Carousel';
@@ -55,16 +56,7 @@ const HomePageTemplate = ({ data }) => (
             conflicting.... To provide you with the fastest & most accurate Data
             Hygiene services and the best customer service in the industry.
           </h4>
-          <button
-            onClick={() =>
-              document
-                .querySelector('#contactForm')
-                .scrollIntoView({ behavior: 'smooth' })}
-            className={`${styles.btn} animated fadeInUp`}
-          >
-            {' '}
-            Contact Us{' '}
-          </button>
+          <ScrollToButton fadeIn scrollTo="#contactForm" text="Contact Us" />
         </div>
       </div>
     </section>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styles from './styles.scss';
-
 const inputStyle = {
   padding: '10px 12px',
   width: '100%',
