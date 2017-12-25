@@ -20,7 +20,7 @@ const AboutUsTemplate = () => (
             <div className="columns is-vcentered">
               <div className="column is-6">
                 <div className="is-video">
-                  <iframe src="https://www.youtube.com/embed/iiyQhxFFJtg" frameBorder="0" allowFullScreen />
+                  <iframe src="https://www.youtube.com/embed/iiyQhxFFJtg?modestbranding=1&controls=0&showinfo=0" frameBorder="0" allowFullScreen />
                 </div>
               </div>
               <div className="column is-6">
