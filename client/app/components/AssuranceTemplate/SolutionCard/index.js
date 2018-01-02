@@ -36,7 +36,7 @@ const SolutionCard = ({subtitle, title, img, content, url}) => (
 SolutionCard.propTypes = {
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  //img: PropTypes.object.isRequired,
+  img: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
 };
 

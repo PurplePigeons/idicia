@@ -9,10 +9,10 @@ import styles from './styles.scss';
 
 const AssuranceTemplate = () => {
 
-   const filledCards = data.cardContent.map(({title, subtitle, content, url, img, id},i) =>
+   const filledCards = data.cardContent.map(({title, subtitle, content, url, img, id}) =>
        <SolutionCard
-         key = {id}
-         img = {
+         key={id}
+         img={
            <img src={require('./images/'+img+'.svg')} style={{fill:'#000066'}}/>
          }
          {...{title, subtitle, content, url }}
