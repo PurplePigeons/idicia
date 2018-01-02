@@ -236,6 +236,15 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: 'assurance',
+      name: 'assurance',
+      getComponent(nextState, cb) {
+        import('components/AssuranceTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
