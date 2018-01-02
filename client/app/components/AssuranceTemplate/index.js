@@ -3,16 +3,22 @@ import PropTypes from 'prop-types';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 import SolutionCard from './SolutionCard'
 import data from './data.json';
-// Components
 
 // Styles
 import styles from './styles.scss';
 
 const AssuranceTemplate = () => {
 
-   const filledCards = (location) => data.cardContent[location].map(({title, subtitle, content, url, imgSrc},i) =>
-     <SolutionCard {...{title, subtitle, content, url, imgSrc}}/>
-   );
+   const filledCards = data.cardContent.map(({title, subtitle, content, url, img, id},i) =>
+       <SolutionCard
+         key = {id}
+         img = {
+           <img src={require('./images/'+img+'.svg')} style={{fill:'#000066'}}/>
+         }
+         {...{title, subtitle, content, url }}
+       />
+       );
+
 
   const content = [`Doing business over the internet is both a blessing and a curse. The blessing is having access to a
    much larger pool of customers - the curse is that some of those "customers" will try to defraud you.`,
@@ -31,24 +37,28 @@ const AssuranceTemplate = () => {
         <div className="hero-body">
           <div className="container is-vcentered">
               <div className="cardsContainer">
-                <div className="columns">
-                {filledCards('top')}
-                </div>
-                <div className="columns">
-                {filledCards('bottom')}
+                <div className="columns is-multiline">
+                  {filledCards}
                 </div>
               </div>
                 <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
                   <div className="card-content">
                     <div className="content">
-                      <p>
+                      <h1 className="has-text-centered">
                         Don't see a perfect fit for your business needs?
+                      </h1>
+                      <p className="has-text-centered">
                         We can work with you to get a custom solution in place thats perfect for you!
                       </p>
                     </div>
                   </div>
                 </div>
-            <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
+          </div>
+        </div>
+      </section>
+      <div className="hero-body">
+        <div className="container is-vcentered">
+            <div className="card animated fadeInUp">
               <div className="card-content">
                 <div className="content">
                   <h1 className="has-text-centered">
@@ -60,7 +70,6 @@ const AssuranceTemplate = () => {
             </div>
           </div>
         </div>
-      </section>
     </section>
   )
 };

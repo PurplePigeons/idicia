@@ -1,21 +1,20 @@
 {
-  "cardContent": {
-    "top":
-    [{
-      "id": "1",
-      "title": "Verification",
-      "subtitle": "Confirm what you know",
-      "content": "Verify telephone numbers, accounts, email addresses, names, SSN, and addresses",
-      "url": "google.com",
-      "imgSrc": "./images/verification.png"
-    },
+  "cardContent":
+      [{
+        "id": "1",
+        "title": "Verification",
+        "subtitle": "Confirm what you know",
+        "content": "Verify telephone numbers, accounts, email addresses, names, SSN, and addresses",
+        "url": "google.com",
+        "img": "verification"
+      },
       {
         "id": "2",
         "title": "Enrichment",
         "subtitle": "Dig deeper into your data",
         "content": "Retrive additional data based on telephone, email, SSN, or address",
         "url": "google.com",
-        "imgSrc": "./images/enrichment.png"
+        "img": "enrichment"
       },
       {
         "id": "3",
@@ -23,24 +22,23 @@
         "subtitle": "Computers aren't that smart",
         "content": "Use our best of breed fuzzy matching to compare multiple contact records",
         "url": "google.com",
-        "imgSrc": "./images/comparison.png"
-      }],
-    "bottom":
-    [{
-      "id": "4",
-      "title": "Telecom",
-      "subtitle": "CNAM, LIDB & Verification.",
-      "content": "CNAM, LIDB, Verification, and Status hosting services of the telecom industry",
-      "url": "google.com",
-      "imgSrc": "./images/telecom.png"
-    },
+        "img": "comparison"
+      },
+      {
+        "id": "4",
+        "title": "Telecom",
+        "subtitle": "CNAM, LIDB & Verification.",
+        "content": "CNAM, LIDB, Verification, and Status hosting services of the telecom industry",
+        "url": "google.com",
+        "img": "telecom"
+      },
       {
         "id": "5",
         "title": "Healthcare",
         "subtitle": "Linking you to consumers.",
         "content": "Member of patient identity verification. Fully HIPPA compliant with BAA",
         "url": "google.com",
-        "imgSrc": "./images/healthcare.png"
+        "img": "healthcare"
       },
       {
         "id": "6",
@@ -48,7 +46,6 @@
         "subtitle": "DNC & TCPA.",
         "content": "Data verification for consent compliance in accordance with TCPA",
         "url": "google.com",
-        "imgSrc": "./images/compliance.png"
+        "img": "compliance"
       }]
-  }
 }
