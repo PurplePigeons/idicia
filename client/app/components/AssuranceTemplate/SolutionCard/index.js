@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import styles from './styles.scss';
 
-const SolutionCard = ({subtitle, title, img, content, url}) => (
+const SolutionCard = ({ subtitle, title, img, content, url }) => (
   <div className="column is-4">
     <div className="card animated fadeInUp">
       <div className="card-content">
@@ -14,19 +15,19 @@ const SolutionCard = ({subtitle, title, img, content, url}) => (
             </figure>
           </div>
           <div className="media-content">
-            <p className="card-title is-size-4">
+            <h1 className="title is-size-4 has-text-dark">
               {title}
-            </p>
-            <p className="card-subtitle is-size-7">{subtitle}</p>
+            </h1>
+            <h2 className="subtitle is-size-7 has-text-dark">
+              {subtitle}
+            </h2>
           </div>
-        <div>
-      </div>
         </div>
         <div className="content">
-          {content}
+          <p>{content}</p>
         </div>
         <div className={styles.learnMore}>
-          <a href = {url}>Learn More</a>
+          <Link to={url}>Learn More</Link>
         </div>
       </div>
     </div>
@@ -38,6 +39,7 @@ SolutionCard.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default SolutionCard;

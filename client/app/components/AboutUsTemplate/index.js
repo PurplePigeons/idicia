@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Reveal from 'react-reveal';
-import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
+// import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // Components
 import ContactForm from 'components/ContactForm';
@@ -15,7 +15,7 @@ const AboutUsTemplate = () => (
   <section>
     <section className={`hero is-fullheight is-primary ${styles.aboutHero}`}>
       <div className="hero-body">
-        <div className="container is-vcentered">
+        <div className="container">
           <div className="card animated fadeInUp">
             <div className="columns is-vcentered">
               <div className="column is-6">
@@ -105,8 +105,8 @@ const AboutUsTemplate = () => (
   </section>
 );
 
-AboutUsTemplate.propTypes = {
+// AboutUsTemplate.propTypes = {
 
-};
+// };
 
 export default AboutUsTemplate;
