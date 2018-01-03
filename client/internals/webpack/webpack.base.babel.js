@@ -52,11 +52,11 @@ module.exports = (options) => ({
       ],
     },
     {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      test: /\.(eot|ttf|woff|woff2)$/,
       loader: 'file-loader',
     },
     {
-      test: /\.(jpg|png|jpeg|gif)$/,
+      test: /\.(jpg|png|jpeg|gif|svg)$/,
       loaders: [
         'file-loader',
         {
