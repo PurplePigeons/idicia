@@ -23,20 +23,9 @@
   height: 80%;
 }
 
-.hrRight {
-  width: 8rem;
-  margin: 1.85rem auto;
-  background: #FFD21E;
-  text-align: right;
-  margin-right: 0;
-}
-
-.hrLeft {
-  width: 8rem;
-  margin: 1.85rem auto;
-  background: #FFD21E;
-  text-align: right;
-  margin-left: 0;
+.hr {
+  width: 5rem;
+  margin: 1.5rem auto;
 }
 
 .darkTextFix {
@@ -55,12 +44,10 @@
 
 .info {
   color: #FFD21E;
-  background: #363636;
 }
 
 .footerLogo {
-  //margin: 0 auto 3rem auto;
-  padding-top: 10px;
+  margin: 0 auto 3rem auto;
 }
 
 .creditFooter {
@@ -73,4 +60,3 @@
   flex-flow: row wrap;
   flex: 1;
 }
-
