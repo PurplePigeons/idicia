@@ -1,43 +1,68 @@
-import React, { Component } from "react";
-import bulma from "styles/bulma.scss";
+import React, { PureComponent } from 'react';
 
-export default class GettingStarted extends Component {
+export default class GettingStarted extends PureComponent {
   render() {
     return (
-      <div
-        className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
-          "is-centered"
-        ]}`}
-        /* style={{ textAlign: "left" }} */
-      >
-        <div className={`${bulma.column} ${bulma["is-4"]}`}>
-          <div className={bulma.field}>
-            <label className={bulma.label}>Give us</label>
-            <p
-              className={`${bulma.control} ${bulma["has-icons-left"]} ${bulma[
-                "has-icons-right"
-              ]}`}
-            >
+      <div className="columns is-multiline is-centered" style={{ marginTop: '20px' }}>
+        <div className="column is-4">
+          <h2 style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>You Provide:</h2>
+          <div className="field">
+            <p className="control has-icons-left has-icons-right">
               <input
-                type="text"
-                className={bulma.input}
+                type="email"
+                className="input"
                 readOnly
-                value={"joe.smith@acme.org"}
+                value={'joe.smith@acme.org'}
               />
-              <span
-                className={`${bulma.icon} ${bulma["is-small"]} ${bulma[
-                  "is-left"
-                ]}`}
-              >
+              <span className="icon is-small is-left">
                 <i className="fa fa-envelope" />
               </span>
             </p>
           </div>
+          <div className="field">
+            <p className="control has-icons-left">
+              <input
+                type="text"
+                className="input"
+                readOnly
+                placeholder="SSN and Last Name"
+              />
+              <span className="icon is-small is-left">
+                <i className="fa fa-user" />
+              </span>
+            </p>
+          </div>
+          <div className="field">
+            <p className="control has-icons-left">
+              <input
+                type="text"
+                className="input"
+                readOnly
+                placeholder="Phone Number"
+              />
+              <span className="icon is-small is-left">
+                <i className="fa fa-phone" />
+              </span>
+            </p>
+          </div>
+          <div className="field">
+            <p className="control has-icons-left">
+              <input
+                type="text"
+                className="input"
+                readOnly
+                placeholder="Address"
+              />
+              <span className="icon is-small is-left">
+                <i className="fa fa-map-marker" />
+              </span>
+            </p>
+          </div>
         </div>
-        <div className={`${bulma.column} ${bulma["is-4"]}`}>
-          <h2 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>Get back</h2>
-          <div className={bulma.card}>
-            <div className={bulma["card-content"]}>
+        <div className="column is-4">
+          <h2 style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>We Return:</h2>
+          <div className="card">
+            <div className="card-content">
               <ul>
                 <li>
                   <strong>First name</strong>: Joe

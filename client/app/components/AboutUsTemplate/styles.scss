@@ -1,6 +1,6 @@
 .aboutHero {
-  background-image: -webkit-linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./about-us.png');
-  background-image: linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./about-us.png');
+  background-image: -webkit-linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087320/idicia/about-us.png');
+  background-image: linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087320/idicia/about-us.png');
   background-size: cover;
 }
 
@@ -26,20 +26,5 @@
   padding: 1rem;
   img {
     min-height: 100%;
-  }
-}
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-  height: 0;
-  
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 }

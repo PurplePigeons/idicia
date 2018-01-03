@@ -4,21 +4,18 @@ import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
 
 // Components
+import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
 import ContactForm from '../ContactForm';
 import Carousel from './Carousel';
 import QuickFacts from './QuickFacts';
 import ServiceIcons from './ServiceIcons';
 import WhatWeDo from './WhatWeDo';
-import H1 from '../H1';
-import H2 from '../H2';
-import H3 from '../H3';
 import ThreeBlock from './components/ThreeBlock';
 import TimeCounter from './components/TimeCounter';
 import GettingStarted from './components/GettingStarted';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const boldHero = 'hero is-bold';
@@ -34,70 +31,47 @@ const HomePageTemplate = ({ data }) => (
       title="Home"
       meta={[
         {
-          name: "description",
-          content: "IDICIA: Real-Time Identity Verification & Fraud Prevention"
-        }
+          name: 'description',
+          content: 'IDICIA: Real-Time Identity Verification & Fraud Prevention',
+        },
       ]}
     />
     <section className={mainHero}>
-      <div className={bulma["hero-body"]}>
-        <div className={`${bulma.container} ${styles.textCenter}`}>
+      <div className="hero-body">
+        <div className={`container ${styles.textCenter}`}>
           <h1
-            className={`${bulma.title} ${bulma[
-              "is-1"
-            ]} ${styles.mainTitle} animated fadeInUp`}
-            ref={title => {
+            className={`title is-1 ${styles.mainTitle} animated fadeInUp`}
+            ref={(title) => {
               this.titleText = title;
             }}
           >
             Idicia
           </h1>
-          <h2
-            className={`${styles.subTitle} ${bulma.subtitle} ${bulma[
-              "is-4"
-            ]} animated fadeInUp`}
-          >
+          <h2 className={`${styles.subTitle} subtitle is-4 animated fadeInUp`}>
             Neighborhood Service <br />
             Global Data
           </h2>
-          <h4
-            className={`${bulma.column} ${styles.titleContent} ${bulma[
-              "is-4"
-            ]} ${bulma["is-offset-4"]} animated fadeInUp`}
-          >
+          <h4 className={`column ${styles.titleContent} is-4 is-offset-4 animated fadeInUp`}>
             At IDICIA we have intentions that some competitors may see as
             conflicting.... To provide you with the fastest & most accurate Data
             Hygiene services and the best customer service in the industry.
           </h4>
-          <button
-            onClick={() =>
-              document
-                .querySelector("#contactForm")
-                .scrollIntoView({ behavior: "smooth" })}
-            className={styles.btn}
-          >
-            {" "}
-            Contact Us{" "}
-          </button>
+          <ScrollToButton fadeIn scrollTo="#contactForm" text="Contact Us" />
         </div>
       </div>
     </section>
     <section
-      className={bulma.section}
-      style={{ padding: "0", backgroundColor: "whitesmoke" }}
+      className="section"
+      style={{ padding: '0', backgroundColor: 'whitesmoke' }}
     >
-      <div className={bulma.container}>
-        <div
-          className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
-            "is-centered"
-          ]} ${styles.textCenter}`}
-        >
+      <div className="container">
+        <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
           <div
-            className={`${bulma.column} ${bulma["is-2"]} `}
+            className="column is-2"
             style={{
-              border: "2px solid #ddd",
-              fontSize: "1.2rem",
-              backgroundColor: "#eee"
+              border: '2px solid #ddd',
+              fontSize: '1.2rem',
+              backgroundColor: '#eee',
             }}
           >
             <TimeCounter initialValue={120938} interval={1000} increment={1} />
@@ -105,13 +79,13 @@ const HomePageTemplate = ({ data }) => (
             Happy Customers
           </div>
           <div
-            className={`${bulma.column} ${bulma["is-2"]}`}
+            className="column is-2"
             style={{
-              borderTop: "2px solid #ddd",
-              borderBottom: "2px solid #ddd",
-              borderRight: "2px solid #ddd",
-              fontSize: "1.2rem",
-              backgroundColor: "#eee"
+              borderTop: '2px solid #ddd',
+              borderBottom: '2px solid #ddd',
+              borderRight: '2px solid #ddd',
+              fontSize: '1.2rem',
+              backgroundColor: '#eee',
             }}
           >
             <TimeCounter
@@ -123,12 +97,12 @@ const HomePageTemplate = ({ data }) => (
             Records Processed
           </div>
           <div
-            className={`${bulma.column} ${bulma["is-2"]}`}
+            className="column is-2"
             style={{
-              borderTop: "2px solid #ddd",
-              borderBottom: "2px solid #ddd",
-              fontSize: "1.2rem",
-              backgroundColor: "#eee"
+              borderTop: '2px solid #ddd',
+              borderBottom: '2px solid #ddd',
+              fontSize: '1.2rem',
+              backgroundColor: '#eee',
             }}
           >
             <TimeCounter
@@ -140,11 +114,11 @@ const HomePageTemplate = ({ data }) => (
             Database Lookups
           </div>
           <div
-            className={`${bulma.column} ${bulma["is-2"]} `}
+            className="column is-2"
             style={{
-              border: "2px solid #ddd",
-              fontSize: "1.2rem",
-              backgroundColor: "#eee"
+              border: '2px solid #ddd',
+              fontSize: '1.2rem',
+              backgroundColor: '#eee',
             }}
           >
             <TimeCounter
@@ -159,38 +133,34 @@ const HomePageTemplate = ({ data }) => (
       </div>
     </section>
     <section
-      className={`${bulma.section} ${styles.textCenter}`}
-      style={{ background: "none" }}
+      className={`section ${styles.textCenter}`}
+      style={{ background: 'none' }}
     >
-      <h1 className={bulma.title}> What We Do </h1>
-      <div
-        className={`${bulma.columns} ${bulma["is-multiline"]} ${bulma[
-          "is-centered"
-        ]} ${styles.textCenter}`}
-      >
+      <h1 className="title"> What We Do </h1>
+      <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
         <ThreeBlock
-          backgroundImage={require("./Support-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
           icon="fa-phone"
           title="Awesome support"
         >
           While the support standard in our industry is an email and hoping to
           hear back, we understand that just isn’t good enough sometimes. We’re
           here to help on an actual phone and email(if you prefer).<br />
-          <a style={{ textDecoration: "underline" }}>Learn more</a>
+          <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
 
         <ThreeBlock
-          backgroundImage={require("./Implementation-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
           icon="fa-code"
           title="Easy Implementation"
         >
           Using the RESTful standard for our API and extensive documentation
           will help you get up and running with our data enrichment services
           fast and with less hassle.<br />
-          <a style={{ textDecoration: "underline" }}>Learn more</a>
+          <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
         <ThreeBlock
-          backgroundImage={require("./dataBackground-20%.png")}
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
           icon="fa-database"
           title="Fast & Accurate Data"
         >
@@ -198,28 +168,28 @@ const HomePageTemplate = ({ data }) => (
           ensure fast response times on our data services. With the ability to
           access telecom data literally seconds after it is updated, we ensure
           highly accurate data.<br />
-          <a style={{ textDecoration: "underline" }}>Learn more</a>
+          <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
       </div>
     </section>
-    <section className={`${bulma.container}`}>
+    <section className="container">
       <div className={styles.textCenter}>
-        <h1 className={bulma.title}>What do you need to get started?</h1>
+        <h1 className="title">What do you need to get started?</h1>
       </div>
       <GettingStarted />
     </section>
     <section
-      className={`${bulma.container} ${styles.textCenter}`}
-      style={{ marginTop: "40px" }}
+      className={`container ${styles.textCenter}`}
+      style={{ marginTop: '40px' }}
     >
       <h1
-        className={bulma.title}
-        style={{ color: "#FFCC00", fontWeight: "bolder" }}
+        className="title"
+        style={{ color: '#FFCC00', fontWeight: 'bolder' }}
       >
         THE IDICIA DIFFERENCE
       </h1>
-      <div className={`${bulma.columns} ${bulma["is-centered"]}`}>
-        <div className={`${bulma.column} ${bulma["is-half"]}`}>
+      <div className="columns is-centered">
+        <div className="column is-half">
           <p>
             <strong>IDICIA is a whole new kind of data company.</strong>
           </p>
@@ -231,7 +201,7 @@ const HomePageTemplate = ({ data }) => (
             accesses the best data on the market and some data our competitors
             only wish they had.
           </p>
-          <p style={{ marginTop: "20px" }}>
+          <p style={{ marginTop: '20px' }}>
             Many of the records we access provide fresh answers within seconds
             of when the record was updated. One of the main reasons we have
             access to many of our information resources is that we don’t require
@@ -252,7 +222,7 @@ const HomePageTemplate = ({ data }) => (
 );
 
 HomePageTemplate.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default HomePageTemplate;

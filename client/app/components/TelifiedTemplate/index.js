@@ -7,15 +7,14 @@ import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 import ContactForm from '../ContactForm';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const TelifiedTemplate = () => (
   <section>
-    <section className={`${bulma.hero} ${bulma['is-fullheight']} ${bulma['is-primary']} ${styles.telifiedHero}`}>
-      <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.telifiedContentStrip}`}>
+    <section className={`hero is-fullheight is-primary ${styles.telifiedHero}`}>
+      <div className={`container has-text-centered ${styles.telifiedContentStrip}`}>
         <div>
-          <h1 className={`${bulma.title} ${bulma['is-1']} animated fadeInUp`}>
+          <h1 className="title is-1 animated fadeInUp">
             Telephone Verified
           </h1>
           <p className="animated fadeInUp">
@@ -23,7 +22,7 @@ const TelifiedTemplate = () => (
           </p>
         </div>
         <div>
-          <h1 className={`${bulma.title} ${bulma['is-1']} ${styles.header2} animated fadeInUp`}>
+          <h1 className={`title is-1 ${styles.header2} animated fadeInUp`}>
             What Telified Can Do For You
           </h1>
           <ul className="animated fadeInUp">
@@ -39,30 +38,30 @@ const TelifiedTemplate = () => (
         </div>
       </div>
     </section>
-    <div className={`${bulma.container} ${bulma['has-text-centered']} ${styles.section2}`}>
-      <h1 className={`${bulma.title} ${bulma['is-1']}`}>The Telified Collection</h1>
-      <div className={`${bulma.columns} ${bulma['is-multiline']}`}>
-        <div className={`${bulma.column} ${bulma['is-half']} ${styles.collectionItem}`}>
-          <div className={bulma.content}>
+    <div className={`container has-text-centered ${styles.section2}`}>
+      <h1 className="title is-1">The Telified Collection</h1>
+      <div className="columns is-multiline">
+        <div className={`column is-half ${styles.collectionItem}`}>
+          <div className="content">
             <h1>NAME AND ADDRESS VERIFICATION</h1>
             <p>Telified 3D is our flagship version and is available for the purposes of identity verification and risk mitigation.  3D specifically focuses on verification of the 3 primary data attributes that form a consumer's identity: Name, Street Address and Telephone Number.</p>
           </div>
         </div>
-        <div className={`${bulma.column} ${bulma['is-half']} ${styles.collectionItem}`}>
-          <div className={bulma.content}>
+        <div className={`column is-half ${styles.collectionItem}`}>
+          <div className="content">
             <h1>ACTIVE/INACTIVE</h1>
             <p>Telified AI answers the critical questions of whether or not a telephone number is active or inactive; whether it is connected and dialable or has been disconnected.</p>
           </div>
         </div>
-        <div className={`${bulma.column} ${bulma['is-half']} ${styles.collectionItem}`}>
-          <div className={bulma.content}>
+        <div className={`column is-half ${styles.collectionItem}`}>
+          <div className="content">
             <h1>CONSENT REVERIFICATION</h1>
             <p>Telified CR is a special configuration of Telified designed specifically to provide companies with a mechanism for periodically reverifying a consumer's consent to communicate with a specific phone number. This can help buinesses prevent costly TCPA violations.</p>
             <p><a>For more details, download our Consent Reverification PDF.</a></p>
           </div>
         </div>
-        <div className={`${bulma.column} ${bulma['is-half']} ${styles.collectionItem}`}>
-          <div className={bulma.content}>
+        <div className={`column is-half ${styles.collectionItem}`}>
+          <div className="content">
             <h1>INTERCONTINENTAL</h1>
             <p>Telified IC extends our Telified line of telephone verification services into the rest of the world. Telified-IC supports carrier, device type and general location information just like our Line Identification Services do in the US and Canada.</p>
             <p><a>See coverage map here.</a></p>
@@ -70,7 +69,7 @@ const TelifiedTemplate = () => (
         </div>
       </div>
       <hr />
-      <h2 className={`${bulma.title} ${bulma['is-2']}`}>Want to learn more about Telified and our broad coverage option?</h2>
+      <h2 className="title is-2">Want to learn more about Telified and our broad coverage option?</h2>
     </div>
     <Reveal effect="animated fadeIn">
       <ContactForm />

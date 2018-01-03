@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import Reveal from 'react-reveal';
 
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 import LargeLogo from './white.png';
@@ -10,13 +9,13 @@ import LargeLogo from './white.png';
 const year = new Date().getFullYear();
 
 const Footer = () => (
-  <footer className={`${bulma.hero} ${bulma['is-dark']} ${bulma['is-medium']}`}>
-    <div className={`${styles.heroBody}`} >
+  <footer className="hero is-dark is-medium">
+    <div className={styles.heroBody}>
       <Reveal effect="animated fadeIn">
-      <div className="container">          
+      <div className="container">
           <div className="columns">
 
-            {/* Quicklinks  & Social Media buttons */} 
+            {/* Quicklinks  & Social Media buttons */}
             {/* These need more vertical space between them */}
             <div className={`column content has-text-left is-3 is-offset-1 ${styles.darkTextFix}`}>
                 <h3>Quick Links</h3>
@@ -69,7 +68,7 @@ const Footer = () => (
                   <td className={`${styles.info}`} >1.844.4IDICIA</td>
                 </table>
             </div>
-              
+
               {/* Contact info */}
             <div className={`column content has-text-right is-3 ${styles.darkTextFix}`}>
               <h3>Locations</h3>
@@ -85,7 +84,7 @@ const Footer = () => (
             </div>
           </div>
           </div>
-          
+
 
           {/* Legal */}
           <div className="container">
@@ -98,7 +97,7 @@ const Footer = () => (
                 </p>
               </div>
           </div>
-        
+
         {/* Credits */}
         <div className={`container ${styles.creditFooter}`}>
           <div className={`content has-text-centered ${styles.darkTextFix}`}>
@@ -106,7 +105,7 @@ const Footer = () => (
               <strong>KeystoneJS + React-Redux + RxJS</strong> by <a href="https://github.com/stern-shawn">Shawn Stern</a>.
             </p>
             <p>
-              <a className={bulma.icon} href="https://github.com/PurplePigeons/idicia">
+              <a className="icon" href="https://github.com/PurplePigeons/idicia">
                 <i className="fa fa-github fa-3x"></i>
               </a>
             </p>
