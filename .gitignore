@@ -12,3 +12,6 @@ logs
 .env
 client/app/config.json
 env.json
+
+# ignore ide config
+.idea/
