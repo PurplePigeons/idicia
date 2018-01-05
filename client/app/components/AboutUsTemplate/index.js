@@ -3,7 +3,7 @@ import React from 'react';
 import Reveal from 'react-reveal';
 // import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
-// Components
+// SharedComponents
 import ContactForm from 'components/ContactForm';
 import ProfileCard from 'components/ProfileCard';
 import ScrollToButton from 'components/ScrollToButton';

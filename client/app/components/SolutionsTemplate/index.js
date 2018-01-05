@@ -1,101 +1,81 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
-
-// Components
-import ContactUsCTA from '../ContactUsCTA';
+// import PropTypes from 'prop-types';
+import cn from 'classnames';
+// import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
+import Card from 'components/SharedComponents/Card';
+import data from './data.json';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
-const SolutionsTemplate = ({ data }) => {
-  // Generate the divs for the 6 distinct solutions
-  const solutionExamples = data.block3.column1 && Object.keys(data.block3.column1)
-    .filter((key) => key !== 'title')
-    .sort() // Since the keys come out in an indeterminate order... #object-things
-    .map((content) => (
-      <div key={content}>
-        {renderHtmlWithRouterLinks(data.block3.column1[content].html)}
-      </div>
-    ));
+const SolutionsTemplate = () => {
+  const filledCards = data.cardContent.map(({ title, subtitle, content, url, img, id }) =>
+    <Card
+      key={id}
+      columnSize = {"is-4"}
+      img={<img role="presentation" src={require(`./images/${img}.svg`)} style={{ fill: '#000066' }} />}
+      {...{ title, subtitle, content, url }}
+    />
+  );
 
-  const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
-  const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
-  const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
-
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
+  const content = [
+    `Doing business over the internet is both a blessing and a curse. The blessing is having access to a
+   much larger pool of customers - the curse is that some of those "customers" will try to defraud you.`,
+    `Some may not do so purposely but may just not give you the information you need to maintain your
+   relationship or even correctly process their orders. It happens. Fortunately a majority of your
+   customers will be great and a benefit to your business. Our solutions are designed to help you
+   enhance your "good customer" data and protect yourself from the bad customers.`,
+    `Most of our solutions are restricted to be used only for select purposes like preventing fraud,
+   verifying a consumer's identity or providing information specifically when requested to do so and
+   with a consumer's consent. This isn't maerketing data that anyone can access. But if you are doing
+   something that is considered an exemption under TCPA or GLBA, we can help.`,
+  ];
 
   return (
-    <div>
-      <section className={mainHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <h1 className={`${bulma.title} ${styles.mainTitle}`}>
-              {data.title}
-            </h1>
-          </div>
-        </div>
-      </section>
-      <section className={infoHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
-          </div>
-        </div>
-      </section>
-      <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.html }} />
-          </div>
-        </div>
-      </section>
-      <section className={infoHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={bulma.columns}>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent}><h1>{data.block3.column1.title}</h1></div>
-                <div className={`${bulma.content} ${bulma['is-medium']} ${styles.content} ${styles.columnCluster}`}>
-                  {solutionExamples}
-                </div>
+    <section>
+      <section className={cn('hero is-fullheight is-primary', styles.aboutHero)}>
+        <div className="hero-body">
+          <div className="container">
+            <div className="cardsContainer">
+              <div className="columns is-multiline">
+                {filledCards}
               </div>
-              <div className={`${bulma.column} ${bulma['is-one-third']}`}>
-                <div className={`${mediumCustomContent} ${styles.verticalCenter}`}>
-                  {renderHtmlWithRouterLinks(data.block3.column2.html)}
+            </div>
+            <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
+              <div className="card-content">
+                <div className="content">
+                  <h1 className="has-text-centered">
+                    Don't see a perfect fit for your business needs?
+                  </h1>
+                  <p className="has-text-centered">
+                    We can work with you to get a custom solution in place thats perfect for you!
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={mediumCustomContent}><h1>{data.block4.title}</h1></div>
-            <div className={bulma.columns}>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.column1.html }} />
-              </div>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.column2.html }} />
-              </div>
-              <div className={bulma.column}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.column3.html }} />
+      <div className="hero-body">
+        <div className="container">
+          <div className="card animated fadeInUp">
+            <div className="card-content">
+              <div className="content">
+                <h1 className="has-text-centered">
+                  IDICIA: A bridge to customer assurance
+                </h1>
+                {content.map((el, i) => <p key={i}> {el} </p>)}
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <ContactUsCTA />
-    </div>
+      </div>
+    </section>
   );
 };
 
-SolutionsTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-};
+// SolutionsTemplate.propTypes = {
+
+// };
 
 export default SolutionsTemplate;

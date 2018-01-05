@@ -1,0 +1,61 @@
+// Custom transforms for content blocks such as centered text and uppercased main headers
+.content {
+  > h1, h2, p {
+    text-align: center;
+  }
+
+  > h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  > p > a {
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    color: #3f3f3f;
+    border: 2px solid transparent;
+    border: 2px solid #3f3f3f;
+    padding: 14px 31px;
+    font-size: 13px;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    &:hover {
+      background-color: #3f3f3f;
+      color: #ffffff;
+      border: 2px solid #3f3f3f;
+    }
+  }
+}
+
+.mainTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Custom styling so that the six elements will render into two columns on larger screens only
+.columnCluster {
+  display: flex;
+  flex-flow: row wrap;
+
+  div {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 10px;
+    @media (min-width: 769px) {
+	    width: 50%;
+	  }
+
+    > h2 > a {
+      color: #000066 !important;
+    }
+  }
+}
+
+.verticalCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}

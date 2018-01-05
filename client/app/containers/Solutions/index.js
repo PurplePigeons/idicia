@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Spinner from 'components/Spinner';
-import SolutionsTemplate from 'components/SolutionsTemplate';
+import SolutionsTemplate from 'components/SolutionsTemplateOld';
 
 import * as actions from '../StaticPages/actions';
 import {

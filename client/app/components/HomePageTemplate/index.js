@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
 
-// Components
+// SharedComponents
 import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
 import ContactForm from '../ContactForm';
