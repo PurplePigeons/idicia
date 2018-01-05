@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import styles from './styles.scss';
 
-const ServicesCardContent = ({ subtitle, title, img }) => (
+const ServicesCardContent = ({ subtitle, title, img, url }) => (
   <div>
     <div className="media">
       <div className={cn('media-left', styles.cardAvatar)}>
@@ -18,7 +18,7 @@ const ServicesCardContent = ({ subtitle, title, img }) => (
           {title}
         </h2>
         <h3 className={cn('subtitle is-size-6 has-text-dark', styles.bottomMargin)}>
-          {subtitle}
+          {subtitle}<Link className={styles.learnMore} to={url}>Learn More</Link>
         </h3>
       </div>
     </div>

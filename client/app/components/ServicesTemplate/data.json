@@ -34,18 +34,20 @@
         [{
           "id": "1",
           "title": "Telecom Hosting",
-          "subtitle": "CNAM, LIDB & Verification"
+          "subtitle": "CNAM, LIDB & Verification. ",
+          "url":"route"
         },
         {
           "id": "2",
           "title": "Wireless Flagging",
-          "subtitle": "Avoid costly TCPA violations by using Data Verification Services on your data"
+          "subtitle": "Avoid costly TCPA violations by using Data Verification Services on your data. ",
+          "url":"route"
         },
         {
           "id": "3",
           "title": "Contact Data Enrichment",
-          "subtitle": "Ensure you are reaching the people you mean to with accurate contacts"
-
+          "subtitle": "Ensure you are reaching the people you mean to with accurate contacts. ",
+          "url":"route"
         }]
     }
 }

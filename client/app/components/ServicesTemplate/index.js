@@ -17,9 +17,9 @@ const ServicesTemplate = () => {
     />
   );
 
-  const filledCardServices = json.data.serviceCardContent.map(({id, title, subtitle}) =>
+  const filledCardServices = json.data.serviceCardContent.map(({id, title, subtitle, url}) =>
     <ServicesCardContent
-      {...{id, title, subtitle}}
+      {...{id, title, subtitle, url}}
     />
   );
 
@@ -38,7 +38,21 @@ const ServicesTemplate = () => {
         <div className="hero-body">
           <div className="container">
             <div className="cardsContainer">
-              <div className="columns is-multiline is-centered is-variable is-4 ">
+              <div className="container">
+                <div className="card animated fadeInUp">
+                  <div className="card-content">
+                    <div className="content has-text-centered">
+                      <h2 style = {{paddingBotom: '2em'}}>
+                        Our Featured Service: <h1 style = {{marginBottom: '0'}}>The Telified Collection</h1>
+                      </h2>
+                      <h3 style = {{marginTop: '0'}}>
+                        Four unique services, each with its own legal access and allowable uses.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="columns is-multiline is-centered is-variable is-4" style={{ marginTop: '3em' }}>
                 {filledCardsTop}
               </div>
             </div>
@@ -50,7 +64,7 @@ const ServicesTemplate = () => {
           <div className="card animated fadeInUp">
             <div className="card-content">
               <div className="content columns">
-                <div className="column is-10 is-centered">
+                <div className="column is-11 is-centered">
                   <h1> Services </h1>
                   <p> {filledCardServices} </p>
                   <p> We also build custom solutions. Let's talk! </p>
@@ -60,7 +74,7 @@ const ServicesTemplate = () => {
           </div>
         </div>
         <div className="container">
-          <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
+          <div className="card animated fadeInUp" style={{ marginTop: '5em' }}>
             <div className="card-content">
               <div className="content has-text-centered">
                 <h1>
