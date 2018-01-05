@@ -55,7 +55,7 @@ const Footer = () => (
           <div className={`column has-text-centered is-4 ${styles.darkTextFix}`}>
             <img
               className={styles.footerLogo}
-              src={'http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087342/idicia/white.png'}
+              src="images/white.png"
               alt="Idicia Footer Logo"
             />
             <hr />

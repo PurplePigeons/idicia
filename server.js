@@ -7,7 +7,7 @@ keystone.init({
 
   'favicon': 'public/favicon.ico',
   'less': 'public',
-  'static': ['public'],
+  'static': ['public', 'assets'],
 
   'views': 'templates/views',
   'view engine': 'pug',

@@ -12,6 +12,11 @@ const app = express();
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
 
+// Allow server to statically serve assets like images, pdfs, etc without cloudinary hosting. Primarily intended to
+// support faster development but also works as an escape hatch for hosting file types that Keystone doesn't support
+// Files will be available by name from the root path '/', ie. <img src="images/white.png" />
+app.use(express.static(resolve(process.cwd(), '../assets')));
+
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
