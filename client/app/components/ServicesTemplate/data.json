@@ -6,28 +6,28 @@
           "id": "1",
           "title": "Name and Address",
           "content": "Verify telephone numbers, accounts, email addresses, names, SSN, and addresses",
-          "url": "verification",
+          "url": "telified",
           "img": "3D"
         },
         {
           "id": "2",
           "title": "Active / Inactive",
           "content": "Retrive additional data based on telephone, email, SSN, or address",
-          "url": "enrichment",
+          "url": "telified",
           "img": "enrichment"
         },
         {
           "id": "3",
           "title": "Consent Re-verification",
           "content": "Use our best of breed fuzzy matching to compare multiple contact records",
-          "url": "comparison",
+          "url": "telified",
           "img": "comparison"
         },
         {
           "id": "4",
           "title": "Inter-Continental",
           "content": "CNAM, LIDB, Verification, and Status hosting services of the telecom industry",
-          "url": "telecom",
+          "url": "telified",
           "img": "telecom"
         }],
       "serviceCardContent":
