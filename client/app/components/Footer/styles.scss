@@ -2,22 +2,21 @@
   padding-top: 20px;
 }
 
-<<<<<<< HEAD
-.footerColumn3 {
+/*.footerColumn3 {
   composes: footerColumn;
   height: 80%;
-}
+}*/
 
 .hr {
   width: 5rem;
   margin: 1.5rem auto;
-=======
-.hr {
+}
+/*.hr {
   width: 8rem;
   margin: 1.85rem auto;
   background: #FFD21E;
   text-align: right;
-}
+}*/
 
 .hrRight {
   composes: hr;
@@ -29,7 +28,6 @@
   composes: hr;
 
   margin-left: 0;
->>>>>>> footer
 }
 
 .darkTextFix {
@@ -64,13 +62,10 @@
 .contactEmailAndPhone {
   display: flex;
   justify-content: space-between;
-<<<<<<< HEAD
   flex-flow: row wrap;
   flex: 1;
-=======
 
   border-bottom: 1px solid #dbdbdb;
   color: #FFD21E;
   padding: 0.25em 0.5em;
->>>>>>> footer
 }
