@@ -38,19 +38,8 @@ const ServicesTemplate = () => {
         <div className="hero-body">
           <div className="container">
             <div className="cardsContainer">
-              <div className="columns is-multiline is-centered is-variable is-4">
+              <div className="columns is-multiline is-centered is-variable is-4 ">
                 {filledCardsTop}
-              </div>
-            </div>
-            <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
-              <div className="card-content">
-                <div className="content columns">
-                  <div className="column is-10 is-centered">
-                    <h1> Services </h1>
-                    <p> {filledCardServices} </p>
-                    <p> We also build custom solutions. Let's talk! </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -59,6 +48,19 @@ const ServicesTemplate = () => {
       <div className="hero-body">
         <div className="container">
           <div className="card animated fadeInUp">
+            <div className="card-content">
+              <div className="content columns">
+                <div className="column is-10 is-centered">
+                  <h1> Services </h1>
+                  <p> {filledCardServices} </p>
+                  <p> We also build custom solutions. Let's talk! </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
             <div className="card-content">
               <div className="content has-text-centered">
                 <h1>
@@ -69,7 +71,7 @@ const ServicesTemplate = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
