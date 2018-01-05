@@ -9,7 +9,7 @@ const ServicesCardContent = ({ subtitle, title, img, url }) => (
   <div>
     <div className="media">
       <div className={cn('media-left', styles.cardAvatar)}>
-        <figure className="image is-64x64 " style={{margin: '0px'}}>
+        <figure className="image is-64x64" style={{ margin: '0px' }}>
           {img}
         </figure>
       </div>
@@ -28,8 +28,8 @@ const ServicesCardContent = ({ subtitle, title, img, url }) => (
 ServicesCardContent.propTypes = {
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  //img: PropTypes.object.isRequired,
-  content: PropTypes.string.isRequired,
+  // img: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default ServicesCardContent;

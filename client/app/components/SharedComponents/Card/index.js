@@ -35,12 +35,13 @@ const Card = ({ subtitle, title, img, content, url, cardSize = 'is-4' }) => (
 );
 
 Card.propTypes = {
-  subtitle: PropTypes.string.isRequired,
+  cardSize: PropTypes.string,
+  subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
-  //img: PropTypes.object.isRequired,
+  // img: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  //offset: PropTypes.string.isRequired,
+  // offset: PropTypes.string.isRequired,
 };
 
 export default Card;

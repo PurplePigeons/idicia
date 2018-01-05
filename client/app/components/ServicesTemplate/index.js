@@ -1,8 +1,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import cn from 'classnames';
-import ServicesCardContent from './ServicesCardContent';
 import Card from 'components/SharedComponents/Card';
+import ServicesCardContent from './ServicesCardContent';
 import json from './data.json';
 
 // Styles
@@ -12,14 +12,15 @@ const ServicesTemplate = () => {
   const filledCardsTop = json.data.topCardContent.map(({ title, subtitle, content, url, img, id }) =>
     <Card
       key={id}
-      cardSize = "is-6"
-      {...{ title, subtitle, content, url, img}}
+      cardSize="is-6"
+      {...{ title, subtitle, content, url, img }}
     />
   );
 
-  const filledCardServices = json.data.serviceCardContent.map(({id, title, subtitle, url}) =>
+  const filledCardServices = json.data.serviceCardContent.map(({ id, title, subtitle, url }) =>
     <ServicesCardContent
-      {...{id, title, subtitle, url}}
+      key={id}
+      {...{ title, subtitle, url }}
     />
   );
 
@@ -42,10 +43,13 @@ const ServicesTemplate = () => {
                 <div className="card animated fadeInUp">
                   <div className="card-content">
                     <div className="content has-text-centered">
-                      <h2 style = {{paddingBotom: '2em'}}>
-                        Our Featured Service: <h1 style = {{marginBottom: '0'}}>The Telified Collection</h1>
+                      <h2 style={{ marginBottom: '0' }}>
+                        Our Featured Service:
                       </h2>
-                      <h3 style = {{marginTop: '0'}}>
+                      <h1 className="title is-2 has-text-dark" style={{ marginTop: '0' }}>
+                        The Telified Collection
+                      </h1>
+                      <h3 style={{ marginTop: '0' }}>
                         Four unique services, each with its own legal access and allowable uses.
                       </h3>
                     </div>
@@ -66,7 +70,7 @@ const ServicesTemplate = () => {
               <div className="content columns">
                 <div className="column is-11 is-centered">
                   <h1> Services </h1>
-                  <p> {filledCardServices} </p>
+                  {filledCardServices}
                   <p> We also build custom solutions. Let's talk! </p>
                 </div>
               </div>
@@ -85,7 +89,7 @@ const ServicesTemplate = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 };
