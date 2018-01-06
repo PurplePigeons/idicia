@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Helmet from 'react-helmet';
 
-// Components
+// SharedComponents
 import Footer from 'components/Footer';
 import withProgressBar from 'components/ProgressBar';
 import NavBar from 'components/NavBar';

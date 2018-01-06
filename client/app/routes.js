@@ -85,8 +85,8 @@ export default function createRoutes(store) {
       ],
     },
     {
-      path: '/assurance',
-      name: 'assurance',
+      path: '/solutionsOld',
+      name: 'solutionsOld',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           import('containers/StaticPages/reducer'),
@@ -240,6 +240,15 @@ export default function createRoutes(store) {
       name: 'solutions',
       getComponent(nextState, cb) {
         import('components/SolutionsTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: '/services',
+      name: 'services',
+      getComponent(nextState, cb) {
+        import('components/ServicesTemplate')
           .then(loadModule(cb))
           .catch(errorLoading);
       },

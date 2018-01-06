@@ -5,7 +5,7 @@ import domToReact from 'html-react-parser/lib/dom-to-react';
 
 /**
  * Parses incoming static HTML string into equivalent React Elements, while converting anchors into
- * React-Router Link Components
+ * React-Router Link SharedComponents
  *
  * @param  {string} HtmlString Static string of HTML (ie. from a backend CMS' API to be converted)
  *
