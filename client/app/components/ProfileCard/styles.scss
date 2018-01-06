@@ -46,7 +46,7 @@
     width: 100%;
     padding: 10px 16px;
     color: #FFF;
-    background-color: #3F51B5;
+    background-color: #000066;
     font-size: 1.4em;
     line-height: 1.6em;
     margin: 0;
@@ -77,8 +77,8 @@
     &:after {
       top: auto;
       bottom: 0;
-      border-top-color: #3F51B5;
-      border-right-color: #3F51B5;
+      border-top-color: #000066;
+      border-right-color: #000066;
       border-bottom-color: transparent;
       border-left-color: transparent;
     }
@@ -104,8 +104,8 @@
       &:before {
         top: 0;
         border-top-color: transparent;
-        border-right-color: #3F51B5;
-        border-bottom-color: #3F51B5;
+        border-right-color: #000066;
+        border-bottom-color: #000066;
         border-left-color: transparent;
       }
 
@@ -141,7 +141,7 @@
     line-height: 44px;
     text-align: center;
     color: #fff;
-    background-color: #3F51B5;
+    background-color: #000066;
     cursor: pointer;
     z-index: 20;
     @include mc-transtition();
@@ -161,7 +161,7 @@
     top: 100%;
     right: 30px;
     left: 30px;
-    bottom: 54px;
+    bottom: 20px;
     overflow: hidden;
     opacity: 0;
     @include mc-transtition(1.2s);
@@ -252,7 +252,7 @@
 
     .mc-description {
       top: 50px;
-      padding-top: 5.6em;
+      padding-top: 4.2em;
       opacity: 1;
 
       @media screen and (max-width: 767px) {
@@ -280,9 +280,7 @@
         top: 0;
       }
 
-      h4 {
-        top: -32px;
-      }
+
     }
   }
 }

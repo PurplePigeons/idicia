@@ -65,37 +65,49 @@ const AboutUsTemplate = () => (
           name="Garth Froese"
           title="CEO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg"
-          description="Very CEO wow guy ..."
+          description="Garth focuses on building bridges.Bridges between opportunities, people, and businesses. 
+          He hikes, fishes, and cycles when possible."
+          liUrl="https://www.linkedin.com/pub/garth-froese/b/863/324"
         />
         <ProfileCard
           name="Scott Rice"
           title="COO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg"
-          description="Very COO wow guy ..."
+          description="Scott is the resident data nerd. Formerly a principal data scientist for one of the big 3 
+          credit bureaus. Scott writes, blogs, and remodels his house."
+          liUrl="https://www.linkedin.com/pub/scott-rice/3/424/67"
         />
         <ProfileCard
           name="Tom Liebe"
           title="CTO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg"
-          description="Very CTO wow guy ..."
-        />
+          description="As head of our technology department, he manages the team that builds and maintains our services. 
+          Tom enjoys reading, music and family time."
+          liUrl="https://ca.linkedin.com/pub/tom-liebe/8/a59/83"
+          />
         <ProfileCard
           name="Dave Mori"
-          title="CEO"
+          title="VP-BD"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg"
-          description="Very CEO wow guy ..."
+          description="Self-proclaimed BBQ aficionado, judo practicioner, and father of 3 under 8. Dave is a great 
+          listener and can help you find your business solution."
+          liUrl="https://ca.linkedin.com/in/davemori"
         />
         <ProfileCard
           name="Ken Dick"
           title="CFO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg"
-          description="Very CFO wow guy ..."
+          description="Ken is our numbers guy and ensures everyone gets paid when he isn’t 
+          driving his convertible or motorcycle on roadtrips."
+          liUrl="https://ca.linkedin.com/pub/ken-dick/69/830/410"
         />
         <ProfileCard
           name="Stacy Halligan"
-          title="Carrier Relations"
+          title="Carrier Rel."
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg"
-          description="Very wow relations lady ..."
+          description="While Stacey is from Texas, don’t let the “y’all” fool you.  
+          Stacey is responsible for accessing our great telecommunications data."
+          liUrl="https://www.linkedin.com/pub/stacey-halligan/94/83b/a6b"
         />
       </div>
     </div>
