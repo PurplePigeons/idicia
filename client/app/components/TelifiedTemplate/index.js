@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
-// Components
+// SharedComponents
 import ContactForm from '../ContactForm';
 
 // Styles

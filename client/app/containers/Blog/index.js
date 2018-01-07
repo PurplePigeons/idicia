@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import classNames from 'classnames';
 
-// Components
+// SharedComponents
 import Paginator from 'components/Paginator';
 
 // Styling

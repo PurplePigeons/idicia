@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 
 import styles from './styles.scss';
 
-const SolutionCard = ({ subtitle, title, img, content, url }) => (
-  <div className="column is-4">
+const Card = ({ subtitle, title, img, content, url, cardSize = 'is-4' }) => (
+  <div className={`column ${cardSize} `}>
     <div className="card animated fadeInUp">
       <div className="card-content">
         <div className="media">
@@ -34,12 +34,13 @@ const SolutionCard = ({ subtitle, title, img, content, url }) => (
   </div>
 );
 
-SolutionCard.propTypes = {
-  subtitle: PropTypes.string.isRequired,
+Card.propTypes = {
+  cardSize: PropTypes.string,
+  subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
-  img: PropTypes.object.isRequired,
+  // img: PropTypes.object.isRequired, //TODO unComment after SVGs have been added to services
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 
-export default SolutionCard;
+export default Card;

@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import cn from 'classnames';
 // import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
-import SolutionCard from './SolutionCard';
+import Card from 'components/SharedComponents/Card';
 import data from './data.json';
 
 // Styles
@@ -10,8 +10,9 @@ import styles from './styles.scss';
 
 const SolutionsTemplate = () => {
   const filledCards = data.cardContent.map(({ title, subtitle, content, url, img, id }) =>
-    <SolutionCard
+    <Card
       key={id}
+      columnSize = {"is-4"}
       img={<img role="presentation" src={require(`./images/${img}.svg`)} style={{ fill: '#000066' }} />}
       {...{ title, subtitle, content, url }}
     />
