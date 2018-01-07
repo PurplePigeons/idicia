@@ -10,6 +10,7 @@ class ProfileCard extends PureComponent {
     title: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    liUrl: PropTypes.string.isRequired,
   }
 
   state = {
@@ -27,6 +28,7 @@ class ProfileCard extends PureComponent {
       title,
       imgSrc,
       description,
+      liUrl,
       // ...social link urls?
     } = this.props;
 
@@ -64,11 +66,10 @@ class ProfileCard extends PureComponent {
             </span>
           </a>
           <div className={styles['mc-footer']}>
-            <h4>Social</h4>
-            <a className="fa fa-fw fa-facebook"></a>
-            <a className="fa fa-fw fa-twitter"></a>
-            <a className="fa fa-fw fa-linkedin"></a>
-            <a className="fa fa-fw fa-google-plus"></a>
+            {/* <a className="fa fa-fw fa-facebook"></a> */}
+            {/* <a className="fa fa-fw fa-twitter"></a> */}
+            <a className="fa fa-fw fa-linkedin" href={liUrl} />
+            {/* <a className="fa fa-fw fa-google-plus"></a> */}
           </div>
         </article>
       </div>
