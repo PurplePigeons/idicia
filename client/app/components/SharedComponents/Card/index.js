@@ -38,10 +38,9 @@ Card.propTypes = {
   cardSize: PropTypes.string,
   subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
-  // img: PropTypes.object.isRequired,
+  // img: PropTypes.object.isRequired, //TODO unComment after SVGs have been added to services
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  // offset: PropTypes.string.isRequired,
 };
 
 export default Card;

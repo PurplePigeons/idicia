@@ -9,11 +9,11 @@ import json from './data.json';
 import styles from './styles.scss';
 
 const ServicesTemplate = () => {
-  const filledCardsTop = json.data.topCardContent.map(({ title, subtitle, content, url, img, id }) =>
+  const filledCardsTop = json.data.topCardContent.map(({ title, content, url, img, id }) =>
     <Card
       key={id}
       cardSize="is-6"
-      {...{ title, subtitle, content, url, img }}
+      {...{ title,  content, url, img }}
     />
   );
 
