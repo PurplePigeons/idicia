@@ -1,7 +1,7 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import cn from 'classnames';
 import BlogPreviewCard from './BlogPreviewCard';
+import CheckOut from './CheckOut';
 import data from './data.json';
 
 // Styles
@@ -12,6 +12,12 @@ const ResourcesTemplate = () => {
   const blogPreviews = data.blogLatest.map(({ id, title, snippet, slug, img }) =>
     <div className="column is-4" key={id}>
       <BlogPreviewCard {...{ title, snippet, slug, img }} />
+    </div>
+  );
+
+  const moreLinks = data.checkOut.map(({ id, imgSrc, title, url }) =>
+    <div className="column" key={id}>
+      <CheckOut {...{ imgSrc, title, url }} />
     </div>
   );
 
@@ -55,39 +61,30 @@ const ResourcesTemplate = () => {
           </div>
         </div>
       </section>
-      {/* <div className="hero-body">
-        <div className="container">
-          <div className="card animated fadeInUp">
-            <div className="card-content">
-              <div className="content columns">
-                <div className="column is-11 is-centered">
-                  <h1> Services </h1>
-                  {filledCardServices}
-                  <p> We also build custom solutions. Let's talk! </p>
+      <div className="hero">
+        <div className="hero-body">
+          <div className="container">
+            <div className={styles.cardContainer}>
+              <div className="card animated fadeInUp">
+                <div className="card-content">
+                  <div className="columns">
+                    { moreLinks }
+                  </div>
+                </div>
+              </div>
+              <div className="card animated fadeInUp">
+                <div className="card-content">
+                  <div className="content has-text-centered">
+                    <h1>Learning Center</h1>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="container">
-          <div className="card animated fadeInUp" style={{ marginTop: '5em' }}>
-            <div className="card-content">
-              <div className="content has-text-centered">
-                <h1>
-                  TELIFIED: Telephone Verified
-                </h1>
-                {content}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      </div>
     </section>
   );
 };
-
-// ResourcesTemplate.propTypes = {
-
-// };
 
 export default ResourcesTemplate;

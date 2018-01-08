@@ -25,5 +25,19 @@
         "alt": "placeholder"
       }
     }
+  ],
+  "checkOut": [
+    {
+      "id": "1",
+      "imgSrc": "images/developer.jpg",
+      "title": "Check out our developer page",
+      "url": "developer"
+    },
+    {
+      "id": "2",
+      "imgSrc": "https://bulma.io/images/placeholders/64x64.png",
+      "title": "Take a look at our press releases",
+      "url": "press-releases"
+    }
   ]
 }
