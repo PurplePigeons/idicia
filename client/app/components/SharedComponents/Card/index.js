@@ -15,10 +15,10 @@ const Card = ({ subtitle, title, img, content, url, cardSize = 'is-4' }) => (
             </figure>
           </div>
           <div className="media-content">
-            <h1 className="title is-size-4 has-text-dark">
+            <h1 className="title is-size-4">
               {title}
             </h1>
-            <h2 className="subtitle is-size-7 has-text-dark">
+            <h2 className="subtitle is-size-7">
               {subtitle}
             </h2>
           </div>

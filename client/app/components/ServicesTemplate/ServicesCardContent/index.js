@@ -14,10 +14,10 @@ const ServicesCardContent = ({ subtitle, title, img, url }) => (
         </figure>
       </div>
       <div className={cn('media-content', styles.paddingLeft)}>
-        <h2 className={cn('title is-size-4 has-text-dark', styles.title)}>
+        <h2 className={cn('title is-size-4', styles.title)}>
           {title}
         </h2>
-        <h3 className={cn('subtitle is-size-6 has-text-dark', styles.bottomMargin)}>
+        <h3 className={cn('subtitle is-size-6', styles.bottomMargin)}>
           {subtitle}<Link className={styles.learnMore} to={url}>Learn More</Link>
         </h3>
       </div>

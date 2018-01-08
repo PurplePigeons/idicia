@@ -33,7 +33,7 @@ module.exports = (options) => ({
       exclude: /node_modules\/react-toolbox/,
       loaders: [
         'style-loader',
-        'css-loader',
+        'css-loader?url=false',
         'sass-loader',
       ],
     },
@@ -47,7 +47,7 @@ module.exports = (options) => ({
       exclude: /app\/styles/,
       loaders: [
         'style-loader?fixUrls',
-        'css-loader?modules&sourceMap&localIdentName=[local]___[hash:base64:5]',
+        'css-loader?url=false&modules&sourceMap&localIdentName=[local]___[hash:base64:5]',
         'sass-loader?outputStyle=expanded&sourceMap',
       ],
     },

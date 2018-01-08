@@ -33,13 +33,11 @@ const SolutionsTemplate = () => {
 
   return (
     <section>
-      <section className={cn('hero is-fullheight is-primary', styles.aboutHero)}>
+      <section className={cn('hero is-fullheight', styles.aboutHero)}>
         <div className="hero-body">
           <div className="container">
-            <div className="cardsContainer">
-              <div className="columns is-multiline">
-                {filledCards}
-              </div>
+            <div className="columns is-multiline">
+              {filledCards}
             </div>
             <div className="card animated fadeInUp" style={{ marginTop: '5rem' }}>
               <div className="card-content">
