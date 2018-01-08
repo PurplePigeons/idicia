@@ -1,0 +1,29 @@
+{
+  "blogLatest": [
+    {
+      "id": "1",
+      "title": "Getting Better an Inch at a Time",
+      "snippet": "You can do it little buddy, we believe in you...",
+      "slug": "example-post-1",
+      "img": {
+        "src": "http://blog.idicia.com/content/images/2017/06/iStock-511116978-1.jpg"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Humanification of Verification",
+      "snippet": "Somebody forgot the image url for the article...",
+      "slug": "example-post-1"
+    },
+    {
+      "id": "3",
+      "title": "Infographic: What is an API?",
+      "snippet": "A small snippet from the article...",
+      "slug": "example-post-1",
+      "img": {
+        "src": "http://blog.idicia.com/content/images/2017/06/API-Stock-Photo.jpg",
+        "alt": "placeholder"
+      }
+    }
+  ]
+}

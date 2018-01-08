@@ -227,10 +227,19 @@ export default function createRoutes(store) {
       },
     },
     {
-      path: 'about-us',
+      path: '/about-us',
       name: 'about us',
       getComponent(nextState, cb) {
         import('components/AboutUsTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: '/resources',
+      name: 'resources',
+      getComponent(nextState, cb) {
+        import('components/ResourcesTemplate')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
