@@ -32,8 +32,6 @@ const AboutUsTemplate = () => (
                     <p>
                       IDICIA gives you access to all the best information without the need to maintain it. Our specialty is combining highly accurate, authoritative and nearly ubiquitous telecom billing data with robust credit bureau data in a hybrid approach that uses the best qualities of each to give your business (or that of your customers) the confidence and assurance it needs when interacting with consumers over the internet. IDICIA services provide access to data enrichment and consumer data verification in our easy to implement API and we’re here to answer the phone when you have a question.
                     </p>
-                    <hr />
-                    <ScrollToButton scrollTo="#contactForm" text="Contact Us" />
                   </div>
                 </div>
               </div>
