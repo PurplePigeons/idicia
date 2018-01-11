@@ -28,7 +28,7 @@ const ServicesCardContent = ({ subtitle, title, img, url }) => (
 ServicesCardContent.propTypes = {
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  // img: PropTypes.object.isRequired,
+  img: PropTypes.object.isRequired,
   url: PropTypes.string.isRequired,
 };
 

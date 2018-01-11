@@ -11,6 +11,8 @@
 
 .title {
   padding-bottom: 0.25rem;
+  // This padding-top doesn't work. 
+  padding-top: .70rem !important; 
 }
 
 .bottomMargin {

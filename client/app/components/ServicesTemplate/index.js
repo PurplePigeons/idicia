@@ -13,13 +13,15 @@ const ServicesTemplate = () => {
     <Card
       key={id}
       cardSize="is-6"
-      {...{ title,  content, url, img }}
+      img={<img role="presentation" src={require(`./images/${img}.svg`)} style={{ fill: '#000066'}} />}
+      {...{ title,  content, url}}
     />
   );
 
-  const filledCardServices = json.data.serviceCardContent.map(({ id, title, subtitle, url }) =>
+  const filledCardServices = json.data.serviceCardContent.map(({ id, title, subtitle, url, img }) =>
     <ServicesCardContent
       key={id}
+      img={<img role="presentation" src={require(`./images/${img}.svg`)} style={{ fill: '#000066'}} />}
       {...{ title, subtitle, url }}
     />
   );
