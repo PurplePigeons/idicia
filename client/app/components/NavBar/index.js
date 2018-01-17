@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 import classNames from "classnames";
+import ContactModal from "../Modal";
 
 // Styles
 import logo from './full_logo.png';
@@ -44,6 +45,8 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
         <Link to={'/'} className="navbar-item">
           <img src={logo} alt="Idicia" width="112" height="28" />
         </Link>
+
+        <ContactModal />
 
         <button
           className={navHamburger}
