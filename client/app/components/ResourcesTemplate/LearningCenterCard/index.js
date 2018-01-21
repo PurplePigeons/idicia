@@ -12,7 +12,7 @@ const LearningCenterCard = ({ title, links }) => (
         </ul>
       </summary>
       <div className="content" style={{ padding: '16px 24px' }}>
-        {links.map((el) => <p>{el}</p>)}
+        {links.map((el) => <p key={el}>{el}</p>)}
       </div>
     </details>
   </div>
