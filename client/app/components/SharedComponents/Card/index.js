@@ -4,6 +4,9 @@ import { Link } from 'react-router';
 
 import styles from './styles.scss';
 
+// TODO - update to take img as a src prop and possibly provide sizing as another prop,
+// instead of accepting an <img> object directly
+
 const Card = ({ subtitle, title, img, content, url, cardSize = 'is-4' }) => (
   <div className={`column ${cardSize} `}>
     <div className="card animated fadeInUp">
@@ -38,7 +41,7 @@ Card.propTypes = {
   cardSize: PropTypes.string,
   subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
-  // img: PropTypes.object.isRequired, //TODO unComment after SVGs have been added to services
+  img: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };

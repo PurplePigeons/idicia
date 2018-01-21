@@ -5,12 +5,12 @@ import cn from 'classnames';
 
 import styles from './styles.scss';
 
-const ServicesCardContent = ({ subtitle, title, img, url }) => (
+const ServicesCardContent = ({ subtitle, title, src, url }) => (
   <div>
     <div className="media">
       <div className={cn('media-left', styles.cardAvatar)}>
         <figure className="image is-64x64" style={{ margin: '0px' }}>
-          {img}
+          <img role="presentation" src={src} style={{ fill: '#000066' }} />
         </figure>
       </div>
       <div className={cn('media-content', styles.paddingLeft)}>
@@ -28,7 +28,7 @@ const ServicesCardContent = ({ subtitle, title, img, url }) => (
 ServicesCardContent.propTypes = {
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  // img: PropTypes.object.isRequired,
+  src: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 

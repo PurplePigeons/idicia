@@ -3,25 +3,24 @@ import React from 'react';
 import cn from 'classnames';
 import Card from 'components/SharedComponents/Card';
 import ServicesCardContent from './ServicesCardContent';
-import json from './data.json';
+import data from './data.json';
 
 // Styles
 import styles from './styles.scss';
 
+// TODO - update Card to not take <img> directly, pass src string and maybe sizing/styles as props
 const ServicesTemplate = () => {
-  const filledCardsTop = json.data.topCardContent.map(({ title, content, url, img, id }) =>
+  const filledCardsTop = data.topCardContent.map(({ title, content, url, src, id }) =>
     <Card
       key={id}
       cardSize="is-6"
-      {...{ title,  content, url, img }}
+      img={<img role="presentation" src={`./images/svgs/${src}.svg`} style={{ fill: '#000066' }} />}
+      {...{ title, content, url }}
     />
   );
 
-  const filledCardServices = json.data.serviceCardContent.map(({ id, title, subtitle, url }) =>
-    <ServicesCardContent
-      key={id}
-      {...{ title, subtitle, url }}
-    />
+  const filledCardServices = data.serviceCardContent.map(({ id, title, subtitle, url, src }) =>
+    <ServicesCardContent key={id} {...{ src, subtitle, title, url }} />
   );
 
   const content = `The Telified™ Collection of consumer identity verification services was 
