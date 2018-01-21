@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.scss';
 
-const LearningCenterCard = ({title, links}) => (
+const LearningCenterCard = ({ title, links }) => (
   <div className="column is-6">
     <details>
       <summary>
@@ -11,8 +11,8 @@ const LearningCenterCard = ({title, links}) => (
           <li className="titleName">{title}</li>
         </ul>
       </summary>
-      <div className="content" style={{ padding: "16px 24px" }}>
-        {Object.values(...links).map(el => <p>{el}</p>)}
+      <div className="content" style={{ padding: '16px 24px' }}>
+        {links.map((el) => <p>{el}</p>)}
       </div>
     </details>
   </div>
@@ -20,6 +20,7 @@ const LearningCenterCard = ({title, links}) => (
 );
 
 LearningCenterCard.propTypes = {
+  links: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
 };
 

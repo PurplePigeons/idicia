@@ -44,50 +44,50 @@
     {
       "id": "1",
       "title": "Getting Started",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     },
     {
       "id": "2",
       "title": "Verification",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     },
     {
       "id": "3",
       "title": "Enrichment",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     },
     {
       "id": "4",
       "title": "Comparison",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     },
     {
       "id": "5",
       "title": "Compliance and Whitepapers",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     },
     {
       "id": "6",
       "title": "Verification",
-      "links": [{
-        "1":"url1",
-        "2":"url2"
-      }]
+      "links": [
+        "url1",
+        "url2"
+      ]
     }
   ]
 }
