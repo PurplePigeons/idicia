@@ -1,12 +1,24 @@
 import { Observable } from 'rxjs';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import {
+  closeContactModal,
   closeMobileNav,
 } from './actions';
 import {
   changeToPage,
   getPageOfPosts,
 } from '../Blog/actions';
+
+// Automatically close the nav drawer when the user has selected a new route
+const closeContactModalEpic = (action$, store) =>
+  action$.ofType(LOCATION_CHANGE)
+    .switchMap(() => {
+      const contactModalActive = store.getState().getIn(['global', 'contactModalActive']);
+      if (contactModalActive) {
+        return Observable.of(closeContactModal());
+      }
+      return Observable.of();
+    });
 
 // Automatically close the nav drawer when the user has selected a new route
 const closeNavEpic = (action$, store) =>
@@ -45,6 +57,7 @@ const fetchPageEpic = (action$, store) =>
     });
 
 export {
+  closeContactModalEpic,
   closeNavEpic,
   fetchPageEpic,
 };
