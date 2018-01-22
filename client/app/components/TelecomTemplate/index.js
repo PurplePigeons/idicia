@@ -9,9 +9,9 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const TelecomTemplate = ({ data }) => {
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
+  const mediumCustomContent = `content ${bulma['is-medium']} ${styles.content}`;
 
-  //TODO this can probably be made more general and into a wrapper component
+  //TODO this can be made more general and into a wrapper component
   const contentCard = (sectionStyle, children) => {
 
     //TODO these are probably pretty universal styles, abstract at some point and create central location for classes
@@ -42,7 +42,7 @@ const TelecomTemplate = ({ data }) => {
 
     //TODO multiple calls of function, maybe memoize & cache or loop?
     <div className="columns is-multiline">
-      {contentCard('mainHero', <h1 className={`${bulma.title} ${styles.mainTitle}`}>
+      {contentCard('mainHero', <h1 className={`title ${styles.mainTitle}`}>
         {data.title}
       </h1>)}
       {contentCard('lightHero',
@@ -51,11 +51,11 @@ const TelecomTemplate = ({ data }) => {
       {contentCard('infoHero',
         <div>
           <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
-            <div className={bulma.columns}>
-              <div className={bulma.column}>
+            <div className='columns'>
+              <div className='column'>
               <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
             </div>
-              <div className={bulma.column}>
+              <div className='column'>
               <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
             </div>
             </div>
