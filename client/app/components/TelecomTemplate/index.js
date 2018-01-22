@@ -9,17 +9,18 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const TelecomTemplate = ({ data }) => {
+  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
 
   //TODO this can probably be made more general and into a wrapper component
   const contentCard = (sectionStyle, children) => {
 
     //TODO these are probably pretty universal styles, abstract at some point and create central location for classes
+    const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
+
     const sectionStyleEnum = {
       mainHero : `${boldHero} is-small is-primary`,
       lightHero : `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`,
-      boldHero : `${bulma.hero} ${bulma['is-bold']}`,
       infoHero : `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`,
-      mediumCustomContent : `${bulma.content} ${bulma['is-medium']} ${styles.content}`,
     };
 
     return (
@@ -38,6 +39,7 @@ const TelecomTemplate = ({ data }) => {
   };
 
   return (
+
     //TODO multiple calls of function, maybe memoize & cache or loop?
     <div className="columns is-multiline">
       {contentCard('mainHero', <h1 className={`${bulma.title} ${styles.mainTitle}`}>
