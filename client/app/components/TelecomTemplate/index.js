@@ -9,70 +9,60 @@ import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const TelecomTemplate = ({ data }) => {
-  const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
-  const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
-  const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
 
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
+  //TODO this can probably be made more general and into a wrapper component
+  const contentCard = (sectionStyle, children) => {
+
+    //TODO these are probably pretty universal styles, abstract at some point and create central location for classes
+    const sectionStyleEnum = {
+      mainHero : `${boldHero} is-small is-primary`,
+      lightHero : `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`,
+      boldHero : `${bulma.hero} ${bulma['is-bold']}`,
+      infoHero : `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`,
+      mediumCustomContent : `${bulma.content} ${bulma['is-medium']} ${styles.content}`,
+    };
+
+    return (
+        <section className= {`${sectionStyleEnum[sectionStyle]} column is-10 is-offset-1`}>
+          <div className="card animated fadeInUp">
+            <div className="card-content">
+              <div className={bulma['hero-body']}>
+                <div className='container'>
+                  {children}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    )
+  };
 
   return (
+    //TODO multiple calls of function, maybe memoize & cache or loop?
     <div className="columns is-multiline">
-      <section className= {`${mainHero} column is-10 is-offset-1`}>
-        <div className="card animated fadeInUp">
-          <div className="card-content">
-            <div className={bulma['hero-body']}>
-              <div className={bulma.container}>
-                <h1 className={`${bulma.title} ${styles.mainTitle}`}>
-                  {data.title}
-                </h1>
-              </div>
+      {contentCard('mainHero', <h1 className={`${bulma.title} ${styles.mainTitle}`}>
+        {data.title}
+      </h1>)}
+      {contentCard('lightHero',
+        <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
+      )}
+      {contentCard('infoHero',
+        <div>
+          <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
+            <div className={bulma.columns}>
+              <div className={bulma.column}>
+              <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className={`${lightHero} column is-10 is-offset-1`}>
-        <div className="card animated fadeInUp">
-          <div className="card-content">
-            <div className={bulma['hero-body']}>
-              <div className={bulma.container}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
-              </div>
+              <div className={bulma.column}>
+              <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className={`${infoHero} column is-10 is-offset-1`}>
-        <div className="card animated fadeInUp">
-          <div className="card-content">
-            <div className={bulma['hero-body']}>
-              <div className={bulma.container}>
-                <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
-                <div className={bulma.columns}>
-                  <div className={bulma.column}>
-                    <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
-                  </div>
-                  <div className={bulma.column}>
-                    <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
-                  </div>
-                </div>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.content.html }}></div>
-              </div>
             </div>
-          </div>
+            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.content.html }}/>
         </div>
-      </section>
-      <section className={`${lightHero} column is-10 is-offset-1`}>
-        <div className="card animated fadeInUp">
-          <div className="card-content">
-            <div className={bulma['hero-body']}>
-              <div className={bulma.container}>
-                <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section >
+      )}
+      {contentCard('lightHero',
+        <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />
+      )}
       <ContactUsCTA />
     </div>
 
