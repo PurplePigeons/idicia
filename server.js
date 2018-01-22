@@ -21,6 +21,7 @@ keystone.init({
   },
 
   'session': true,
+  'session store': 'mongo',
   'auth': true,
   'user model': 'User',
   'cookie secret': config.COOKIE_SECRET || 'changeme',

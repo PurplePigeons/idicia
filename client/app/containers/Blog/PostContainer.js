@@ -4,7 +4,7 @@ import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-// Components
+// SharedComponents
 import BlogPost from 'components/BlogComponents/BlogPost';
 import Spinner from 'components/Spinner';
 

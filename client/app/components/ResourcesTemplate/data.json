@@ -1,0 +1,93 @@
+{
+  "blogLatest": [
+    {
+      "id": "1",
+      "title": "Getting Better an Inch at a Time",
+      "snippet": "You can do it little buddy, we believe in you...",
+      "slug": "example-post-1",
+      "img": {
+        "src": "http://blog.idicia.com/content/images/2017/06/iStock-511116978-1.jpg"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Humanification of Verification",
+      "snippet": "Somebody forgot the image url for the article...",
+      "slug": "example-post-1"
+    },
+    {
+      "id": "3",
+      "title": "Infographic: What is an API?",
+      "snippet": "A small snippet from the article...",
+      "slug": "example-post-1",
+      "img": {
+        "src": "http://blog.idicia.com/content/images/2017/06/API-Stock-Photo.jpg",
+        "alt": "placeholder"
+      }
+    }
+  ],
+  "checkOut": [
+    {
+      "id": "1",
+      "imgSrc": "images/developer.jpg",
+      "title": "Check out our developer page",
+      "url": "developer"
+    },
+    {
+      "id": "2",
+      "imgSrc": "https://bulma.io/images/placeholders/64x64.png",
+      "title": "Take a look at our press releases",
+      "url": "press-releases"
+    }
+  ],
+  "learningCenter": [
+    {
+      "id": "1",
+      "title": "Getting Started",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Verification",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Enrichment",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Comparison",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Compliance and Whitepapers",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Verification",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    }
+  ]
+}

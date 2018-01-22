@@ -1,0 +1,19 @@
+.learnMore {
+  h5 {
+    color: #000066 !important;
+  }
+
+  &:hover {
+    h5 {
+      color: #363636 !important;
+    }
+  }
+}
+
+.mediaCentered {
+  align-self: center;
+}
+
+.roundedImg {
+  border-radius: 50%;
+}

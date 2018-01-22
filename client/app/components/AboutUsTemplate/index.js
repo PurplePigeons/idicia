@@ -3,7 +3,7 @@ import React from 'react';
 import Reveal from 'react-reveal';
 // import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
-// Components
+// SharedComponents
 import ContactForm from 'components/ContactForm';
 import ProfileCard from 'components/ProfileCard';
 import ScrollToButton from 'components/ScrollToButton';
@@ -32,8 +32,6 @@ const AboutUsTemplate = () => (
                     <p>
                       IDICIA gives you access to all the best information without the need to maintain it. Our specialty is combining highly accurate, authoritative and nearly ubiquitous telecom billing data with robust credit bureau data in a hybrid approach that uses the best qualities of each to give your business (or that of your customers) the confidence and assurance it needs when interacting with consumers over the internet. IDICIA services provide access to data enrichment and consumer data verification in our easy to implement API and we’re here to answer the phone when you have a question.
                     </p>
-                    <hr />
-                    <ScrollToButton scrollTo="#contactForm" text="Contact Us" />
                   </div>
                 </div>
               </div>
@@ -84,7 +82,7 @@ const AboutUsTemplate = () => (
           description="As our head of tech, he manages development and maintenance of our services. 
           Tom enjoys reading, music and family time."
           liUrl="https://ca.linkedin.com/pub/tom-liebe/8/a59/83"
-          />
+        />
         <ProfileCard
           name="Dave Mori"
           title="VP-BD"
@@ -97,16 +95,14 @@ const AboutUsTemplate = () => (
           name="Ken Dick"
           title="CFO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/ken-dick.jpg"
-          description="Ken is our numbers guy and ensures everyone gets paid when he isn’t 
-          driving his convertible or motorcycle on roadtrips."
+          description="Ken is our numbers guy and ensures everyone gets paid when he isn't driving his convertible or motorcycle on roadtrips."
           liUrl="https://ca.linkedin.com/pub/ken-dick/69/830/410"
         />
         <ProfileCard
           name="Stacy Halligan"
           title="Carrier Rel."
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/stacey-halligan.jpg"
-          description="While Stacey is from Texas, don’t let the “y’all” fool you.  
-          Stacey is responsible for accessing our great telecommunications data."
+          description={`While Stacey is from Texas, don’t let the "y'all" fool you. Stacey is responsible for accessing our great telecommunications data.`}
           liUrl="https://www.linkedin.com/pub/stacey-halligan/94/83b/a6b"
         />
       </div>

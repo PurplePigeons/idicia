@@ -6,7 +6,7 @@ import classNames from 'classnames';
 // Styles
 import styles from './styles.scss';
 
-// Components
+// SharedComponents
 import RangeButtons from './RangeButtons';
 
 const Paginator = ({ currPage, numPages }) => {

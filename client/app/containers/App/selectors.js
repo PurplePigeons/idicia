@@ -6,6 +6,11 @@ import { createSelector } from 'reselect';
 
 const selectGlobal = (state) => state.get('global');
 
+const makeSelectContactModalActive = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('contactModalActive')
+);
+
 const makeSelectMobileNavActive = () => createSelector(
   selectGlobal,
   (globalState) => globalState.get('mobileNavActive')
@@ -29,6 +34,7 @@ const makeSelectLocationState = () => {
 
 export {
   selectGlobal,
+  makeSelectContactModalActive,
   makeSelectMobileNavActive,
   makeSelectLocationState,
 };

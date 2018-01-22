@@ -62,13 +62,13 @@ class ProfileCard extends PureComponent {
           </div>
           <a className={styles['mc-btn-action']} onClick={this.handleClick}>
             <span className="icon">
-              <i className={actionIcon} style={{color: "#ffcc00"}} />
+              <i className={actionIcon} />
             </span>
           </a>
           <div className={styles['mc-footer']}>
             {/* <a className="fa fa-fw fa-facebook"></a> */}
             {/* <a className="fa fa-fw fa-twitter"></a> */}
-            <a className="fa fa-fw fa-linkedin" href={liUrl}></a>
+            <a className="fa fa-fw fa-linkedin" href={liUrl} />
             {/* <a className="fa fa-fw fa-google-plus"></a> */}
           </div>
         </article>

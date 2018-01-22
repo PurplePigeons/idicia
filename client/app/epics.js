@@ -1,5 +1,6 @@
 import { combineEpics } from 'redux-observable';
 import {
+  closeContactModalEpic,
   closeNavEpic,
   fetchPageEpic,
 } from 'containers/App/epic';
@@ -11,6 +12,7 @@ import { homePageEpic, staticPagesEpic } from 'containers/StaticPages/epic';
 import * as blogApi from 'utils/blogApi';
 
 const rootEpic = (...args) => combineEpics(
+  closeContactModalEpic,
   closeNavEpic,
   fetchPageEpic,
   getBlogPostBySlugEpic,

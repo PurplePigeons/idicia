@@ -4,8 +4,11 @@ import { Link } from 'react-router';
 
 import styles from './styles.scss';
 
-const SolutionCard = ({ subtitle, title, img, content, url }) => (
-  <div className="column is-4">
+// TODO - update to take img as a src prop and possibly provide sizing as another prop,
+// instead of accepting an <img> object directly
+
+const Card = ({ subtitle, title, img, content, url, cardSize = 'is-4' }) => (
+  <div className={`column ${cardSize} `}>
     <div className="card animated fadeInUp">
       <div className="card-content">
         <div className="media">
@@ -15,10 +18,10 @@ const SolutionCard = ({ subtitle, title, img, content, url }) => (
             </figure>
           </div>
           <div className="media-content">
-            <h1 className="title is-size-4 has-text-dark">
+            <h1 className="title is-size-4">
               {title}
             </h1>
-            <h2 className="subtitle is-size-7 has-text-dark">
+            <h2 className="subtitle is-size-7">
               {subtitle}
             </h2>
           </div>
@@ -34,12 +37,13 @@ const SolutionCard = ({ subtitle, title, img, content, url }) => (
   </div>
 );
 
-SolutionCard.propTypes = {
-  subtitle: PropTypes.string.isRequired,
+Card.propTypes = {
+  cardSize: PropTypes.string,
+  subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
   img: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 
-export default SolutionCard;
+export default Card;

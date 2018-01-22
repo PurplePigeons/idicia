@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
-// Components
+// SharedComponents
 import ContactUsCTA from '../ContactUsCTA';
 
 // Styles

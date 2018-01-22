@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
 
-// Components
+// SharedComponents
 import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
 import ContactForm from '../ContactForm';
@@ -56,7 +56,7 @@ const HomePageTemplate = ({ data }) => (
             conflicting.... To provide you with the fastest & most accurate Data
             Hygiene services and the best customer service in the industry.
           </h4>
-          <ScrollToButton fadeIn scrollTo="#contactForm" text="Contact Us" />
+          {/* <ScrollToButton fadeIn scrollTo="#contactForm" text="Contact Us" /> */}
         </div>
       </div>
     </section>
@@ -64,102 +64,55 @@ const HomePageTemplate = ({ data }) => (
       className="section"
       style={{ padding: '0', backgroundColor: 'whitesmoke' }}
     >
-      <div className="container">
-        <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
-          <div
-            className="column is-2"
-            style={{
-              border: '2px solid #ddd',
-              fontSize: '1.2rem',
-              backgroundColor: '#eee',
-            }}
-          >
-            <TimeCounter initialValue={120938} interval={1000} increment={1} />
-            <br />
-            Happy Customers
-          </div>
-          <div
-            className="column is-2"
-            style={{
-              borderTop: '2px solid #ddd',
-              borderBottom: '2px solid #ddd',
-              borderRight: '2px solid #ddd',
-              fontSize: '1.2rem',
-              backgroundColor: '#eee',
-            }}
-          >
-            <TimeCounter
-              initialValue={1209381239000000}
-              interval={300}
-              increment={1}
-            />
-            <br />
-            Records Processed
-          </div>
-          <div
-            className="column is-2"
-            style={{
-              borderTop: '2px solid #ddd',
-              borderBottom: '2px solid #ddd',
-              fontSize: '1.2rem',
-              backgroundColor: '#eee',
-            }}
-          >
-            <TimeCounter
-              initialValue={12093812390}
-              interval={150}
-              increment={5}
-            />
-            <br />
-            Database Lookups
-          </div>
-          <div
-            className="column is-2"
-            style={{
-              border: '2px solid #ddd',
-              fontSize: '1.2rem',
-              backgroundColor: '#eee',
-            }}
-          >
-            <TimeCounter
-              initialValue={83874982374}
-              interval={100}
-              increment={111}
-            />
-            <br />
-            Data Points
+    <div className="container">
+      <nav className="level">
+        <div className="level-item has-text-centered" style={{paddingTop: "3rem"}}>
+          <div>
+            <p className="heading">Happy Customers</p>
+            <div className="title">
+              <TimeCounter initialValue={385} interval={2500} increment={1} />
+            </div>
           </div>
         </div>
-      </div>
+        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+          <div>
+            <p className="heading">Records Processed</p>
+            <div className="title">
+              <TimeCounter initialValue={209} interval={1500} increment={1} />
+              <span> M</span>
+            </div>
+          </div>
+        </div>
+        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+          <div>
+            <p className="heading">Database Lookups</p>
+            <div className="title">
+              <TimeCounter initialValue={145} interval={500} increment={1} />
+              <span> M</span>
+            </div>
+          </div>
+        </div>
+        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+          <div>
+            <p className="heading">Data Points</p>
+            <div className="title">
+              <TimeCounter initialValue={873} interval={250} increment={1} />
+              <span> M</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     </section>
     <section
       className={`section ${styles.textCenter}`}
-      style={{ background: 'none' }}
+      style={{background: 'none'}}
+
     >
       <h1 className="title"> What We Do </h1>
       <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
-        <ThreeBlock
-          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
-          icon="fa-phone"
-          title="Awesome support"
-        >
-          While the support standard in our industry is an email and hoping to
-          hear back, we understand that just isn’t good enough sometimes. We’re
-          here to help on an actual phone and email(if you prefer).<br />
-          <a style={{ textDecoration: 'underline' }}>Learn more</a>
-        </ThreeBlock>
 
-        <ThreeBlock
-          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
-          icon="fa-code"
-          title="Easy Implementation"
-        >
-          Using the RESTful standard for our API and extensive documentation
-          will help you get up and running with our data enrichment services
-          fast and with less hassle.<br />
-          <a style={{ textDecoration: 'underline' }}>Learn more</a>
-        </ThreeBlock>
-        <ThreeBlock
+      <ThreeBlock
           backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
           icon="fa-database"
           title="Fast & Accurate Data"
@@ -170,30 +123,56 @@ const HomePageTemplate = ({ data }) => (
           highly accurate data.<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
+        
+        <ThreeBlock
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
+          icon="fa-code"
+          title="Easy Implementation"
+        >
+          Using the RESTful standard for our API and extensive documentation
+          will help you get up and running with our data enrichment services
+          fast and with less hassle.<br />
+          <a style={{ textDecoration: 'underline' }}>Learn more</a>
+        </ThreeBlock>
+
+        <ThreeBlock
+          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
+          icon="fa-phone"
+          title="Awesome support"
+        >
+          While the support standard in our industry is an email and hoping to
+          hear back, we understand that just isn’t good enough sometimes. We’re
+          here to help on an actual phone and email(if you prefer).<br />
+          <a style={{ textDecoration: 'underline' }}>Learn more</a>
+        </ThreeBlock>
+        
       </div>
     </section>
     <section className="container">
       <div className={styles.textCenter}>
         <h1 className="title">What do you need to get started?</h1>
       </div>
-      <GettingStarted />
+      <Reveal effect="animated fadeInUp">
+        <GettingStarted />
+      </Reveal>
     </section>
     <section
       className={`container ${styles.textCenter}`}
-      style={{ marginTop: '40px' }}
+      style={{margin: '40px auto'}}
     >
-      <h1
-        className="title"
-        style={{ color: '#FFCC00', fontWeight: 'bolder' }}
-      >
-        THE IDICIA DIFFERENCE
-      </h1>
-      <div className="columns is-centered">
-        <div className="column is-half">
+      <div className="card is-centered">
+        <div className="card-content">
+          <h1
+            className="title"
+            style={{ color: '#FFCC00', fontWeight: 'bolder' }}
+          >
+            THE IDICIA DIFFERENCE
+          </h1>
           <p>
             <strong>IDICIA is a whole new kind of data company.</strong>
           </p>
-          <p>
+          <br/>
+          <p style={{margin: 'auto 40px'}}>
             We have access to billions of consumer data records but we only pull
             the specific record we need at the very last possible second we need
             it, so it is as fresh as possible. Our data services are truly “just
@@ -201,7 +180,7 @@ const HomePageTemplate = ({ data }) => (
             accesses the best data on the market and some data our competitors
             only wish they had.
           </p>
-          <p style={{ marginTop: '20px' }}>
+          <p style={{ margin: '20px 40px' }}>
             Many of the records we access provide fresh answers within seconds
             of when the record was updated. One of the main reasons we have
             access to many of our information resources is that we don’t require
@@ -214,10 +193,11 @@ const HomePageTemplate = ({ data }) => (
           </p>
         </div>
       </div>
+
     </section>
-    <Reveal effect="animated fadeIn">
+    {/* <Reveal effect="animated fadeIn">
       <ContactForm />
-    </Reveal>
+    </Reveal> */}
   </section>
 );
 

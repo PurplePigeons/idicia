@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Components
+// SharedComponents
 import ContactUsCTA from '../ContactUsCTA';
 
 // Styles

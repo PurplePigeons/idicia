@@ -27,13 +27,14 @@ export default class ThreeBlock extends PureComponent {
       <div
         className="column is-3"
         style={{
-          border: '1px solid #ddd',
-          backgroundImage: `url(${this.props.backgroundImage})`,
-          backgroundSize: 'cover',
-          height: '200px',
+          border: '3px solid #fff',
+           backgroundImage: `url(${this.props.backgroundImage})`,
+           backgroundSize: 'cover',
+           height: '200px',
           display: 'flex',
           flexAlign: 'center',
           alignItems: 'center',
+          margin: '0 20px'
         }}
         onMouseEnter={this.handleEnter}
         onMouseLeave={this.handleLeave}

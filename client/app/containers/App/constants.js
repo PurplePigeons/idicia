@@ -9,7 +9,9 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
+export const CLOSE_CONTACT_MODAL = 'keystone/App/CLOSE_CONTACT_MODAL';
 export const CLOSE_MOBILE_NAV = 'keystone/App/CLOSE_MOBILE_NAV';
+export const TOGGLE_CONTACT_MODAL = 'keystone/App/TOGGLE_CONTACT_FORM';
 export const TOGGLE_MOBILE_NAV = 'keystone/App/TOGGLE_MOBILE_NAV';
 export const LOAD_REPOS = 'boilerplate/App/LOAD_REPOS';
 export const LOAD_REPOS_SUCCESS = 'boilerplate/App/LOAD_REPOS_SUCCESS';
