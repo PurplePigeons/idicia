@@ -16,7 +16,9 @@
  */
 
 import {
+  CLOSE_CONTACT_MODAL,
   CLOSE_MOBILE_NAV,
+  TOGGLE_CONTACT_MODAL,
   TOGGLE_MOBILE_NAV,
 } from './constants';
 
@@ -28,6 +30,22 @@ import {
 export function toggleMobileNav() {
   return {
     type: TOGGLE_MOBILE_NAV,
+  };
+}
+
+/**
+ * Toggle state of the contact form
+ *
+ */
+export function toggleContactModal() {
+  return {
+    type: TOGGLE_CONTACT_MODAL,
+  };
+}
+
+export function closeContactModal() {
+  return {
+    type: CLOSE_CONTACT_MODAL,
   };
 }
 
