@@ -1,13 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router";
-import classNames from "classnames";
-import ContactModal from "../Modal";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router';
+import cn from 'classnames';
 
 // Styles
 import logo from './full_logo.png';
 
-const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
+const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
   // Pattern for refs in functional components...
   let navButton;
 
@@ -18,20 +17,20 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
     navButton.blur();
   };
 
-  const hoverableDropdownItem = classNames(
+  const hoverableDropdownItem = cn(
     'navbar-item',
     'has-dropdown',
     'is-hoverable',
   );
 
-  const navMenu = classNames(
+  const navMenu = cn(
     'navbar-menu',
     {
       'is-active': mobileNavActive,
     }
   );
 
-  const navHamburger = classNames(
+  const navHamburger = cn(
     'navbar-burger',
     'burger',
     {
@@ -46,14 +45,16 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
           <img src={logo} alt="Idicia" width="112" height="28" />
         </Link>
 
-        <ContactModal />
+        <div className="navbar-item animated fadeIn">
+          <button className="button is-link" onClick={toggleContactModal}>
+            Contact Us
+          </button>
+        </div>
 
         <button
           className={navHamburger}
           onClick={handleClick}
-          ref={button => {
-            navButton = button;
-          }}
+          ref={(button) => { navButton = button; }}
         >
           <span />
           <span />
@@ -110,7 +111,8 @@ const NavBar = ({ mobileNavActive, toggleMobileNav }) => {
 
 NavBar.propTypes = {
   mobileNavActive: PropTypes.bool.isRequired,
-  toggleMobileNav: PropTypes.func.isRequired
+  toggleContactModal: PropTypes.func.isRequired,
+  toggleMobileNav: PropTypes.func.isRequired,
 };
 
 export default NavBar;
