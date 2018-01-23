@@ -39,5 +39,55 @@
       "title": "Take a look at our press releases",
       "url": "press-releases"
     }
+  ],
+  "learningCenter": [
+    {
+      "id": "1",
+      "title": "Getting Started",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Verification",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Enrichment",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Comparison",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Compliance and Whitepapers",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Verification",
+      "links": [
+        "url1",
+        "url2"
+      ]
+    }
   ]
 }

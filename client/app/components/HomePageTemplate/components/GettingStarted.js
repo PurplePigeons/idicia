@@ -12,7 +12,7 @@ export default class GettingStarted extends PureComponent {
                 type="email"
                 className="input"
                 readOnly
-                value={'joe.smith@acme.org'}
+                value='Email Address'
               />
               <span className="icon is-small is-left">
                 <i className="fa fa-envelope" />
@@ -25,7 +25,7 @@ export default class GettingStarted extends PureComponent {
                 type="text"
                 className="input"
                 readOnly
-                placeholder="SSN and Last Name"
+                value='SSN & Last Name'
               />
               <span className="icon is-small is-left">
                 <i className="fa fa-user" />
@@ -38,7 +38,7 @@ export default class GettingStarted extends PureComponent {
                 type="text"
                 className="input"
                 readOnly
-                placeholder="Phone Number"
+                value='Phone Number'
               />
               <span className="icon is-small is-left">
                 <i className="fa fa-phone" />
@@ -51,7 +51,7 @@ export default class GettingStarted extends PureComponent {
                 type="text"
                 className="input"
                 readOnly
-                placeholder="Address"
+                value='Street Address'
               />
               <span className="icon is-small is-left">
                 <i className="fa fa-map-marker" />

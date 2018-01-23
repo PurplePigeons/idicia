@@ -1,53 +1,53 @@
 {
-  "data":
+  "topCardContent":
+    [{
+      "id": "1",
+      "title": "Name and Address",
+      "content": "Verify telephone numbers, accounts, email addresses, names, SSN, and addresses",
+      "url": "3D",
+      "src": "3D"
+    },
     {
-      "topCardContent":
-        [{
-          "id": "1",
-          "title": "Name and Address",
-          "content": "Verify telephone numbers, accounts, email addresses, names, SSN, and addresses",
-          "url": "telified",
-          "img": "3D"
-        },
-        {
-          "id": "2",
-          "title": "Active / Inactive",
-          "content": "Retrive additional data based on telephone, email, SSN, or address",
-          "url": "telified",
-          "img": "enrichment"
-        },
-        {
-          "id": "3",
-          "title": "Consent Re-verification",
-          "content": "Use our best of breed fuzzy matching to compare multiple contact records",
-          "url": "telified",
-          "img": "comparison"
-        },
-        {
-          "id": "4",
-          "title": "Inter-Continental",
-          "content": "CNAM, LIDB, Verification, and Status hosting services of the telecom industry",
-          "url": "telified",
-          "img": "telecom"
-        }],
-      "serviceCardContent":
-        [{
-          "id": "1",
-          "title": "Telecom Hosting",
-          "subtitle": "CNAM, LIDB & Verification. ",
-          "url":"route"
-        },
-        {
-          "id": "2",
-          "title": "Wireless Flagging",
-          "subtitle": "Avoid costly TCPA violations by using Data Verification Services on your data. ",
-          "url":"route"
-        },
-        {
-          "id": "3",
-          "title": "Contact Data Enrichment",
-          "subtitle": "Ensure you are reaching the people you mean to with accurate contacts. ",
-          "url":"route"
-        }]
-    }
+      "id": "2",
+      "title": "Active / Inactive",
+      "content": "Retrive additional data based on telephone, email, SSN, or address",
+      "url": "AI",
+      "src": "AI"
+    },
+    {
+      "id": "3",
+      "title": "Consent Re-verification",
+      "content": "Use our best of breed fuzzy matching to compare multiple contact records",
+      "url": "CR",
+      "src": "CR"
+    },
+    {
+      "id": "4",
+      "title": "Inter-Continental",
+      "content": "CNAM, LIDB, Verification, and Status hosting services of the telecom industry",
+      "url": "IC",
+      "src": "IC"
+    }],
+  "serviceCardContent":
+    [{
+      "id": "1",
+      "title": "Telecom Hosting",
+      "subtitle": "CNAM, LIDB & Verification. ",
+      "url":"telecom-hosting",
+      "src": "/images/svgs/telecom-hosting.svg"
+    },
+    {
+      "id": "2",
+      "title": "Wireless Flagging",
+      "subtitle": "Avoid costly TCPA violations by using Data Verification Services on your data. ",
+      "url":"wireless-flagging",
+      "src": "/images/svgs/wireless-flagging.svg"
+    },
+    {
+      "id": "3",
+      "title": "Contact Data Enrichment",
+      "subtitle": "Ensure you are reaching the people you mean to with accurate contacts. ",
+      "url":"contact-data-enrichment",
+      "src": "/images/svgs/contact-data-enrichment.svg"
+    }]
 }

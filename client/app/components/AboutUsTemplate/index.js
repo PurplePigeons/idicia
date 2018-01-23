@@ -32,8 +32,6 @@ const AboutUsTemplate = () => (
                     <p>
                       IDICIA gives you access to all the best information without the need to maintain it. Our specialty is combining highly accurate, authoritative and nearly ubiquitous telecom billing data with robust credit bureau data in a hybrid approach that uses the best qualities of each to give your business (or that of your customers) the confidence and assurance it needs when interacting with consumers over the internet. IDICIA services provide access to data enrichment and consumer data verification in our easy to implement API and we’re here to answer the phone when you have a question.
                     </p>
-                    <hr />
-                    <ScrollToButton scrollTo="#contactForm" text="Contact Us" />
                   </div>
                 </div>
               </div>
@@ -65,28 +63,32 @@ const AboutUsTemplate = () => (
           name="Garth Froese"
           title="CEO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg"
-          description="Garth focuses on building bridges. Bridges between opportunities, people, and businesses. He hikes, fishes, and cycles when possible."
+          description="Garth builds bridges.Bridges between opportunities, people, and businesses. 
+          He hikes, fishes, and cycles when possible."
           liUrl="https://www.linkedin.com/pub/garth-froese/b/863/324"
         />
         <ProfileCard
           name="Scott Rice"
           title="COO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg"
-          description="Scott is the resident data nerd. Formerly a principal data scientist for one of the big 3 credit bureaus. Scott writes, blogs, and remodels his house."
+          description="Scott is our data nerd. Formerly a principal data scientist for one of the big 3 
+          credit bureaus. Scott writes and remodels his house."
           liUrl="https://www.linkedin.com/pub/scott-rice/3/424/67"
         />
         <ProfileCard
           name="Tom Liebe"
           title="CTO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg"
-          description="As head of our technology department, he manages the team that builds and maintains our services. Tom enjoys reading, music and family time."
+          description="As our head of tech, he manages development and maintenance of our services. 
+          Tom enjoys reading, music and family time."
           liUrl="https://ca.linkedin.com/pub/tom-liebe/8/a59/83"
         />
         <ProfileCard
           name="Dave Mori"
           title="VP-BD"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg"
-          description="Self-proclaimed BBQ aficionado, judo practicioner, and father of 3 under 8. Dave is a great listener and can help you find your business solution."
+          description="BBQ aficionado, judo practicioner, and father of 3 under 8. Dave is a great 
+          listener and can help you find your business solution."
           liUrl="https://ca.linkedin.com/in/davemori"
         />
         <ProfileCard
