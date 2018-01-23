@@ -25,12 +25,16 @@ const ContactUsCTA = () => {
   const taglineSelector = Math.floor(Math.random() * taglineOptions.length);
 
   return (
-    <section className={infoHero}>
-      <div className={bulma['hero-body']}>
-        <div className={bulma.container}>
-          <h2 className={`${bulma.title} ${styles.contactUsTitle}`}>{titleOptions[titleSelector]}</h2>
-          <h3 className={styles.contactUsText}>{taglineOptions[taglineSelector]}</h3>
-          <Link to={`/${contactUsRoute}`} className={styles.contactUsButton}>{buttonText}</Link>
+    <section className={`${infoHero} column is-10 is-offset-1`}>
+      <div className="card animated fadeInUp">
+        <div className="card-content is-centered">
+          <div className={bulma['hero-body']}>
+            <div className={bulma.container}>
+              <h2 className={`${bulma.title} ${styles.contactUsTitle}`}>{titleOptions[titleSelector]}</h2>
+              <h3 className={styles.contactUsText}>{taglineOptions[taglineSelector]}</h3>
+              <Link to={`/${contactUsRoute}`} className={styles.contactUsButton}>{buttonText}</Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
