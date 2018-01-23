@@ -64,8 +64,8 @@ const HomePageTemplate = ({ data }) => (
       className="section"
       style={{ padding: '0', backgroundColor: 'whitesmoke' }}
     >
-    <div className="container">
-      <nav className="level">
+
+      <nav className="level is-10" style={{margin: "auto 3rem"}}>
         <div className="level-item has-text-centered" style={{paddingTop: "3rem"}}>
           <div>
             <p className="heading">Happy Customers</p>
@@ -102,7 +102,7 @@ const HomePageTemplate = ({ data }) => (
           </div>
         </div>
       </nav>
-    </div>
+ 
     </section>
     <section
       className={`section ${styles.textCenter}`}
@@ -110,16 +110,16 @@ const HomePageTemplate = ({ data }) => (
 
     >
       <h1 className="title"> What We Do </h1>
-      <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
+      <div className={`columns is-multiline is-centered is-10 ${styles.textCenter}`}>
 
       <ThreeBlock
           backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
           icon="fa-database"
           title="Fast & Accurate Data"
         >
-          With data centers strategically positioned across the country we
-          ensure fast response times on our data services. With the ability to
-          access telecom data literally seconds after it is updated, we ensure
+          With servers positioned across the U.S. we
+          ensure blazing fast response times and capable of
+          accessing telecom data seconds after it is updated, we ensure
           highly accurate data.<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
@@ -193,7 +193,6 @@ const HomePageTemplate = ({ data }) => (
           </p>
         </div>
       </div>
-
     </section>
     {/* <Reveal effect="animated fadeIn">
       <ContactForm />
