@@ -1,37 +1,5 @@
 .footerBody {
-  padding-top: 20px;
-}
-
-/*.footerColumn3 {
-  composes: footerColumn;
-  height: 80%;
-}*/
-
-.hr {
-  width: 5rem;
-  margin: 1.5rem auto;
-}
-/*.hr {
-  width: 8rem;
-  margin: 1.85rem auto;
-  background: #FFD21E;
-  text-align: right;
-}*/
-
-.hrRight {
-  composes: hr;
-
-  margin-right: 0;
-}
-
-.hrLeft {
-  composes: hr;
-
-  margin-left: 0;
-}
-
-.darkTextFix {
-  color: white !important;
+  padding-top: 2rem;
 
   h3 {
     color: #FFD21E;
@@ -47,8 +15,21 @@
   }
 }
 
-.info {
-  color: #FFD21E;
+.hr {
+  width: 5rem;
+  margin: 1.5rem auto;
+}
+
+.hrRight {
+  composes: hr;
+
+  margin-right: 0;
+}
+
+.hrLeft {
+  composes: hr;
+
+  margin-left: 0;
 }
 
 .footerLogo {
@@ -67,5 +48,5 @@
 
   border-bottom: 1px solid #dbdbdb;
   color: #FFD21E;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
