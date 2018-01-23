@@ -1,12 +1,9 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Reveal from 'react-reveal';
 // import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // SharedComponents
-import ContactForm from 'components/ContactForm';
 import ProfileCard from 'components/ProfileCard';
-import ScrollToButton from 'components/ScrollToButton';
 
 // Styles
 import styles from './styles.scss';
@@ -59,11 +56,12 @@ const AboutUsTemplate = () => (
       </h1>
       <hr />
       <div className="columns is-multiline">
+        {/*TODO  Make into loop*/}
         <ProfileCard
           name="Garth Froese"
           title="CEO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087314/idicia/garth-froese.jpg"
-          description="Garth builds bridges.Bridges between opportunities, people, and businesses. 
+          description="Garth builds bridges.Bridges between opportunities, people, and businesses.
           He hikes, fishes, and cycles when possible."
           liUrl="https://www.linkedin.com/pub/garth-froese/b/863/324"
         />
@@ -71,7 +69,7 @@ const AboutUsTemplate = () => (
           name="Scott Rice"
           title="COO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/scott-rice.jpg"
-          description="Scott is our data nerd. Formerly a principal data scientist for one of the big 3 
+          description="Scott is our data nerd. Formerly a principal data scientist for one of the big 3
           credit bureaus. Scott writes and remodels his house."
           liUrl="https://www.linkedin.com/pub/scott-rice/3/424/67"
         />
@@ -79,7 +77,7 @@ const AboutUsTemplate = () => (
           name="Tom Liebe"
           title="CTO"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/tom-liebe.jpg"
-          description="As our head of tech, he manages development and maintenance of our services. 
+          description="As our head of tech, he manages development and maintenance of our services.
           Tom enjoys reading, music and family time."
           liUrl="https://ca.linkedin.com/pub/tom-liebe/8/a59/83"
         />
@@ -87,7 +85,7 @@ const AboutUsTemplate = () => (
           name="Dave Mori"
           title="VP-BD"
           imgSrc="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087315/idicia/dave-mori.jpg"
-          description="BBQ aficionado, judo practicioner, and father of 3 under 8. Dave is a great 
+          description="BBQ aficionado, judo practicioner, and father of 3 under 8. Dave is a great
           listener and can help you find your business solution."
           liUrl="https://ca.linkedin.com/in/davemori"
         />
@@ -107,9 +105,6 @@ const AboutUsTemplate = () => (
         />
       </div>
     </div>
-    <Reveal effect="animated fadeIn">
-      <ContactForm />
-    </Reveal>
   </section>
 );
 

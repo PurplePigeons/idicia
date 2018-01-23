@@ -6,7 +6,6 @@ import Reveal from 'react-reveal';
 // SharedComponents
 import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
-import ContactForm from '../ContactForm';
 import Carousel from './Carousel';
 import QuickFacts from './QuickFacts';
 import ServiceIcons from './ServiceIcons';
@@ -123,7 +122,7 @@ const HomePageTemplate = ({ data }) => (
           highly accurate data.<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
-        
+
         <ThreeBlock
           backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
           icon="fa-code"
@@ -145,7 +144,7 @@ const HomePageTemplate = ({ data }) => (
           here to help on an actual phone and email(if you prefer).<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
-        
+
       </div>
     </section>
     <section className="container">
@@ -195,9 +194,6 @@ const HomePageTemplate = ({ data }) => (
       </div>
 
     </section>
-    {/* <Reveal effect="animated fadeIn">
-      <ContactForm />
-    </Reveal> */}
   </section>
 );
 
