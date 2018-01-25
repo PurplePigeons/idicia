@@ -80,6 +80,14 @@ const ResourcesTemplate = () => {
                 <div className="card-content">
                   <div className="columns">
                     { moreLinks }
+                      {/* Once developer page is complete 
+                      add this to the checkout object
+                      {
+                        "id": "2",
+                        "imgSrc": "images/developer.jpg",
+                        "title": "Check out our developer page",
+                        "url": "developer"
+                      } */}
                   </div>
                 </div>
               </div>
