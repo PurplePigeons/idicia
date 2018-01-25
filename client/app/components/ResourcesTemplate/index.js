@@ -27,8 +27,8 @@ const ResourcesTemplate = () => {
     </div>
   );
 
-  const learningCenterCardContent = data.learningCenter.map(({ id, title, links }) =>
-    <LearningCenterCard key={id} {...{ title, links }} />
+  const learningCenterCardContent = data.learningCenter.map(({ id, title, links, caption }) =>
+    <LearningCenterCard key={id} {...{ title, links, caption }} />
   );
 
   return (
