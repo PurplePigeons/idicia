@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import cn from 'classnames';
 
 // Styles
-import logo from './full_logo.png';
+import logo from '/Users/leseanjohnson/Documents/idicia/assets/images/svgs/IDICIA-sample.svg';
 
 const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
   // Pattern for refs in functional components...
@@ -39,17 +39,11 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
   );
 
   return (
-    <nav className="navbar">
+    <nav className="navbar is-transparent">
       <div className="navbar-brand">
         <Link to={'/'} className="navbar-item">
-          <img src={logo} alt="Idicia" width="112" height="28" />
+          <img src={logo} alt="Idicia"/>
         </Link>
-
-        <div className="navbar-item animated fadeIn">
-          <button className="button is-link" onClick={toggleContactModal}>
-            Contact Us
-          </button>
-        </div>
 
         <button
           className={navHamburger}
@@ -105,6 +99,11 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
         <div className="navbar-end">
         </div>
       </div>
+      <div className="navbar-item animated fadeIn">
+          <button className="button is-link" onClick={toggleContactModal}>
+            Contact Us
+          </button>
+        </div>
     </nav>
   );
 };
