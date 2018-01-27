@@ -1,65 +1,72 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
+// import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
 // SharedComponents
 import ContactUsCTA from '../ContactUsCTA';
+import ContentCard from '../ContentCard';
 
 // Styles
 import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const VerificationTemplate = ({ data }) => {
-  // Generate the divs for the 4 different Enrichment examples
-  const enrichmentExamples = data.section2 && Object.keys(data.section2)
-    .sort() // Since the keys come out in an indeterminate order... #object-things
-    .map((content) =>
-      <div key={content}>
-        {renderHtmlWithRouterLinks(data.section2[content].html)}
-      </div>
-    );
-
-  const boldHero = `${bulma.hero} ${bulma['is-bold']}`;
-  const mainHero = `${boldHero} ${bulma['is-small']} ${bulma['is-primary']}`;
-  const infoHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-info']}`;
-  const lightHero = `${boldHero} ${bulma['is-medium']} ${bulma['is-light']}`;
-
-  const mediumCustomContent = `${bulma.content} ${bulma['is-medium']} ${styles.content}`;
-
+  const mediumCustomContent = `card ${bulma.content} ${bulma['is-medium']} ${styles.content}`;
   return (
-    <div>
-      <section className={mainHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <h1 className={`${bulma.title} ${styles.mainTitle}`}>
-              {data.title}
-            </h1>
-          </div>
-        </div>
-      </section>
-      <section className={lightHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />
-          </div>
-        </div>
-      </section>
-      <section className={infoHero}>
-        <div className={bulma['hero-body']}>
-          <div className={bulma.container}>
-            <div className={`${bulma.content} ${bulma['is-medium']} ${styles.content} ${styles.columnCluster}`}>
-              {enrichmentExamples}
-            </div>
-          </div>
-        </div>
-      </section>
-      <ContactUsCTA />
+    <div className={`columns is-multiline ${styles.verificationHero}`}>
+    <ContentCard 
+        sectionStyle = {'mainHero'}
+        children = {<div className={`${styles.mainTitle}`} dangerouslySetInnerHTML={{ __html: data.slug }} />}
+      />
+
+      <ContentCard 
+        sectionStyle = {'lightHero'}
+        children = {<div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />}
+      />
+
+      <ContentCard 
+        sectionStyle = {'infoHero'}
+        children = {
+                    <div>
+                      {/* <div className={mediumCustomContent}><h1>{data.section2.title}</h1></div> */}
+                        <div className='columns'>
+                          <div className='column'>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element4.html }} />
+                          <br/>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element2.html }} />
+                          <br/>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element3.html }} />
+                          <br/>
+                        </div>
+                          <div className='column'>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element1.html }} />
+                          <br/>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element5.html }} />
+                          <br/>
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element6.html }} />
+                          <br/>
+                        </div>
+                        </div>
+                        <div className={`${styles.content}`}>
+                          <a href="/telified">Find Out More</a>
+                        </div>
+                    </div>
+                    
+                    }
+      />
+
+      {/* <ContentCard
+        sectionStyle = {'lightHero'}
+        children = {<div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />}
+      /> */}
+
+      {/* */}
     </div>
   );
 };
 
-VerificationTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-};
+// VerificationTemplate.propTypes = {
+//   data: PropTypes.object.isRequired,
+// };
 
 export default VerificationTemplate;

@@ -227,6 +227,33 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/contact-data-enrichment',
+      name: 'contact-data-enrichment',
+      getComponent(nextState, cb) {
+        import('components/ContactDataEnrichmentTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: '/wireless-flagging',
+      name: 'wireless-flagging',
+      getComponent(nextState, cb) {
+        import('components/WirelessFlaggingTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: '/telecom-hosting',
+      name: 'telecom-hosting',
+      getComponent(nextState, cb) {
+        import('components/TelecomHostingTemplate')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
       path: '/about-us',
       name: 'about us',
       getComponent(nextState, cb) {

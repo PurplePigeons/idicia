@@ -4,6 +4,7 @@ import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 import ContactUsCTA from '../ContactUsCTA';
 import ContentCard from '../ContentCard';
+import data from './data.json';
 
 // Styles
 import styles from './styles.scss';
@@ -15,33 +16,30 @@ const TelifiedTemplate = () => (
       <div className={`container has-text-centered ${styles.telifiedContentStrip}`}>
         <div>
           <h1 className="title is-1 animated fadeInUp">
-          {/* how to color this up to make it like the old site, spell telified */}
-            Telephone Verified
+            {data.slug}
           </h1>
-          <p className="card animated fadeInUp">
-            Our service verifies consumer identity by providing direct access to the ultimate source of accurate contact data: the phone company billing database. Telified confirms the name, address and phone number supplied is indeed valid.
+          <p className="card card-content animated fadeInUp">
+            {data.section1}
           </p>
+          <br/>
+          <p className="card card-content animated fadeInUp">
+            {data.section2}
+          </p>
+          <br/>
+          <p className="card card-content animated fadeInUp">
+            {data.section3}
+          </p>
+          <br/>
         </div>
-        <div>
+        {/* <div>
           <h1 className={`title is-1 ${styles.header2} animated fadeInUp`}>
             What Telified Can Do For You
           </h1>
-          
-          <ul className="card animated fadeInUp">
-            <li>Verify the name, address and phone number supplied in on-line orders is truly valid.</li>
-            <li>Verify a telephone number is truly active or has been disconnected.</li>
-            <li>Verify that consumer identity is valid and associated to the provided phone number.</li>
-            <li>Verify the customer contact information you have on file is still current.</li>
-            <li>Provide an alternative to credit verification for those with little or no credit history.</li>
-            <li>Remove phone numbers made invalid over time.</li>
-            <li>Detect if cell phone numbers have been reassigned.</li>
-            <li>Help you stay in compliance with TCPA regulations.</li>
-          </ul>
-        </div>
-        </div>
+        </div> */}
+      </div>
       
     </section>
-    <ContentCard
+    {/* <ContentCard
       sectionStyle={'infoHero'}
       children={
                 <div className={''}>
@@ -66,7 +64,7 @@ const TelifiedTemplate = () => (
                     <h2 className="is-2 has-text-centered">Want to learn more about Telified and our broad coverage option?</h2>
                   </div>
                   }
-      />
+      /> */}
        <ContactUsCTA />
         
 </section>

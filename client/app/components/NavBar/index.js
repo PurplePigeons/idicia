@@ -84,19 +84,19 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
               <Link to={'/telified'} className="navbar-item">Telefied</Link>
               <Link to={'/contact-data-enrichment'} className="navbar-item">Contact Data Enrichment</Link>
               <Link to={'/wireless-flagging'} className="navbar-item">Wireless Flagging</Link>
-              <Link to={'/caller-id'} className="navbar-item">Caller ID</Link>
+              {/* <Link to={'/caller-id'} className="navbar-item">Caller ID</Link> */}
               <Link to={'/telecom-hosting'} className="navbar-item">Telecom Hosting</Link>
             </div>
           </div>
 
           <div className={hoverableDropdownItem}>
             <Link to={'/resources'} className="navbar-link">Resources</Link>
-            <div className="navbar-dropdown">
+            {/* <div className="navbar-dropdown">
               <Link to={'/developer'} className="navbar-item">Developer</Link>
               <Link to={'/blog'} className="navbar-item">Blog</Link>
               <Link to={'/contact-us'} className="navbar-item">Contact Us</Link>
               <Link to={'/learning-center'} className="navbar-item">Learning Center</Link>
-            </div>
+            </div> */}
           </div>
 
           <Link to={'/about-us'} className="navbar-item">About Us</Link>

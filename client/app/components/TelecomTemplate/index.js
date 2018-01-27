@@ -18,7 +18,7 @@ const TelecomTemplate = ({ data }) => {
     <div className={`columns is-multiline ${styles.telecomHero}`}>
       <ContentCard  
         sectionStyle = {'mainHero'}
-        children = {<h1 className={`title ${styles.mainTitle}`}>{data.title}</h1>}
+        children = {<h1 className={`${styles.mainTitle}`}>{data.title}</h1>}
       />
 
       <ContentCard 
