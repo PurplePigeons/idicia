@@ -9,6 +9,15 @@ class ContactUsModal extends PureComponent {
   }
 
   handleSubmit = () => {
+
+    emailjs.send("gmail","template_x5ME6jZ4",{
+      name: {name}, 
+      company: "pac east",
+      email: "leseanbiz@gmail.com",
+      phone: "4439395333",
+      subject: "test",
+      question: "this is a hardcoded test"
+    },console.log("email sent"));
     // Placeholder secondary action on form submit... could be something other than a native alert
     // 1. Do something to grab form values from html
     // 2. Validate
@@ -34,7 +43,7 @@ class ContactUsModal extends PureComponent {
           </header>
 
           <section className="modal-card-body">
-            <form>
+            <form method="POST">
               <div className="field is-horizontal">
                 <div className="field-label is-normal">
                   <label className="label" htmlFor="name">From</label>
@@ -42,7 +51,7 @@ class ContactUsModal extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <p className="control is-expanded has-icons-left">
-                      <input className="input" type="text" placeholder="Name" id="name" />
+                      <input className="input" type="text" placeholder="Name" id="name" name="name"/>
                       <span className="icon is-small is-left">
                         <i className="fa fa-user" />
                       </span>
@@ -50,7 +59,7 @@ class ContactUsModal extends PureComponent {
                   </div>
                   <div className="field">
                     <p className="control is-expanded has-icons-left has-icons-right">
-                      <input className="input" type="text" placeholder="Company" />
+                      <input className="input" type="text" placeholder="Company" name="company"/>
                       <span className="icon is-small is-left">
                         <i className="fa fa-building" />
                       </span>
@@ -66,7 +75,7 @@ class ContactUsModal extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <p className="control is-expanded has-icons-left">
-                      <input className="input" type="tel" placeholder="Your phone number" id="phone" />
+                      <input className="input" type="tel" placeholder="Your phone number" id="phone" name="phone" />
                       <span className="icon is-small is-left">
                         <i className="fa fa-phone" />
                       </span>
@@ -74,7 +83,7 @@ class ContactUsModal extends PureComponent {
                   </div>
                   <div className="field">
                     <p className="control is-expanded has-icons-left has-icons-right">
-                      <input className="input" type="email" placeholder="Email" />
+                      <input className="input" type="email" placeholder="Email" name="email"/>
                       <span className="icon is-small is-left">
                         <i className="fa fa-envelope" />
                       </span>
@@ -90,7 +99,7 @@ class ContactUsModal extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <div className="control">
-                      <input className="input" type="text" placeholder="e.g. Partnership opportunity, Quote Request" id="subject" />
+                      <input className="input" type="text" placeholder="e.g. Partnership opportunity, Quote Request" id="subject" name="subject"/>
                     </div>
                   </div>
                 </div>
@@ -103,7 +112,7 @@ class ContactUsModal extends PureComponent {
                 <div className="field-body">
                   <div className="field">
                     <div className="control">
-                      <textarea className="textarea" placeholder="How can we help you" id="question" />
+                      <textarea className="textarea" placeholder="How can we help you" id="question" name="question"/>
                     </div>
                   </div>
                 </div>
