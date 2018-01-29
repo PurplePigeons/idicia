@@ -1,1 +1,1 @@
-web: node /client/app/routes.js
+web: yarn start
