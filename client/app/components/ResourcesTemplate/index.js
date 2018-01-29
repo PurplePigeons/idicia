@@ -10,7 +10,7 @@ import styles from './styles.scss';
 
 const ResourcesTemplate = () => {
   // Leave the presentation of the card content to the card component, and sizing to the parent
-  const learningCenterSubTitle = `Quick and easy access for everything you need to know.`;
+  const learningCenterSubTitle = 'Quick and easy access for everything you need to know.';
   const learningCenterContent = `Our learning center is filled with valuable resources, compiled into one location,
     for you to view and download, whether you are looking to become a new customer, research our products, or learn about 
     related industry information, we've provided you with informative documents, infographics and tutorial videos`;
@@ -21,6 +21,14 @@ const ResourcesTemplate = () => {
     </div>
   );
 
+  /* Once developer page is complete add this to the checkOut object
+    {
+      "id": "2",
+      "imgSrc": "images/developer.jpg",
+      "title": "Check out our developer page",
+      "url": "developer"
+    }
+  */
   const moreLinks = data.checkOut.map(({ id, imgSrc, title, url }) =>
     <div className="column" key={id}>
       <CheckOut {...{ imgSrc, title, url }} />
@@ -80,14 +88,6 @@ const ResourcesTemplate = () => {
                 <div className="card-content">
                   <div className="columns">
                     { moreLinks }
-                      {/* Once developer page is complete 
-                      add this to the checkout object
-                      {
-                        "id": "2",
-                        "imgSrc": "images/developer.jpg",
-                        "title": "Check out our developer page",
-                        "url": "developer"
-                      } */}
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const ResourcesTemplate = () => {
                     {learningCenterCardContent}
                   </div>
                   <div>
-                    Are we missing something? let us know! {/*TODO Contact us*/}
+                    Are we missing something? let us know! {/* TODO Contact us*/}
                   </div>
                 </div>
               </div>
