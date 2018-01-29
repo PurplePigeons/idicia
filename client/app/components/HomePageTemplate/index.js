@@ -39,12 +39,7 @@ const HomePageTemplate = ({ data }) => (
     <section className={mainHero}>
       <div className="hero-body">
         <div className={`container ${styles.textCenter}`}>
-          <h1
-            className={`title is-1 ${styles.mainTitle} animated fadeInUp`}
-            ref={(title) => {
-              this.titleText = title;
-            }}
-          >
+          <h1 className={`title is-1 ${styles.mainTitle} animated fadeInUp`}>
             Idicia
           </h1>
           <h2 className={`${styles.subTitle} subtitle is-4 animated fadeInUp`}>
@@ -60,13 +55,9 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    <section
-      className="section"
-      style={{ padding: '0', backgroundColor: 'whitesmoke' }}
-    >
-    <div className="container">
-      <nav className="level">
-        <div className="level-item has-text-centered" style={{paddingTop: "3rem"}}>
+    <section className="section" style={{ padding: '0', backgroundColor: 'whitesmoke' }}>
+      <nav className="level is-10" style={{ margin: 'auto 3rem' }}>
+        <div className="level-item has-text-centered" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Happy Customers</p>
             <div className="title">
@@ -74,7 +65,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Records Processed</p>
             <div className="title">
@@ -83,7 +74,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Database Lookups</p>
             <div className="title">
@@ -92,7 +83,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Data Points</p>
             <div className="title">
@@ -102,28 +93,22 @@ const HomePageTemplate = ({ data }) => (
           </div>
         </div>
       </nav>
-    </div>
     </section>
-    <section
-      className={`section ${styles.textCenter}`}
-      style={{background: 'none'}}
-
-    >
+    <section className={`section ${styles.textCenter}`} style={{ background: 'none' }}>
       <h1 className="title"> What We Do </h1>
-      <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
-
-      <ThreeBlock
+      <div className={`columns is-multiline is-centered is-10 ${styles.textCenter}`}>
+        <ThreeBlock
           backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
           icon="fa-database"
           title="Fast & Accurate Data"
         >
-          With data centers strategically positioned across the country we
-          ensure fast response times on our data services. With the ability to
-          access telecom data literally seconds after it is updated, we ensure
+          With servers positioned across the U.S. we
+          ensure blazing fast response times and capable of
+          accessing telecom data seconds after it is updated, we ensure
           highly accurate data.<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
-        
+
         <ThreeBlock
           backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
           icon="fa-code"
@@ -145,7 +130,6 @@ const HomePageTemplate = ({ data }) => (
           here to help on an actual phone and email(if you prefer).<br />
           <a style={{ textDecoration: 'underline' }}>Learn more</a>
         </ThreeBlock>
-        
       </div>
     </section>
     <section className="container">
@@ -158,7 +142,7 @@ const HomePageTemplate = ({ data }) => (
     </section>
     <section
       className={`container ${styles.textCenter}`}
-      style={{margin: '40px auto'}}
+      style={{ margin: '40px auto' }}
     >
       <div className="card is-centered">
         <div className="card-content">
@@ -171,8 +155,8 @@ const HomePageTemplate = ({ data }) => (
           <p>
             <strong>IDICIA is a whole new kind of data company.</strong>
           </p>
-          <br/>
-          <p style={{margin: 'auto 40px'}}>
+          <br />
+          <p style={{ margin: 'auto 40px' }}>
             We have access to billions of consumer data records but we only pull
             the specific record we need at the very last possible second we need
             it, so it is as fresh as possible. Our data services are truly “just
@@ -193,7 +177,6 @@ const HomePageTemplate = ({ data }) => (
           </p>
         </div>
       </div>
-
     </section>
     {/* <Reveal effect="animated fadeIn">
       <ContactForm />
