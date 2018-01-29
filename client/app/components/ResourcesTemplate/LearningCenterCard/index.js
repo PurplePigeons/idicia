@@ -8,11 +8,11 @@ const LearningCenterCard = ({ title, links, caption }) => (
     <details>
       <summary>
         <ul>
-          <li className="titleName">{title}</li>
+          <li className="titleName">{ title }</li>
         </ul>
       </summary>
       <div className="content" style={{ padding: '16px 24px' }}>
-        {links.map((el, i) => <p><a key={el} target="_blank" href={el}>{caption[i]}</a></p>)}
+        {links.map((link, i) => <p key={link}><a target="_blank" href={link}>{ caption[i] }</a></p>)}
       </div>
     </details>
   </div>
@@ -22,7 +22,7 @@ const LearningCenterCard = ({ title, links, caption }) => (
 LearningCenterCard.propTypes = {
   links: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  caption: PropTypes.string.isRequired
+  caption: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default LearningCenterCard;
