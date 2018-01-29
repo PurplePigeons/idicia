@@ -20,12 +20,10 @@ const TelecomTemplate = ({ data }) => {
     };
 
     return (
-      <section className={`hero is-bold ${sectionStyleEnum[sectionStyle]} column is-10 is-offset-1`}>
-        <div className="card animated fadeInUp">
+      <section className={`hero is-bold ${sectionStyleEnum[sectionStyle]} column is-10 is-offset-1 animated fadeInUp`}>
+        <div className="card">
           <div className="card-content">
-            <div className="container">
-              {children}
-            </div>
+            { children }
           </div>
         </div>
       </section>
@@ -34,34 +32,39 @@ const TelecomTemplate = ({ data }) => {
 
   return (
     // TODO multiple calls of function, maybe memoize & cache or loop?
-    <div className="columns is-multiline">
-      { contentCard('mainHero',
-        <h1 className={`title ${styles.mainTitle}`}>
-          {data.title}
-        </h1>
-      )}
-      { contentCard('lightHero',
-        <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
-      )}
-      { contentCard('infoHero',
-        <div>
-          <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
-          <div className="columns">
-            <div className="column">
-              <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
+    <section className="section">
+      <div className="container">
+        <div className="columns is-multiline">
+          { contentCard('mainHero',
+            <div className={mediumCustomContent}>
+              <h1 className={`title has-text-dark ${styles.mainTitle}`}>
+                {data.title}
+              </h1>
             </div>
-            <div className="column">
-              <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
+          )}
+          { contentCard('lightHero',
+            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block1.html }} />
+          )}
+          { contentCard('infoHero',
+            <div>
+              <div className={mediumCustomContent}><h1>{data.block2.title}</h1></div>
+              <div className="columns">
+                <div className="column">
+                  <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column1.html }} />
+                </div>
+                <div className="column">
+                  <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.column2.html }} />
+                </div>
+              </div>
+              <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.content.html }} />
             </div>
-          </div>
-          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block2.content.html }} />
+          )}
+          { contentCard('lightHero',
+            <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />
+          )}
         </div>
-      )}
-      { contentCard('lightHero',
-        <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />
-      )}
-    </div>
-
+      </div>
+    </section>
   );
 };
 
