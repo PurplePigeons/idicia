@@ -94,12 +94,12 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
         </div>
 
         <div className="navbar-end">
+          <div className="navbar-item animated fadeIn">
+            <button className="button is-link" onClick={toggleContactModal}>
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="navbar-item animated fadeIn">
-        <button className="button is-link" onClick={toggleContactModal}>
-          Contact Us
-        </button>
       </div>
     </nav>
   );
