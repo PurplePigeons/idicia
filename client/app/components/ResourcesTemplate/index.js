@@ -10,7 +10,7 @@ import styles from './styles.scss';
 
 const ResourcesTemplate = () => {
   // Leave the presentation of the card content to the card component, and sizing to the parent
-  const learningCenterSubTitle = `Quick and easy access for everything you need to know.`;
+  const learningCenterSubTitle = 'Quick and easy access for everything you need to know.';
   const learningCenterContent = `Our learning center is filled with valuable resources, compiled into one location,
     for you to view and download, whether you are looking to become a new customer, research our products, or learn about 
     related industry information, we've provided you with informative documents, infographics and tutorial videos`;
@@ -97,7 +97,7 @@ const ResourcesTemplate = () => {
                     {learningCenterCardContent}
                   </div>
                   <div>
-                    Are we missing something? let us know! {/*TODO Contact us*/}
+                    Are we missing something? let us know! {/* TODO Contact us*/}
                   </div>
                 </div>
               </div>
