@@ -5,7 +5,7 @@ var keystone = require('keystone');
 keystone.init({
   'name': 'My Project',
 
-  'favicon': 'public/favicon.ico',
+  // 'favicon': 'public/favicon.ico',
   'less': 'public',
   'static': ['public', 'assets'],
 
