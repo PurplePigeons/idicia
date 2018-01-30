@@ -1,4 +1,4 @@
-// const config = require('env.json');
+const config = require('./env.json');
 
 var keystone = require('keystone');
 
@@ -13,8 +13,8 @@ keystone.init({
   'view engine': 'pug',
 
   'auto update': true,
-  'mongo': process.env.MONGODB_REMOTE || 'mongodb://localhost/my-project',
-  'cloudinary config':  process.env.CLOUDINARY_URL || {
+  'mongo': config.MONGODB_REMOTE || 'mongodb://localhost/my-project',
+  'cloudinary config':  config.CLOUDINARY_URL || {
     cloud_name: 'my-cloud',
     api_key   : 'abc',
     api_secret: '123',
@@ -24,8 +24,8 @@ keystone.init({
   'session store': 'mongo',
   'auth': true,
   'user model': 'User',
-  'cookie secret': process.env.COOKIE_SECRET || 'changeme',
-  'port': process.env.PORT || 3000,
+  'cookie secret': config.COOKIE_SECRET || 'changeme',
+  'port': config.PORT || 3000,
 });
 
 require('./models');
@@ -37,7 +37,7 @@ keystone.set('locals', {
 
 // Expose base url of this site so that we can autogenerate social sharing/SEO
 // content relative to this site
-keystone.set('baseUrl', (keystone.get('env') == 'production') ? process.env.DOMAIN_URL : 'http://localhost:3000/');
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? config.DOMAIN_URL : 'http://localhost:3000/');
 
 keystone.set('routes', require('./routes'));
 

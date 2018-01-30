@@ -48,6 +48,7 @@ const ComplianceTemplate = ({ data }) => {
           sectionStyle={'infoHero'}
           children={<div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section1.html }} />}
         />
+        <ContactUsCTA />
     </div>
   );
 };

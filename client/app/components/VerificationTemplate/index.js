@@ -33,7 +33,7 @@ const VerificationTemplate = ({ data }) => {
                           <div className='column'>
                           <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element4.html }} />
                           <br/>
-                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element2.html }} />
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element5.html }} />
                           <br/>
                           <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element3.html }} />
                           <br/>
@@ -41,26 +41,17 @@ const VerificationTemplate = ({ data }) => {
                           <div className='column'>
                           <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element1.html }} />
                           <br/>
-                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element5.html }} />
+                          <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element2.html }} />
                           <br/>
                           <div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.section2.element6.html }} />
                           <br/>
                         </div>
                         </div>
-                        <div className={`${styles.content}`}>
-                          <a href="/telified">Find Out More</a>
-                        </div>
                     </div>
                     
                     }
       />
-
-      {/* <ContentCard
-        sectionStyle = {'lightHero'}
-        children = {<div className={mediumCustomContent} dangerouslySetInnerHTML={{ __html: data.block4.html }} />}
-      /> */}
-
-      {/* */}
+      <ContactUsCTA />
     </div>
   );
 };

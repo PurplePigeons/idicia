@@ -49,6 +49,7 @@ const ComparisonTemplate = ({ data }) => {
 
                   }
       />
+      <ContactUsCTA />
     </div>
   );
 };

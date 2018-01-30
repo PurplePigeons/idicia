@@ -12,7 +12,7 @@ import bulma from 'styles/bulma.scss';
 
 const TelifiedTemplate = () => (
   <section>
-    <section className={`hero is-primary ${styles.telifiedHero}`}>
+    <section className={`hero is-primary is-fullheight ${styles.telifiedHero}`}>
       <div className={`container has-text-centered ${styles.telifiedContentStrip}`}>
         <div>
           <h1 className="title is-1 animated fadeInUp">
