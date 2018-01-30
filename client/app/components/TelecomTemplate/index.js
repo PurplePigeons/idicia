@@ -6,7 +6,6 @@ import ContactUsCTA from '../ContactUsCTA';
 import ContentCard from '../ContentCard';
 
 // Styles
-import bulma from 'styles/bulma.scss';
 import styles from './styles.scss';
 
 const TelecomTemplate = ({ data }) => {
