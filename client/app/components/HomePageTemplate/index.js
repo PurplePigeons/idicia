@@ -36,6 +36,7 @@ const HomePageTemplate = ({ data }) => (
       ]}
     />
     <section className={mainHero}>
+
       <div className="hero-body columns is-multiline">
         <div className={`container ${styles.textCenter} column is-10 is-offset-by-1  is-centered `}>
           <h1
@@ -58,13 +59,9 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    <section
-      className="section"
-      style={{ padding: '0', backgroundColor: 'whitesmoke' }}
-    >
-    <div className="container">
-      <nav className="level">
-        <div className="level-item has-text-centered" style={{paddingTop: "3rem"}}>
+    <section className="section" style={{ padding: '0', backgroundColor: 'whitesmoke' }}>
+      <nav className="level is-10" style={{ margin: 'auto 3rem' }}>
+        <div className="level-item has-text-centered" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Happy Customers</p>
             <div className="title">
@@ -72,7 +69,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Records Processed</p>
             <div className="title">
@@ -81,7 +78,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Database Lookups</p>
             <div className="title">
@@ -90,7 +87,7 @@ const HomePageTemplate = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="level-item has-text-centered verticalCenter" style={{paddingTop: "3rem"}}>
+        <div className="level-item has-text-centered verticalCenter" style={{ paddingTop: '3rem' }}>
           <div>
             <p className="heading">Data Points</p>
             <div className="title">
@@ -100,7 +97,6 @@ const HomePageTemplate = ({ data }) => (
           </div>
         </div>
       </nav>
-    </div>
     </section>
     <section
       className={`section ${styles.textCenter}`}
@@ -108,6 +104,7 @@ const HomePageTemplate = ({ data }) => (
     >
       <h1 className="title"> What We Do </h1>
       <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
+
         <ThreeBlock
             backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
             icon="fa-database"
@@ -119,7 +116,6 @@ const HomePageTemplate = ({ data }) => (
             highly accurate data.<br />
             <a style={{ textDecoration: 'underline' }}>Learn more</a>
           </ThreeBlock>
-
           <ThreeBlock
             backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
             icon="fa-code"
@@ -141,6 +137,7 @@ const HomePageTemplate = ({ data }) => (
             here to help on an actual phone and email(if you prefer).<br />
             <a style={{ textDecoration: 'underline' }}>Learn more</a>
           </ThreeBlock>
+
       </div>
     </section>
     <section className="container">
@@ -188,7 +185,6 @@ const HomePageTemplate = ({ data }) => (
           </p>
         </div>
       </div>
-
     </section>
   </section>
 );

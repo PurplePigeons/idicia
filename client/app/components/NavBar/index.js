@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import cn from 'classnames';
 
-// Styles
-import logo from './full_logo.png';
-
 const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
   // Pattern for refs in functional components...
   let navButton;
@@ -39,17 +36,11 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
   );
 
   return (
-    <nav className="navbar">
+    <nav className="navbar is-transparent">
       <div className="navbar-brand">
         <Link to={'/'} className="navbar-item">
-          <img src={logo} alt="Idicia" width="112" height="28" />
+          <img src="images/svgs/IDICIA-sample.svg" alt="Idicia" />
         </Link>
-
-        <div className="navbar-item animated fadeIn">
-          <button className="button is-link" onClick={toggleContactModal}>
-            Contact Us
-          </button>
-        </div>
 
         <button
           className={navHamburger}
@@ -103,6 +94,11 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
         </div>
 
         <div className="navbar-end">
+          <div className="navbar-item animated fadeIn">
+            <button className="button is-link" onClick={toggleContactModal}>
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
     </nav>
