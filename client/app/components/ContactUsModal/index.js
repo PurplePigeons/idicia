@@ -32,7 +32,7 @@ class ContactUsModal extends PureComponent {
 
     return (
       <InteractiveModal focusFirst="input#name" closeModal={close}>
-        <div className="modal-card animated fadeInUp">
+        <div className="modal-card animated fadeIn">
           <header className="modal-card-head">
             <div className="modal-card-title">
               <figure className="image is-48x48">

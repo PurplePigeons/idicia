@@ -49,11 +49,11 @@ export default class ThreeBlock extends PureComponent {
               />
             </div>
             <div>
-              <H2>{this.props.title}</H2>
+              <H2 className="is-size-5-tablet">{this.props.title}</H2>
             </div>
           </div>
         ) : (
-          <div className={styles.content}>{this.props.children}</div>
+          <div className={`is-size-4-mobile is-size-7-tablet ${styles.content}`}>{this.props.children}</div>
         )}
       </div>
     );

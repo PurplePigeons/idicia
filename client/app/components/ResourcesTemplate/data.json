@@ -29,12 +29,6 @@
   "checkOut": [
     {
       "id": "1",
-      "imgSrc": "images/developer.jpg",
-      "title": "Check out our developer page",
-      "url": "developer"
-    },
-    {
-      "id": "2",
       "imgSrc": "https://bulma.io/images/placeholders/64x64.png",
       "title": "Take a look at our press releases",
       "url": "press-releases"
@@ -45,48 +39,90 @@
       "id": "1",
       "title": "Getting Started",
       "links": [
-        "url1",
-        "url2"
+        "images/Learning_Center/Getting Started/IDICIA-CreditApplication.pdf",
+        "images/Learning_Center/Getting Started/IDICIA-CreditCard_MultipleUse.pdf"
+      ],
+      "caption": [
+        "Credit Application",
+        "Credit Application - Multi-Use"
       ]
     },
     {
       "id": "2",
       "title": "Verification",
       "links": [
-        "url1",
-        "url2"
+        "images/Learning_Center/Verification/identity-fraud.jpg",
+        "images/Learning_Center/Verification/IDICIA-Prdct-TelifiedCollection-1.png",
+        "images/Learning_Center/Verification/IDICIA-Prdct-Telified3D-1.png",
+        "images/Learning_Center/Verification/IDICIA-Prdct-TelifiedAI-1.png",
+        "images/Learning_Center/Verification/IDICIA-ReverseEmailAppend-1.png",
+        "images/Learning_Center/Verification/IDICIA-Telified-Banking-1.png",
+        "images/Learning_Center/Verification/IDICIA-Telified-DataHosting.png",
+        "images/Learning_Center/Verification/IDICIA-Telified-Healthcare-1.png",
+        "images/Learning_Center/Verification/internet-of-things.jpg"
+      ],
+      "caption": [
+        "Identity Fraud - Infographic",
+        "Telified Collection",
+        "Telified 3D",
+        "Telified AI",
+        "Reverse Email Append",
+        "Banking",
+        "Data Hosting",
+        "Healthcare",
+        "Internet of Things - Infographic"
       ]
     },
     {
       "id": "3",
       "title": "Enrichment",
       "links": [
-        "url1",
-        "url2"
+        "images/Learning_Center/Enrichment/IDICIA-LineIdentificationAppend-1.png",
+        "images/Learning_Center/Enrichment/IDICIA-ReverseEmailAppend-1.png",
+        "images/Learning_Center/Enrichment/IDICIA-ReverseOnPhone-1.png"
+      ],
+      "caption": [
+        "Line Identification Append",
+        "Reverse Email Append",
+        "Reverse Phone Append"
       ]
     },
     {
       "id": "4",
       "title": "Comparison",
       "links": [
-        "url1",
-        "url2"
+        "images/Learning_Center/Comparison/IDICIA-DataPRIME.png"
+      ],
+      "caption": [
+        "DataPRIME"
       ]
     },
     {
       "id": "5",
       "title": "Compliance and Whitepapers",
       "links": [
-        "url1",
-        "url2"
+        "http://www.openidentityexchange.org/wp-content/uploads/2016/11/OIX-White-Paper-ARPU-of-Identity-2014-10-16.pdf",
+        "https://www.fcc.gov/consumers/guides/wireless-phones-and-national-do-not-call-list",
+        "images/Learning_Center/Compliance/IDICIA-ConsentReverification.png"
+      ],
+      "caption": [
+        "ARPU of Identity",
+        "DNC & TCPA Compliance",
+        "Consent Reverification"
       ]
     },
     {
       "id": "6",
-      "title": "Verification",
+      "title": "White Papers",
       "links": [
-        "url1",
-        "url2"
+        "images/Learning_Center/Whitepapers/5Reasons.png",
+        "images/Learning_Center/Whitepapers/IDICIA-Telified-IC_Coverage.png",
+        "images/Learning_Center/Whitepapers/IDICIA-what-is-an-API-1.png"
+      ],
+      "caption": [
+        "5 reasons for data quality",
+        "Telified IC Coverage Map",
+        "What is an API?"
       ]
     }
   ]
