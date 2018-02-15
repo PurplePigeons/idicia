@@ -1,0 +1,23 @@
+{
+  "slug": "What is Data Enrichment?",
+  "section1":"Data Enrichment is the process of using data you have provided against other sources to cross-reference and double-check to ensure we give you back the most up-to-date and accurate data.",
+  "section2":{
+      "title": "We offer 4 ways to enrich your data",
+      "block1":{
+        "header": "PEACE OF MIND ENRICHMENT",
+        "content": "Verify TCPA compliance parameters including the Do Not Call list, cell phone identification or if ownership has changed since your last call."
+      },
+      "block2":{
+        "header": "PHONE NUMBER ENRICHMENT",
+        "content": "Enrich or verify your contact phone numbers based on name and address, email address or SSN. Clean out invalid or disconnected phones."
+      },
+      "block3":{
+        "header": "ADDRESS ENRICHMENT",
+        "content": "Standardize your contact addresses or add geo-coding or mortgage attributes based on name, phone or email address."
+      },
+      "block4":{
+        "header": "NAME ENRICHMENT",
+        "content": "Enrich your contact names based on an address on file, phone number, email address or SSN."
+    }
+  }
+}

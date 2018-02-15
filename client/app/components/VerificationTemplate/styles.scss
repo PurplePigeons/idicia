@@ -1,3 +1,9 @@
+.verificationHero {
+  background-image: -webkit-linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),-webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/backgrounds/Verification.jpg');
+  background-image: linear-gradient(141deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 71%, rgba(0, 0, 0, 0.3) 100%),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/backgrounds/Verification.jpg');
+  background-size: cover;
+}
+
 // Custom transforms for content blocks such as centered text and uppercased main headers
 .content {
   > h1, h2, p {
@@ -8,8 +14,10 @@
     text-transform: uppercase;
     font-weight: bold;
   }
+}
 
-  a {
+.content{
+  > a {
     transition: all .3s ease-in-out;
     background-color: transparent;
     color: #3f3f3f;
@@ -18,8 +26,9 @@
     padding: 14px 31px;
     font-size: 13px;
     font-weight: bold;
-    word-wrap: break-word;
-
+    display:flex;
+    justify-content: center;
+  
     &:hover {
       background-color: #3f3f3f;
       color: #ffffff;
@@ -28,27 +37,29 @@
   }
 }
 
+
 .mainTitle {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 2.5rem;
 }
 
 // Custom styling so that the six elements will render into two columns on larger screens only
-.columnCluster {
-  display: flex;
-  flex-flow: row wrap;
+// .columnCluster {
+//   display: flex;
+//   flex-flow: row wrap;
 
-  div {
-    display: inline-block;
-    width: 100%;
-    padding: 25px 10px;
-    @media (min-width: 769px) {
-	    width: 50%;
-	  }
+//   div {
+//     display: inline-block;
+//     width: 100%;
+//     padding: 25px 10px;
+//     @media (min-width: 769px) {
+// 	    width: 50%;
+// 	  }
 
-    > h2 > a {
-      color: #000066 !important;
-    }
-  }
-}
+//     > h2 > a {
+//       color: #000066 !important;
+//     }
+//   }
+// }
