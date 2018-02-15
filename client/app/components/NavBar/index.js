@@ -83,10 +83,10 @@ const NavBar = ({ mobileNavActive, toggleContactModal, toggleMobileNav }) => {
           <div className={hoverableDropdownItem}>
             <Link to={'/resources'} className="navbar-link">Resources</Link>
             <div className="navbar-dropdown">
-              <Link to={'/developer'} className="navbar-item">Developer</Link>
+              {/* <Link to={'/developer'} className="navbar-item">Developer</Link> */}
               <Link to={'/blog'} className="navbar-item">Blog</Link>
-              <Link to={'/contact-us'} className="navbar-item">Contact Us</Link>
-              <Link to={'/learning-center'} className="navbar-item">Learning Center</Link>
+              {/* <Link to={'/contact-us'} className="navbar-item">Contact Us</Link>
+              <Link to={'/learning-center'} className="navbar-item">Learning Center</Link> */}
             </div>
           </div>
 

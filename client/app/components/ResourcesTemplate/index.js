@@ -21,6 +21,14 @@ const ResourcesTemplate = () => {
     </div>
   );
 
+  /* Once developer page is complete add this to the checkOut object
+    {
+      "id": "2",
+      "imgSrc": "images/developer.jpg",
+      "title": "Check out our developer page",
+      "url": "developer"
+    }
+  */
   const moreLinks = data.checkOut.map(({ id, imgSrc, title, url }) =>
     <div className="column" key={id}>
       <CheckOut {...{ imgSrc, title, url }} />
