@@ -12,3 +12,4 @@ env.json
 
 # ignore ide config
 .idea/
+.vscode/

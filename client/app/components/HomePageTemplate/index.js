@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Reveal from 'react-reveal';
+import testData from './data.json';
 
 // SharedComponents
 import ScrollToButton from 'components/ScrollToButton';
@@ -24,7 +25,11 @@ const lightHero = `${boldHero} is-medium is-light`;
 
 const mediumCustomContent = `content is-medium ${styles.content}`;
 
-const HomePageTemplate = ({ data }) => (
+
+
+const HomePageTemplate = ({ data }) => {
+
+return (
   <section>
     <Helmet
       title="Home"
@@ -145,7 +150,7 @@ const HomePageTemplate = ({ data }) => (
         <h1 className="title">What do you need to get started?</h1>
       </div>
       <Reveal effect="animated fadeInUp">
-        <GettingStarted />
+        <GettingStarted {...{testData}} />
       </Reveal>
     </section>
     <section
@@ -188,6 +193,7 @@ const HomePageTemplate = ({ data }) => (
     </section>
   </section>
 );
+}
 
 HomePageTemplate.propTypes = {
   data: PropTypes.object.isRequired,

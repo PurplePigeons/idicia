@@ -1,0 +1,37 @@
+{
+  "dataPoints": [
+    [
+      "Click an option",
+      "see what is",
+      "returned from",
+      "from our services" 
+    ],
+    [
+      "Full Name",
+      "Address",
+      "City State Zip",
+      "Email Verified"
+    ],
+    [
+      "Full Name",
+      "Address",
+      "City State Zip",
+      "Phone",
+      "DOB/DOD"
+    ],
+    [
+      "Full Name",
+      "Address",
+      "City State Zip",
+      "Phone Service Type",
+      "Carrier"
+    ],
+    [
+      "Email Address",
+      "Address",
+      "City State Zip",
+      "SSN",
+      "Phone"
+    ]
+  ]
+}
