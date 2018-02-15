@@ -6,7 +6,6 @@ import Reveal from 'react-reveal';
 // SharedComponents
 import ScrollToButton from 'components/ScrollToButton';
 import ContactUsCTA from '../ContactUsCTA';
-import ContactForm from '../ContactForm';
 import Carousel from './Carousel';
 import QuickFacts from './QuickFacts';
 import ServiceIcons from './ServiceIcons';
@@ -37,19 +36,24 @@ const HomePageTemplate = ({ data }) => (
       ]}
     />
     <section className={mainHero}>
-      <div className="hero-body">
-        <div className={`container ${styles.textCenter}`}>
-          <h1 className={`title is-1 ${styles.mainTitle} animated fadeInUp`}>
+
+      <div className="hero-body columns is-multiline">
+        <div className={`container ${styles.textCenter} column is-10 is-offset-by-1  is-centered `}>
+          <h1
+            className={`title is-1 ${styles.mainTitle} animated fadeInUp  `}
+            ref={(title) => {
+              this.titleText = title;
+            }}
+          >
             Idicia
           </h1>
-          <h2 className={`${styles.subTitle} subtitle is-4 animated fadeInUp`}>
-            Neighborhood Service <br />
-            Global Data
+          <h2 className={`${styles.subTitle} subtitle animated fadeInUp `}>
+             Global Data,
+            <span style={{fontFamily: "Josefin Sans" }}> Neighborhood Service </span>
           </h2>
-          <h4 className={`column ${styles.titleContent} is-4 is-offset-4 animated fadeInUp`}>
-            At IDICIA we have intentions that some competitors may see as
-            conflicting.... To provide you with the fastest & most accurate Data
-            Hygiene services and the best customer service in the industry.
+          <h4 className={`column ${styles.titleContent} animated fadeInUp `}>
+            High quality data cleansing
+            delivered with personalized customer service
           </h4>
           {/* <ScrollToButton fadeIn scrollTo="#contactForm" text="Contact Us" /> */}
         </div>
@@ -94,42 +98,46 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </nav>
     </section>
-    <section className={`section ${styles.textCenter}`} style={{ background: 'none' }}>
+    <section
+      className={`section ${styles.textCenter}`}
+      style={{background: 'none'}}
+    >
       <h1 className="title"> What We Do </h1>
-      <div className={`columns is-multiline is-centered is-10 ${styles.textCenter}`}>
-        <ThreeBlock
-          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
-          icon="fa-database"
-          title="Fast & Accurate Data"
-        >
-          With servers positioned across the U.S. we
-          ensure blazing fast response times and capable of
-          accessing telecom data seconds after it is updated, we ensure
-          highly accurate data.<br />
-          <a style={{ textDecoration: 'underline' }}>Learn more</a>
-        </ThreeBlock>
+      <div className={`columns is-multiline is-centered ${styles.textCenter}`}>
 
         <ThreeBlock
-          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
-          icon="fa-code"
-          title="Easy Implementation"
-        >
-          Using the RESTful standard for our API and extensive documentation
-          will help you get up and running with our data enrichment services
-          fast and with less hassle.<br />
-          <a style={{ textDecoration: 'underline' }}>Learn more</a>
-        </ThreeBlock>
+            backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087372/idicia/dataBackground-20.png"
+            icon="fa-database"
+            title="Fast & Accurate Data"
+          >
+            With data centers strategically positioned across the country we
+            ensure fast response times on our data services. With the ability to
+            access telecom data literally seconds after it is updated, we ensure
+            highly accurate data.<br />
+            <a style={{ textDecoration: 'underline' }}>Learn more</a>
+          </ThreeBlock>
+          <ThreeBlock
+            backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087375/idicia/Implementation-20.png"
+            icon="fa-code"
+            title="Easy Implementation"
+          >
+            Using the RESTful standard for our API and extensive documentation
+            will help you get up and running with our data enrichment services
+            fast and with less hassle.<br />
+            <a style={{ textDecoration: 'underline' }}>Learn more</a>
+          </ThreeBlock>
 
-        <ThreeBlock
-          backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
-          icon="fa-phone"
-          title="Awesome support"
-        >
-          While the support standard in our industry is an email and hoping to
-          hear back, we understand that just isn’t good enough sometimes. We’re
-          here to help on an actual phone and email(if you prefer).<br />
-          <a style={{ textDecoration: 'underline' }}>Learn more</a>
-        </ThreeBlock>
+          <ThreeBlock
+            backgroundImage="http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087377/idicia/Support-20.png"
+            icon="fa-phone"
+            title="Awesome support"
+          >
+            While the support standard in our industry is an email and hoping to
+            hear back, we understand that just isn’t good enough sometimes. We’re
+            here to help on an actual phone and email(if you prefer).<br />
+            <a style={{ textDecoration: 'underline' }}>Learn more</a>
+          </ThreeBlock>
+
       </div>
     </section>
     <section className="container">
@@ -141,10 +149,10 @@ const HomePageTemplate = ({ data }) => (
       </Reveal>
     </section>
     <section
-      className={`container ${styles.textCenter}`}
-      style={{ margin: '40px auto' }}
+      className={`container ${styles.textCenter} `}
+      style={{margin: '40px auto'}}
     >
-      <div className="card is-centered">
+      <div className="card is-centered ">
         <div className="card-content">
           <h1
             className="title"
@@ -155,8 +163,8 @@ const HomePageTemplate = ({ data }) => (
           <p>
             <strong>IDICIA is a whole new kind of data company.</strong>
           </p>
-          <br />
-          <p style={{ margin: 'auto 40px' }}>
+          <br/>
+          <p >
             We have access to billions of consumer data records but we only pull
             the specific record we need at the very last possible second we need
             it, so it is as fresh as possible. Our data services are truly “just
@@ -164,7 +172,7 @@ const HomePageTemplate = ({ data }) => (
             accesses the best data on the market and some data our competitors
             only wish they had.
           </p>
-          <p style={{ margin: '20px 40px' }}>
+          <p >
             Many of the records we access provide fresh answers within seconds
             of when the record was updated. One of the main reasons we have
             access to many of our information resources is that we don’t require
@@ -178,9 +186,6 @@ const HomePageTemplate = ({ data }) => (
         </div>
       </div>
     </section>
-    {/* <Reveal effect="animated fadeIn">
-      <ContactForm />
-    </Reveal> */}
   </section>
 );
 

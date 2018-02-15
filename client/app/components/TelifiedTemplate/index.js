@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Reveal from 'react-reveal';
 import { renderHtmlWithRouterLinks } from 'utils/staticHtmlUtils';
 
-// SharedComponents
-import ContactForm from '../ContactForm';
 
 // Styles
 import styles from './styles.scss';
@@ -71,9 +69,6 @@ const TelifiedTemplate = () => (
       <hr />
       <h2 className="title is-2">Want to learn more about Telified and our broad coverage option?</h2>
     </div>
-    <Reveal effect="animated fadeIn">
-      <ContactForm />
-    </Reveal>
   </section>
 );
 

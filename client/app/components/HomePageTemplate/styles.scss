@@ -22,8 +22,7 @@
 
 .titleContent {
   text-align: center;
-  background-color: rgba(61, 61, 138, 0.8);
-  border-radius: 5px;
+  font-style: italic;
 }
 
 .textCenter {
@@ -39,7 +38,6 @@
 
 .subTitle {
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
   color: #fff838;
 }
@@ -82,11 +80,9 @@
     transition: all 0.3s ease-in-out;
     background-color: transparent;
     color: #3f3f3f !important;
-    border: 2px solid transparent;
     border: 2px solid #3f3f3f;
     padding: 14px 31px;
     font-size: 18px;
-    font-weight: bold;
     text-transform: uppercase;
     font-weight: bold;
     word-wrap: break-word;
@@ -134,7 +130,6 @@
 
 // Transparent gradient overlay of image :D
 .landingHero {
-  background-image: url('http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087385/idicia/idiciaLandingImage.jpg');
   background-image: url('http://res.cloudinary.com/dyjo5a3ci/image/upload/v1514087385/idicia/idiciaLandingImage.jpg');
   background-size: cover;
 }
